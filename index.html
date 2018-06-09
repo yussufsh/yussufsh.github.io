@@ -4561,4 +4561,13 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 09:04:18,561 INFO: [mNotice: /Stage[setup]/Vswitch::Ovs/Service[openvswitch]/ensure: ensure changed 'stopped' to 'running'[0m
 2018-06-09 09:04:39,315 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[os-net-config]/returns: executed successfully[0m
 2018-06-09 09:04:39,834 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[trigger-keepalived-restart]: Triggered 'refresh' from 1 events[0m
+2018-06-09 09:12:53,637 INFO: [1;31mError: /Stage[main]/Rabbitmq/Rabbitmq_plugin[rabbitmq_management]: Could not evaluate: Command is still failing after 180 seconds expired![0m
+2018-06-09 09:12:54,685 INFO: [mNotice: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 09:12:54,890 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Skipping because of failed dependencies[0m
+2018-06-09 09:12:54,972 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 09:12:55,116 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Skipping because of failed dependencies[0m
+2018-06-09 09:12:55,309 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 09:12:55,489 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-09 09:12:55,495 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 09:12:55,704 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
 </pre></body></html>
