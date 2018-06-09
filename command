@@ -1,1 +1,1 @@
-openstack undercloud install
+ps -ef | grep 'openstack undercloud'
