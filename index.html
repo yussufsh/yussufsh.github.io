@@ -4615,4 +4615,12 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 10:07:58,817 INFO: [mNotice: /Stage[main]/Mistral::Db::Sync/Exec[mistral-db-sync]/returns: executed successfully[0m
 2018-06-09 10:08:19,298 INFO: [mNotice: /Stage[main]/Main/Zaqar::Server_instance[1]/Service[openstack-zaqar@1]/ensure: ensure changed 'stopped' to 'running'[0m
 2018-06-09 10:08:19,459 INFO: [mNotice: /Stage[main]/Zaqar::Deps/Anchor[zaqar::service::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 10:10:44,907 INFO: [mNotice: /Stage[main]/Keystone::Db::Sync/Exec[keystone-manage db_sync]/returns: executed successfully[0m
+2018-06-09 10:10:45,011 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 10:11:56,423 INFO: [mNotice: /Stage[main]/Keystone/Exec[keystone-manage bootstrap]: Triggered 'refresh' from 1 events[0m
+2018-06-09 10:11:56,467 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::begin]: Triggered 'refresh' from 2 events[0m
+2018-06-09 10:11:56,525 INFO: [mNotice: /Stage[main]/Apache::Service/Service[httpd]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 10:11:56,529 INFO: [1;33mWarning: /Stage[main]/Apache::Service/Service[httpd]: Skipping because of failed dependencies[0m
+2018-06-09 10:11:56,567 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 10:11:56,572 INFO: [1;33mWarning: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Skipping because of failed dependencies[0m
 </pre></body></html>
