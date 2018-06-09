@@ -1367,4 +1367,71 @@
 2018-06-09 16:16:48,516 INFO: [1;33mWarning: /Stage[main]/Apache::Service/Service[httpd]: Skipping because of failed dependencies[0m
 2018-06-09 16:16:48,553 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
 2018-06-09 16:16:48,557 INFO: [1;33mWarning: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Skipping because of failed dependencies[0m
+2018-06-09 16:21:22,969 INFO: [1;31mError: Failed to apply catalog: Command: 'openstack ["role", "list", "--quiet", "--format", "csv", []]' has been running for more than 40 seconds (tried 4, for a total of 170 seconds)[0m
+2018-06-09 16:21:23,092 INFO: Changes:
+2018-06-09 16:21:23,095 INFO:             Total: 664
+2018-06-09 16:21:23,097 INFO: Events:
+2018-06-09 16:21:23,100 INFO:           Failure: 1
+2018-06-09 16:21:23,123 INFO:           Success: 664
+2018-06-09 16:21:23,127 INFO:             Total: 665
+2018-06-09 16:21:23,129 INFO: Resources:
+2018-06-09 16:21:23,132 INFO:            Failed: 1
+2018-06-09 16:21:23,157 INFO:             Total: 2491
+2018-06-09 16:21:23,160 INFO:           Skipped: 6
+2018-06-09 16:21:23,162 INFO:           Changed: 654
+2018-06-09 16:21:23,186 INFO:       Out of sync: 655
+2018-06-09 16:21:23,190 INFO:         Restarted: 88
+2018-06-09 16:21:23,193 INFO: Time:
+2018-06-09 16:21:23,195 INFO:    Sysctl runtime: 0.01
+2018-06-09 16:21:23,220 INFO:            Sysctl: 0.01
+2018-06-09 16:21:23,223 INFO:             Group: 0.02
+2018-06-09 16:21:23,226 INFO:    Neutron api config: 0.02
+2018-06-09 16:21:23,228 INFO:         Resources: 0.02
+2018-06-09 16:21:23,252 INFO:              Cron: 0.02
+2018-06-09 16:21:23,254 INFO:         File line: 0.04
+2018-06-09 16:21:23,257 INFO:    Glance swift config: 0.16
+2018-06-09 16:21:23,280 INFO:              User: 0.19
+2018-06-09 16:21:23,283 INFO:       Concat file: 0.27
+2018-06-09 16:21:23,285 INFO:            Anchor: 0.49
+2018-06-09 16:21:23,287 INFO:          Firewall: 0.49
+2018-06-09 16:21:23,313 INFO:    Swift object expirer config: 0.66
+2018-06-09 16:21:23,316 INFO:    Neutron dhcp agent config: 0.70
+2018-06-09 16:21:23,318 INFO:    Neutron agent ovs: 0.75
+2018-06-09 16:21:23,343 INFO:    Concat fragment: 0.83
+2018-06-09 16:21:23,346 INFO:    Neutron plugin ml2: 0.83
+2018-06-09 16:21:23,349 INFO:      Swift config: 1.45
+2018-06-09 16:21:23,351 INFO:         Vs bridge: 1.72
+2018-06-09 16:21:23,377 INFO:    Glance registry config: 10.44
+2018-06-09 16:21:23,380 INFO:             Total: 10500.22
+2018-06-09 16:21:23,382 INFO:      Nova cell v2: 107.81
+2018-06-09 16:21:23,406 INFO:            Augeas: 11.99
+2018-06-09 16:21:23,410 INFO:    Mysql database: 13.55
+2018-06-09 16:21:23,413 INFO:        Mysql user: 139.10
+2018-06-09 16:21:23,415 INFO:              Exec: 1478.33
+2018-06-09 16:21:23,452 INFO:          Last run: 1528561282
+2018-06-09 16:21:23,454 INFO:           Service: 1551.91
+2018-06-09 16:21:23,462 INFO:     Mysql datadir: 16.04
+2018-06-09 16:21:23,464 INFO:    Ironic inspector config: 17.01
+2018-06-09 16:21:23,521 INFO:     Ironic config: 171.40
+2018-06-09 16:21:23,523 INFO:    Mistral config: 2.04
+2018-06-09 16:21:23,525 INFO:    Swift proxy config: 27.74
+2018-06-09 16:21:23,588 INFO:    Nova paste api ini: 3.26
+2018-06-09 16:21:23,592 INFO:      Zaqar config: 30.43
+2018-06-09 16:21:23,594 INFO:       Nova config: 351.79
+2018-06-09 16:21:23,597 INFO:              File: 37.91
+2018-06-09 16:21:23,650 INFO:    Ring account device: 40.25
+2018-06-09 16:21:23,653 INFO:    Keystone config: 45.47
+2018-06-09 16:21:23,655 INFO:    Rabbitmq plugin: 490.44
+2018-06-09 16:21:23,707 INFO:           Package: 4978.70
+2018-06-09 16:21:23,709 INFO:    Glance cache config: 5.15
+2018-06-09 16:21:23,712 INFO:    Ring object device: 50.40
+2018-06-09 16:21:23,763 INFO:    Config retrieval: 518.82
+2018-06-09 16:21:23,767 INFO:    Neutron config: 52.77
+2018-06-09 16:21:23,769 INFO:       Heat config: 65.42
+2018-06-09 16:21:23,772 INFO:       Mysql grant: 84.56
+2018-06-09 16:21:23,827 INFO:    Ring container device: 93.45
+2018-06-09 16:21:23,829 INFO:    Glance api config: 95.37
+2018-06-09 16:21:23,832 INFO: Version:
+2018-06-09 16:21:23,876 INFO:            Config: 1528548826
+2018-06-09 16:21:23,879 INFO:            Puppet: 4.8.2
 </pre></body></html>
