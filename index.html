@@ -4573,4 +4573,11 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 09:20:08,935 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker/Augeas[docker-sysconfig-registry]/returns: executed successfully[0m
 2018-06-09 09:20:10,497 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker_registry/File_line[docker insecure registry]/ensure: created[0m
 2018-06-09 09:20:39,228 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker/Service[docker]: Triggered 'refresh' from 2 events[0m
+2018-06-09 09:32:18,461 INFO: [mNotice: /Stage[main]/Glance::Db::Sync/Exec[glance-manage db_sync]/returns: executed successfully[0m
+2018-06-09 09:32:18,494 INFO: [mNotice: /Stage[main]/Glance::Deps/Anchor[glance::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 09:32:48,441 INFO: [mNotice: /Stage[main]/Glance::Db::Metadefs/Exec[glance-manage db_load_metadefs]: Triggered 'refresh' from 1 events[0m
+2018-06-09 09:34:26,648 INFO: [mNotice: /Stage[main]/Nova::Db::Sync_api/Exec[nova-db-sync-api]/returns: executed successfully[0m
+2018-06-09 09:34:26,686 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::dbsync_api::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 09:34:26,703 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::cell_v2::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 09:34:26,728 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::db_online_data_migrations::begin]: Triggered 'refresh' from 1 events[0m
 </pre></body></html>
