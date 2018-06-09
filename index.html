@@ -1349,4 +1349,14 @@
 2018-06-09 16:08:24,730 INFO: [mNotice: /Stage[main]/Main/Zaqar::Server_instance[1]/Service[openstack-zaqar@1]/ensure: ensure changed 'stopped' to 'running'[0m
 2018-06-09 16:08:24,871 INFO: [mNotice: /Stage[main]/Zaqar::Deps/Anchor[zaqar::service::end]: Triggered 'refresh' from 2 events[0m
 2018-06-09 16:09:05,193 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::config::end]: Triggered 'refresh' from 30 events[0m
+2018-06-09 16:10:48,642 INFO: [mNotice: /Stage[main]/Keystone/Exec[keystone-manage fernet_setup]: Triggered 'refresh' from 2 events[0m
+2018-06-09 16:11:32,110 INFO: [mNotice: /Stage[main]/Keystone/Exec[keystone-manage credential_setup]: Triggered 'refresh' from 2 events[0m
+2018-06-09 16:11:33,225 INFO: [mNotice: /Stage[main]/Keystone::Db::Mysql/Openstacklib::Db::Mysql[keystone]/Mysql_database[keystone]/ensure: created[0m
+2018-06-09 16:11:38,456 INFO: [mNotice: /Stage[main]/Keystone::Db::Mysql/Openstacklib::Db::Mysql[keystone]/Openstacklib::Db::Mysql::Host_access[keystone_%]/Mysql_user[keystone@%]/ensure: created[0m
+2018-06-09 16:11:39,755 INFO: [mNotice: /Stage[main]/Keystone::Db::Mysql/Openstacklib::Db::Mysql[keystone]/Openstacklib::Db::Mysql::Host_access[keystone_%]/Mysql_grant[keystone@%/keystone.*]/ensure: created[0m
+2018-06-09 16:11:44,119 INFO: [mNotice: /Stage[main]/Keystone::Db::Mysql/Openstacklib::Db::Mysql[keystone]/Openstacklib::Db::Mysql::Host_access[keystone_192.168.126.1]/Mysql_user[keystone@192.168.126.1]/ensure: created[0m
+2018-06-09 16:11:45,209 INFO: [mNotice: /Stage[main]/Keystone::Db::Mysql/Openstacklib::Db::Mysql[keystone]/Openstacklib::Db::Mysql::Host_access[keystone_192.168.126.1]/Mysql_grant[keystone@192.168.126.1/keystone.*]/ensure: created[0m
+2018-06-09 16:11:46,216 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::db::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:11:46,256 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::dbsync::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:14:04,037 INFO: [mNotice: /Stage[main]/Keystone::Db::Sync/Exec[keystone-manage db_sync]/returns: executed successfully[0m
 </pre></body></html>
