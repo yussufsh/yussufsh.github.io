@@ -608,4 +608,13 @@
 2018-06-09 13:07:55,678 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/content: content changed '{md5}c8e444b74c6294006936abdaea55a079' to '{md5}8d8eaed7eb4abb8b609ec54055733543'[0m
 2018-06-09 13:07:55,737 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/owner: owner changed 'rabbitmq' to 'root'[0m
 2018-06-09 13:07:55,775 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/mode: mode changed '0644' to '0640'[0m
+2018-06-09 13:16:11,774 INFO: [1;31mError: /Stage[main]/Rabbitmq/Rabbitmq_plugin[rabbitmq_management]: Could not evaluate: Command is still failing after 180 seconds expired![0m
+2018-06-09 13:16:13,448 INFO: [mNotice: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 13:16:13,644 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Skipping because of failed dependencies[0m
+2018-06-09 13:16:13,649 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 13:16:13,652 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Skipping because of failed dependencies[0m
+2018-06-09 13:16:13,868 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 13:16:13,871 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-09 13:16:14,115 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 13:16:14,120 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
 </pre></body></html>
