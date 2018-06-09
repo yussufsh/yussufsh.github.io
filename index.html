@@ -1309,4 +1309,29 @@
 2018-06-09 15:59:24,258 INFO: [1;33mWarning: Unexpected line: Ring file /etc/swift/account.ring.gz not found, probably it hasn't been written yet[0m
 2018-06-09 15:59:43,423 INFO: [mNotice: /Stage[main]/Main/Ring_account_device[192.168.126.1:6002/1]/ensure: created[0m
 2018-06-09 16:00:18,107 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Create[container]/Exec[create_container]/returns: executed successfully[0m
+2018-06-09 16:01:18,038 INFO: [1;33mWarning: Unexpected line: Ring file /etc/swift/container.ring.gz not found, probably it hasn't been written yet[0m
+2018-06-09 16:01:51,686 INFO: [mNotice: /Stage[main]/Main/Ring_container_device[192.168.126.1:6001/1]/ensure: created[0m
+2018-06-09 16:02:25,394 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Rebalance[object]/Exec[rebalance_object]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:03:00,309 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Rebalance[account]/Exec[rebalance_account]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:03:19,218 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Rebalance[container]/Exec[rebalance_container]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:03:19,412 INFO: [mNotice: /Stage[main]/Swift::Storage::Account/Swift::Storage::Generic[account]/File[/etc/swift/account-server/]/owner: owner changed 'root' to 'swift'[0m
+2018-06-09 16:03:19,455 INFO: [mNotice: /Stage[main]/Swift::Storage::Account/Swift::Storage::Generic[account]/File[/etc/swift/account-server/]/group: group changed 'root' to 'swift'[0m
+2018-06-09 16:03:19,608 INFO: [mNotice: /Stage[main]/Swift::Storage::Container/Swift::Storage::Generic[container]/File[/etc/swift/container-server/]/owner: owner changed 'root' to 'swift'[0m
+2018-06-09 16:03:19,658 INFO: [mNotice: /Stage[main]/Swift::Storage::Container/Swift::Storage::Generic[container]/File[/etc/swift/container-server/]/group: group changed 'root' to 'swift'[0m
+2018-06-09 16:03:19,778 INFO: [mNotice: /Stage[main]/Swift::Storage::Object/Swift::Storage::Generic[object]/File[/etc/swift/object-server/]/owner: owner changed 'root' to 'swift'[0m
+2018-06-09 16:03:29,305 INFO: [mNotice: /Stage[main]/Swift::Storage::Object/Swift::Storage::Generic[object]/File[/etc/swift/object-server/]/group: group changed 'root' to 'swift'[0m
+2018-06-09 16:03:29,999 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6002]/Concat[/etc/swift/account-server.conf]/File[/etc/swift/account-server.conf]/content: content changed '{md5}07e5a1a1e5a0ab83d745e20680eb32c1' to '{md5}f094a1de8788ccfd62d009eb10dc8853'[0m
+2018-06-09 16:03:30,048 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6002]/Concat[/etc/swift/account-server.conf]/File[/etc/swift/account-server.conf]/mode: mode changed '0640' to '0644'[0m
+2018-06-09 16:03:30,718 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6001]/Concat[/etc/swift/container-server.conf]/File[/etc/swift/container-server.conf]/content: content changed '{md5}4998257eb89ff63e838b37686ebb1ee7' to '{md5}11425ba92d699b6ea8a1b979963376ee'[0m
+2018-06-09 16:03:30,736 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6001]/Concat[/etc/swift/container-server.conf]/File[/etc/swift/container-server.conf]/mode: mode changed '0640' to '0644'[0m
+2018-06-09 16:03:31,952 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6000]/Concat[/etc/swift/object-server.conf]/File[/etc/swift/object-server.conf]/content: content changed '{md5}8c3bfdea900f37c8b2cbd5d9fe5d664c' to '{md5}941c106ed6b640f589861cd53d843fac'[0m
+2018-06-09 16:03:32,034 INFO: [mNotice: /Stage[main]/Swift::Storage::All/Swift::Storage::Server[6000]/Concat[/etc/swift/object-server.conf]/File[/etc/swift/object-server.conf]/mode: mode changed '0640' to '0644'[0m
+2018-06-09 16:03:32,437 INFO: [mNotice: /Stage[main]/Swift::Deps/Anchor[swift::config::end]: Triggered 'refresh' from 51 events[0m
+2018-06-09 16:03:32,506 INFO: [mNotice: /Stage[main]/Swift::Deps/Anchor[swift::service::begin]: Triggered 'refresh' from 3 events[0m
+2018-06-09 16:03:37,377 INFO: [mNotice: /Stage[main]/Mistral::Db::Mysql/Openstacklib::Db::Mysql[mistral]/Openstacklib::Db::Mysql::Host_access[mistral_%]/Mysql_user[mistral@%]/ensure: created[0m
+2018-06-09 16:03:38,258 INFO: [mNotice: /Stage[main]/Mistral::Db::Mysql/Openstacklib::Db::Mysql[mistral]/Openstacklib::Db::Mysql::Host_access[mistral_%]/Mysql_grant[mistral@%/mistral.*]/ensure: created[0m
+2018-06-09 16:03:42,500 INFO: [mNotice: /Stage[main]/Mistral::Db::Mysql/Openstacklib::Db::Mysql[mistral]/Openstacklib::Db::Mysql::Host_access[mistral_192.168.126.1]/Mysql_user[mistral@192.168.126.1]/ensure: created[0m
+2018-06-09 16:03:43,580 INFO: [mNotice: /Stage[main]/Mistral::Db::Mysql/Openstacklib::Db::Mysql[mistral]/Openstacklib::Db::Mysql::Host_access[mistral_192.168.126.1]/Mysql_grant[mistral@192.168.126.1/mistral.*]/ensure: created[0m
+2018-06-09 16:03:44,469 INFO: [mNotice: /Stage[main]/Mistral::Deps/Anchor[mistral::db::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:03:44,494 INFO: [mNotice: /Stage[main]/Mistral::Deps/Anchor[mistral::dbsync::begin]: Triggered 'refresh' from 1 events[0m
 </pre></body></html>
