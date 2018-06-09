@@ -4474,4 +4474,87 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 08:52:21,913 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 2018-06-09 08:52:21,916 INFO: + set +e
 2018-06-09 08:52:21,934 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-09 08:55:27,994 INFO: ovs-vsctl: unix:/var/run/openvswitch/db.sock: database connection failed (No such file or directory)
+2018-06-09 08:55:34,879 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-09 08:55:37,215 INFO: [1;33mWarning: ModuleLoader: module 'openstacklib' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:55:37,220 INFO:    (file & line not available)[0m
+2018-06-09 08:55:43,429 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-09 08:55:50,044 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Ipv6 instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/rabbitmq/manifests/install/rabbitmqadmin.pp", 36]:["/etc/puppet/modules/rabbitmq/manifests/init.pp", 314]
+2018-06-09 08:55:50,049 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:55:53,339 INFO: [mNotice: Scope(Class[Tripleo::Firewall::Post]): At this stage, all network traffic is blocked.[0m
+2018-06-09 08:55:55,689 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Hash. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/tripleo/manifests/profile/base/database/mysql.pp", 97]:["/etc/puppet/manifests/puppet-stack-config.pp", 84]
+2018-06-09 08:55:55,694 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:55:57,112 INFO: [1;33mWarning: ModuleLoader: module 'mysql' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:55:57,116 INFO:    (file & line not available)[0m
+2018-06-09 08:56:03,258 INFO: [1;33mWarning: ModuleLoader: module 'keystone' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:03,263 INFO:    (file & line not available)[0m
+2018-06-09 08:56:12,300 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/db/mysql.pp", 63]:
+2018-06-09 08:56:12,304 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:56:12,828 INFO: [1;33mWarning: ModuleLoader: module 'glance' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:12,832 INFO:    (file & line not available)[0m
+2018-06-09 08:56:17,190 INFO: [1;33mWarning: ModuleLoader: module 'nova' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:17,195 INFO:    (file & line not available)[0m
+2018-06-09 08:56:20,112 INFO: [1;33mWarning: Unknown variable: '::nova::db::mysql_api::setup_cell0'. at /etc/puppet/modules/nova/manifests/db/mysql.pp:53:28[0m
+2018-06-09 08:56:21,224 INFO: [1;33mWarning: ModuleLoader: module 'neutron' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:21,229 INFO:    (file & line not available)[0m
+2018-06-09 08:56:33,775 INFO: [1;33mWarning: ModuleLoader: module 'heat' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:33,779 INFO:    (file & line not available)[0m
+2018-06-09 08:56:35,827 INFO: [1;33mWarning: ModuleLoader: module 'ironic' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:35,831 INFO:    (file & line not available)[0m
+2018-06-09 08:56:39,214 INFO: [1;33mWarning: ModuleLoader: module 'swift' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:56:39,218 INFO:    (file & line not available)[0m
+2018-06-09 08:56:45,759 INFO: [1;33mWarning: Scope(Class[Keystone]): keystone::rabbit_host, keystone::rabbit_hosts, keystone::rabbit_password, keystone::rabbit_port, keystone::rabbit_userid and keystone::rabbit_virtual_host are deprecated. Please use keystone::default_transport_url instead.[0m
+2018-06-09 08:56:45,802 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Pattern[]. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/init.pp", 806]:
+2018-06-09 08:56:45,807 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:57:20,247 INFO: [1;33mWarning: Scope(Class[Glance::Notify::Rabbitmq]): glance::notify::rabbitmq::rabbit_host, glance::notify::rabbitmq::rabbit_hosts, glance::notify::rabbitmq::rabbit_password, glance::notify::rabbitmq::rabbit_port, glance::notify::rabbitmq::rabbit_userid and glance::notify::rabbitmq::rabbit_virtual_host are deprecated. Please use glance::notify::rabbitmq::default_transport_url instead.[0m
+2018-06-09 08:57:22,342 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_database_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 08:57:22,347 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_slave_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 08:57:23,004 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/nova/manifests/init.pp", 557]:
+2018-06-09 08:57:23,009 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:57:28,179 INFO: [1;33mWarning: ModuleLoader: module 'cinder' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:57:28,184 INFO:    (file & line not available)[0m
+2018-06-09 08:57:33,370 INFO: [1;33mWarning: Unknown variable: 'until_complete_real'. at /etc/puppet/modules/nova/manifests/cron/archive_deleted_rows.pp:75:82[0m
+2018-06-09 08:57:34,449 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Array instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/nova/manifests/scheduler/filter.pp", 140]:["/etc/puppet/manifests/puppet-stack-config.pp", 404]
+2018-06-09 08:57:34,453 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:57:39,595 INFO: [1;33mWarning: Scope(Class[Neutron]): neutron::rabbit_host, neutron::rabbit_hosts, neutron::rabbit_password, neutron::rabbit_port, neutron::rabbit_user, neutron::rabbit_virtual_host and neutron::rpc_backend are deprecated. Please use neutron::default_transport_url instead.[0m
+2018-06-09 08:57:50,153 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Bool. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/swift/manifests/proxy.pp", 163]:["/etc/puppet/manifests/puppet-stack-config.pp", 444]
+2018-06-09 08:57:50,157 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:57:56,373 INFO: [1;33mWarning: Unknown variable: 'methods_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:100:56[0m
+2018-06-09 08:57:56,391 INFO: [1;33mWarning: Unknown variable: 'incoming_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:101:56[0m
+2018-06-09 08:57:56,407 INFO: [1;33mWarning: Unknown variable: 'incoming_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:102:56[0m
+2018-06-09 08:57:56,412 INFO: [1;33mWarning: Unknown variable: 'outgoing_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:103:56[0m
+2018-06-09 08:57:56,427 INFO: [1;33mWarning: Unknown variable: 'outgoing_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:104:56[0m
+2018-06-09 08:57:57,952 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the object storage server has changed from 6000 to 6200 and will be changed in a later release[0m
+2018-06-09 08:57:57,970 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the container storage server has changed from 6001 to 6201 and will be changed in a later release[0m
+2018-06-09 08:57:57,974 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the account storage server has changed from 6002 to 6202 and will be changed in a later release[0m
+2018-06-09 08:58:04,098 INFO: [1;33mWarning: Scope(Class[Heat]): heat::rabbit_host, heat::rabbit_hosts, heat::rabbit_password, heat::rabbit_port, heat::rabbit_userid, heat::rabbit_virtual_host and heat::rpc_backend are deprecated. Please use heat::default_transport_url instead.[0m
+2018-06-09 08:58:06,941 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Integer. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/heat/manifests/wsgi/apache_api_cfn.pp", 105]:["/etc/puppet/manifests/puppet-stack-config.pp", 506]
+2018-06-09 08:58:06,945 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 08:58:14,665 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_account'. at /etc/puppet/modules/ironic/manifests/glance.pp:106:30[0m
+2018-06-09 08:58:14,685 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_key'. at /etc/puppet/modules/ironic/manifests/glance.pp:107:35[0m
+2018-06-09 08:58:14,703 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_duration'. at /etc/puppet/modules/ironic/manifests/glance.pp:108:40[0m
+2018-06-09 08:58:15,234 INFO: [1;33mWarning: Unknown variable: '::ironic::api::neutron_url'. at /etc/puppet/modules/ironic/manifests/neutron.pp:58:29[0m
+2018-06-09 08:58:25,398 INFO: [1;33mWarning: Scope(Class[Ironic::Inspector]): dnsmasq_ip_range is deprecated, replaced by dnsmasq_ip_subnets[0m
+2018-06-09 08:58:33,212 INFO: [1;33mWarning: ModuleLoader: module 'mistral' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:58:33,216 INFO:    (file & line not available)[0m
+2018-06-09 08:58:34,361 INFO: [1;33mWarning: Unknown variable: '::mistral::database_idle_timeout'. at /etc/puppet/modules/mistral/manifests/db.pp:57:40[0m
+2018-06-09 08:58:34,388 INFO: [1;33mWarning: Unknown variable: '::mistral::database_min_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:58:40[0m
+2018-06-09 08:58:34,393 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:59:40[0m
+2018-06-09 08:58:34,409 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_retries'. at /etc/puppet/modules/mistral/manifests/db.pp:60:40[0m
+2018-06-09 08:58:34,426 INFO: [1;33mWarning: Unknown variable: '::mistral::database_retry_interval'. at /etc/puppet/modules/mistral/manifests/db.pp:61:40[0m
+2018-06-09 08:58:34,444 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_overflow'. at /etc/puppet/modules/mistral/manifests/db.pp:62:40[0m
+2018-06-09 08:58:34,917 INFO: [1;33mWarning: Scope(Class[Mistral]): mistral::rabbit_host, mistral::rabbit_hosts, mistral::rabbit_password, mistral::rabbit_port, mistral::rabbit_userid, mistral::rabbit_virtual_host and mistral::rpc_backend are deprecated. Please use mistral::default_transport_url instead.[0m
+2018-06-09 08:58:39,529 INFO: [1;33mWarning: ModuleLoader: module 'zaqar' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:58:39,533 INFO:    (file & line not available)[0m
+2018-06-09 08:58:47,318 INFO: [1;33mWarning: ModuleLoader: module 'ssh' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:58:47,322 INFO:    (file & line not available)[0m
+2018-06-09 08:59:00,305 INFO: [1;33mWarning: ModuleLoader: module 'oslo' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 08:59:00,309 INFO:    (file & line not available)[0m
+2018-06-09 08:59:02,798 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[keystone_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 08:59:23,716 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_api_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 08:59:24,056 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_registry_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 08:59:28,360 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[neutron_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 08:59:29,861 INFO: [1;33mWarning: Scope(Neutron::Plugins::Ml2::Type_driver[local]): local type_driver is useful only for single-box, because it provides no connectivity between hosts[0m
+2018-06-09 08:59:35,775 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[heat_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 08:59:43,236 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[mistral_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
 </pre></body></html>
