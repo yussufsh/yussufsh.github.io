@@ -600,4 +600,12 @@
 2018-06-09 11:55:38,804 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[mistral_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
 2018-06-09 11:57:01,868 INFO: [mNotice: Compiled catalog for under.persistent.co.in in environment production in 353.62 seconds[0m
 2018-06-09 12:00:23,467 INFO: [mNotice: /Stage[setup]/Vswitch::Ovs/Service[openvswitch]/ensure: ensure changed 'stopped' to 'running'[0m
+2018-06-09 12:01:11,569 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[os-net-config]/returns: executed successfully[0m
+2018-06-09 12:01:12,437 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[trigger-keepalived-restart]: Triggered 'refresh' from 1 events[0m
+2018-06-09 12:02:25,724 INFO: [mNotice: /Stage[main]/Rabbitmq::Install/Package[rabbitmq-server]/ensure: created[0m
+2018-06-09 12:02:25,999 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[/etc/rabbitmq]/owner: owner changed 'rabbitmq' to 'root'[0m
+2018-06-09 12:02:26,030 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[/etc/rabbitmq]/group: group changed 'rabbitmq' to 'root'[0m
+2018-06-09 12:02:30,443 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/content: content changed '{md5}c8e444b74c6294006936abdaea55a079' to '{md5}32fa8c1ddbf539a7a33129d1a31071d5'[0m
+2018-06-09 12:02:30,447 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/owner: owner changed 'rabbitmq' to 'root'[0m
+2018-06-09 12:02:30,468 INFO: [mNotice: /Stage[main]/Rabbitmq::Config/File[rabbitmq.config]/mode: mode changed '0644' to '0640'[0m
 </pre></body></html>
