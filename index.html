@@ -897,4 +897,52 @@
 2018-06-09 14:29:58,068 INFO: [mNotice: /Stage[main]/Glance::Api::Authtoken/Keystone::Resource::Authtoken[glance_api_config]/Glance_api_config[keystone_authtoken/password]/ensure: created[0m
 2018-06-09 14:29:58,967 INFO: [mNotice: /Stage[main]/Glance::Api::Authtoken/Keystone::Resource::Authtoken[glance_api_config]/Glance_api_config[keystone_authtoken/project_name]/ensure: created[0m
 2018-06-09 14:30:00,513 INFO: [mNotice: /Stage[main]/Glance::Api/Oslo::Middleware[glance_api_config]/Glance_api_config[oslo_middleware/enable_proxy_headers_parsing]/ensure: created[0m
+2018-06-09 14:30:19,140 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_api_config]/Glance_api_config[oslo_messaging_rabbit/rabbit_password]/ensure: created[0m
+2018-06-09 14:30:24,285 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_api_config]/Glance_api_config[oslo_messaging_rabbit/rabbit_userid]/ensure: created[0m
+2018-06-09 14:30:29,362 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_api_config]/Glance_api_config[oslo_messaging_rabbit/rabbit_host]/ensure: created[0m
+2018-06-09 14:30:33,823 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_registry_config]/Glance_registry_config[oslo_messaging_rabbit/rabbit_password]/ensure: created[0m
+2018-06-09 14:30:37,826 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_registry_config]/Glance_registry_config[oslo_messaging_rabbit/rabbit_userid]/ensure: created[0m
+2018-06-09 14:30:38,943 INFO: [mNotice: /Stage[main]/Glance::Notify::Rabbitmq/Oslo::Messaging::Rabbit[glance_registry_config]/Glance_registry_config[oslo_messaging_rabbit/rabbit_host]/ensure: created[0m
+2018-06-09 14:30:43,216 INFO: [mNotice: /Stage[main]/Glance::Deps/Anchor[glance::config::end]: Triggered 'refresh' from 45 events[0m
+2018-06-09 14:30:43,979 INFO: [mNotice: /Stage[main]/Glance::Db::Mysql/Openstacklib::Db::Mysql[glance]/Mysql_database[glance]/ensure: created[0m
+2018-06-09 14:31:38,400 INFO: [mNotice: /Stage[main]/Nova::Api/Nova::Generic_service[api]/Package[nova-api]/ensure: created[0m
+2018-06-09 14:32:22,657 INFO: [mNotice: /Stage[main]/Nova::Wsgi::Apache_placement/Nova::Generic_service[placement-api]/Package[nova-placement-api]/ensure: created[0m
+2018-06-09 14:32:22,711 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::install::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 14:32:23,321 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/admin_token]/ensure: created[0m
+2018-06-09 14:32:23,845 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/public_bind_host]/ensure: created[0m
+2018-06-09 14:32:24,357 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/admin_bind_host]/ensure: created[0m
+2018-06-09 14:32:24,840 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/public_port]/ensure: created[0m
+2018-06-09 14:32:25,350 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/admin_port]/ensure: created[0m
+2018-06-09 14:32:29,489 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[DEFAULT/public_endpoint]/ensure: created[0m
+2018-06-09 14:32:30,248 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[token/driver]/ensure: created[0m
+2018-06-09 14:32:30,746 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[token/expiration]/ensure: created[0m
+2018-06-09 14:32:31,684 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[ssl/enable]/ensure: created[0m
+2018-06-09 14:32:33,594 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[catalog/driver]/ensure: created[0m
+2018-06-09 14:32:34,092 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[catalog/template_file]/ensure: created[0m
+2018-06-09 14:32:35,880 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[token/provider]/ensure: created[0m
+2018-06-09 14:32:36,738 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[eventlet_server/admin_workers]/ensure: created[0m
+2018-06-09 14:32:37,182 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[eventlet_server/public_workers]/ensure: created[0m
+2018-06-09 14:32:37,282 INFO: [mNotice: /Stage[main]/Keystone/File[/etc/keystone/fernet-keys]/ensure: created[0m
+2018-06-09 14:32:37,342 INFO: [mNotice: /Stage[main]/Keystone/File[/etc/keystone/credential-keys]/ensure: created[0m
+2018-06-09 14:32:37,769 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[fernet_tokens/key_repository]/ensure: created[0m
+2018-06-09 14:32:38,201 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[token/revoke_by_id]/ensure: created[0m
+2018-06-09 14:32:38,636 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[fernet_tokens/max_active_keys]/ensure: created[0m
+2018-06-09 14:32:39,122 INFO: [mNotice: /Stage[main]/Keystone/Keystone_config[credential/key_repository]/ensure: created[0m
+2018-06-09 14:32:43,035 INFO: [mNotice: /Stage[main]/Main/Keystone_config[ec2/driver]/ensure: created[0m
+2018-06-09 14:32:43,530 INFO: [mNotice: /Stage[main]/Keystone::Logging/Oslo::Log[keystone_config]/Keystone_config[DEFAULT/debug]/ensure: created[0m
+2018-06-09 14:32:44,594 INFO: [mNotice: /Stage[main]/Keystone::Logging/Oslo::Log[keystone_config]/Keystone_config[DEFAULT/log_dir]/ensure: created[0m
+2018-06-09 14:32:47,995 INFO: [mNotice: /Stage[main]/Keystone::Policy/Oslo::Policy[keystone_config]/Keystone_config[oslo_policy/policy_file]/ensure: created[0m
+2018-06-09 14:32:49,293 INFO: [mNotice: /Stage[main]/Keystone::Db/Oslo::Db[keystone_config]/Keystone_config[database/connection]/ensure: created[0m
+2018-06-09 14:32:59,339 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Middleware[keystone_config]/Keystone_config[oslo_middleware/enable_proxy_headers_parsing]/ensure: created[0m
+2018-06-09 14:33:00,418 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Messaging::Notifications[keystone_config]/Keystone_config[oslo_messaging_notifications/driver]/ensure: created[0m
+2018-06-09 14:33:04,170 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Messaging::Notifications[keystone_config]/Keystone_config[oslo_messaging_notifications/topics]/ensure: created[0m
+2018-06-09 14:33:06,873 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Messaging::Rabbit[keystone_config]/Keystone_config[oslo_messaging_rabbit/rabbit_password]/ensure: created[0m
+2018-06-09 14:33:08,401 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Messaging::Rabbit[keystone_config]/Keystone_config[oslo_messaging_rabbit/rabbit_userid]/ensure: created[0m
+2018-06-09 14:33:09,894 INFO: [mNotice: /Stage[main]/Keystone/Oslo::Messaging::Rabbit[keystone_config]/Keystone_config[oslo_messaging_rabbit/rabbit_host]/ensure: created[0m
+2018-06-09 14:33:20,828 INFO: [mNotice: /Stage[main]/Apache/File[/etc/httpd/conf.d/00-nova-placement-api.conf.rpmsave]/ensure: removed[0m
+2018-06-09 14:33:20,870 INFO: [mNotice: /Stage[main]/Apache/File[/etc/httpd/conf.d/openstack-tripleo-ui.conf.rpmsave]/ensure: removed[0m
+2018-06-09 14:33:21,040 INFO: [mNotice: /Stage[main]/Nova::Wsgi::Apache_placement/File[/etc/httpd/conf.d/00-nova-placement-api.conf]/content: content changed '{md5}611e31d39e1635bfabc0aafc51b43d0b' to '{md5}612d455490cfecc4b51db6656ea39240'[0m
+2018-06-09 14:33:21,191 INFO: [mNotice: /Stage[main]/Tripleo::Ui/File[/etc/httpd/conf.d/openstack-tripleo-ui.conf]/content: content changed '{md5}0bb5ccf9a90544699ec07adf8028d99a' to '{md5}ec9dfa67b5507ef6f7a8bba6345bc07d'[0m
+2018-06-09 14:33:21,846 INFO: [mNotice: /Stage[main]/Keystone::Cors/Oslo::Cors[keystone_config]/Keystone_config[cors/allowed_origin]/ensure: created[0m
+2018-06-09 14:34:19,356 INFO: [mNotice: /Stage[main]/Nova::Conductor/Nova::Generic_service[conductor]/Package[nova-conductor]/ensure: created[0m
 </pre></body></html>
