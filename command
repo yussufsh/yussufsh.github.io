@@ -1,1 +1,1 @@
-ps -ef | grep 'openstack undercloud'
+none
