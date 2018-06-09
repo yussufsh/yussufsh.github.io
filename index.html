@@ -1253,4 +1253,60 @@
 2018-06-09 15:51:25,385 INFO: [mNotice: /Stage[main]/Swift::Storage::Container/Swift::Storage::Generic[container]/Package[swift-container]/ensure: created[0m
 2018-06-09 15:55:51,049 INFO: [mNotice: /Stage[main]/Swift::Storage::Object/Swift::Storage::Generic[object]/Package[swift-object]/ensure: created[0m
 2018-06-09 15:55:51,529 INFO: [mNotice: /Stage[main]/Swift::Deps/Anchor[swift::install::end]: Triggered 'refresh' from 5 events[0m
+2018-06-09 15:55:54,119 INFO: [mNotice: /Stage[main]/Swift/File[/var/lib/swift]/group: group changed 'root' to 'swift'[0m
+2018-06-09 15:55:55,114 INFO: [mNotice: /Stage[main]/Swift/File[/etc/swift/swift.conf]/owner: owner changed 'root' to 'swift'[0m
+2018-06-09 15:55:56,492 INFO: [mNotice: /Stage[main]/Swift/Swift_config[swift-hash/swift_hash_path_suffix]/value: value changed '%SWIFT_HASH_PATH_SUFFIX%' to '324069ec361561b46ccf43b84793e74419e49068'[0m
+2018-06-09 15:55:57,205 INFO: [mNotice: /Stage[main]/Swift/Swift_config[swift-constraints/max_header_size]/ensure: created[0m
+2018-06-09 15:55:57,721 INFO: [mNotice: /Stage[main]/Cinder::Deps/Anchor[cinder::service::end]: Triggered 'refresh' from 30 events[0m
+2018-06-09 15:55:58,870 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/bind_ip]/ensure: created[0m
+2018-06-09 15:55:59,570 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/workers]/value: value changed '8' to '2'[0m
+2018-06-09 15:56:00,414 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/log_name]/ensure: created[0m
+2018-06-09 15:56:01,024 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/log_facility]/ensure: created[0m
+2018-06-09 15:56:01,825 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/log_level]/ensure: created[0m
+2018-06-09 15:56:02,392 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/log_headers]/ensure: created[0m
+2018-06-09 15:56:03,016 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/log_address]/ensure: created[0m
+2018-06-09 15:56:04,490 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[pipeline:main/pipeline]/value: value changed 'catch_errors gatekeeper healthcheck proxy-logging cache container_sync bulk tempurl ratelimit copy container-quotas account-quotas slo dlo versioned_writes proxy-logging proxy-server' to 'catch_errors healthcheck proxy-logging cache ratelimit bulk tempurl formpost authtoken keystone staticweb proxy-logging proxy-server'[0m
+2018-06-09 15:56:05,383 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/set log_name]/ensure: created[0m
+2018-06-09 15:56:05,774 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/set log_facility]/ensure: created[0m
+2018-06-09 15:56:06,113 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/set log_level]/ensure: created[0m
+2018-06-09 15:56:06,510 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/set log_address]/ensure: created[0m
+2018-06-09 15:56:07,038 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/log_handoffs]/ensure: created[0m
+2018-06-09 15:56:07,413 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/allow_account_management]/value: value changed 'true' to 'True'[0m
+2018-06-09 15:56:07,897 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/account_autocreate]/value: value changed 'true' to 'True'[0m
+2018-06-09 15:56:08,733 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[app:proxy-server/node_timeout]/ensure: created[0m
+2018-06-09 15:56:09,147 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/cors_allow_origin]/ensure: created[0m
+2018-06-09 15:56:09,709 INFO: [mNotice: /Stage[main]/Swift::Proxy/Swift_proxy_config[DEFAULT/strict_cors_mode]/ensure: created[0m
+2018-06-09 15:56:11,920 INFO: [mNotice: /Stage[main]/Swift::Proxy::Bulk/Swift_proxy_config[filter:bulk/max_containers_per_extraction]/ensure: created[0m
+2018-06-09 15:56:12,344 INFO: [mNotice: /Stage[main]/Swift::Proxy::Bulk/Swift_proxy_config[filter:bulk/max_failed_extractions]/ensure: created[0m
+2018-06-09 15:56:12,686 INFO: [mNotice: /Stage[main]/Swift::Proxy::Bulk/Swift_proxy_config[filter:bulk/max_deletes_per_request]/ensure: created[0m
+2018-06-09 15:56:13,185 INFO: [mNotice: /Stage[main]/Swift::Proxy::Bulk/Swift_proxy_config[filter:bulk/yield_frequency]/ensure: created[0m
+2018-06-09 15:56:14,725 INFO: [mNotice: /Stage[main]/Swift::Proxy::Keystone/Swift_proxy_config[filter:keystone/reseller_prefix]/ensure: created[0m
+2018-06-09 15:56:15,318 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/File[/var/cache/swift]/mode: mode changed '0755' to '0700'[0m
+2018-06-09 15:56:15,697 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/log_name]/ensure: created[0m
+2018-06-09 15:56:16,198 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/signing_dir]/value: value changed '/tmp/keystone-signing-swift' to '/var/cache/swift'[0m
+2018-06-09 15:56:16,986 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/auth_uri]/ensure: created[0m
+2018-06-09 15:56:17,406 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/auth_url]/ensure: created[0m
+2018-06-09 15:56:17,832 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/auth_plugin]/ensure: created[0m
+2018-06-09 15:56:18,276 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/project_domain_id]/ensure: created[0m
+2018-06-09 15:56:18,735 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/user_domain_id]/ensure: created[0m
+2018-06-09 15:56:19,129 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/project_name]/ensure: created[0m
+2018-06-09 15:56:19,769 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/username]/ensure: created[0m
+2018-06-09 15:56:20,242 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/password]/ensure: created[0m
+2018-06-09 15:56:20,832 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/delay_auth_decision]/ensure: created[0m
+2018-06-09 15:56:21,762 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/cache]/ensure: created[0m
+2018-06-09 15:56:22,532 INFO: [mNotice: /Stage[main]/Swift::Proxy::Authtoken/Swift_proxy_config[filter:authtoken/include_service_catalog]/ensure: created[0m
+2018-06-09 15:56:23,443 INFO: [mNotice: /Stage[main]/Swift::Proxy::Staticweb/Swift_proxy_config[filter:staticweb/use]/ensure: created[0m
+2018-06-09 15:56:24,896 INFO: [mNotice: /Stage[main]/Swift::Proxy::Ratelimit/Swift_proxy_config[filter:ratelimit/clock_accuracy]/ensure: created[0m
+2018-06-09 15:56:25,392 INFO: [mNotice: /Stage[main]/Swift::Proxy::Ratelimit/Swift_proxy_config[filter:ratelimit/max_sleep_time_seconds]/ensure: created[0m
+2018-06-09 15:56:25,843 INFO: [mNotice: /Stage[main]/Swift::Proxy::Ratelimit/Swift_proxy_config[filter:ratelimit/log_sleep_time_seconds]/ensure: created[0m
+2018-06-09 15:56:26,220 INFO: [mNotice: /Stage[main]/Swift::Proxy::Ratelimit/Swift_proxy_config[filter:ratelimit/rate_buffer_seconds]/ensure: created[0m
+2018-06-09 15:56:26,711 INFO: [mNotice: /Stage[main]/Swift::Proxy::Ratelimit/Swift_proxy_config[filter:ratelimit/account_ratelimit]/ensure: created[0m
+2018-06-09 15:56:28,936 INFO: [mNotice: /Stage[main]/Swift::Proxy::Formpost/Swift_proxy_config[filter:formpost/use]/ensure: created[0m
+2018-06-09 15:57:50,806 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Create[object]/Exec[create_object]/returns: executed successfully[0m
+2018-06-09 15:58:22,164 INFO: [1;33mWarning: Unexpected line: Ring file /etc/swift/object.ring.gz not found, probably it hasn't been written yet[0m
+2018-06-09 15:58:41,334 INFO: [mNotice: /Stage[main]/Main/Ring_object_device[192.168.126.1:6000/1]/ensure: created[0m
+2018-06-09 15:59:03,127 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Create[account]/Exec[create_account]/returns: executed successfully[0m
+2018-06-09 15:59:24,258 INFO: [1;33mWarning: Unexpected line: Ring file /etc/swift/account.ring.gz not found, probably it hasn't been written yet[0m
+2018-06-09 15:59:43,423 INFO: [mNotice: /Stage[main]/Main/Ring_account_device[192.168.126.1:6002/1]/ensure: created[0m
+2018-06-09 16:00:18,107 INFO: [mNotice: /Stage[main]/Swift::Ringbuilder/Swift::Ringbuilder::Create[container]/Exec[create_container]/returns: executed successfully[0m
 </pre></body></html>
