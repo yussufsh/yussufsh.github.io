@@ -8506,4 +8506,142 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 18:35:17,960 INFO: dib-run-parts 10-puppet-stack-config-puppet-module completed
 2018-06-09 18:35:17,965 INFO: dib-run-parts Running /tmp/tmp7Irg8n/install.d/11-create-template-root
 2018-06-09 18:35:21,121 INFO: dib-run-parts 11-create-template-root                      34.667
+2018-06-09 18:35:22,676 INFO: ++ os-apply-config --print-templates
+2018-06-09 18:35:27,798 INFO: dib-run-parts 11-hiera-orc-install                          9.553
+2018-06-09 18:35:32,326 INFO: dib-run-parts 75-puppet-modules-package                     5.197
+2018-06-09 18:35:38,359 INFO: dib-run-parts 99-install-config-templates                  37.139
+2018-06-09 18:35:43,155 INFO: dib-run-parts 99-os-refresh-config-install-scripts         16.788
+2018-06-09 18:35:44,607 INFO: dib-run-parts
+2018-06-09 18:35:44,612 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-09 18:35:45,211 INFO: INFO: 2018-06-09 18:35:44,681 -- ############### End stdout/stderr logging ###############
+2018-06-09 18:35:45,553 INFO: INFO: 2018-06-09 18:35:45,442 --   Running hook post-install
+2018-06-09 18:35:45,900 INFO: INFO: 2018-06-09 18:35:45,891 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmpJmFn_c/post-install.d
+2018-06-09 18:35:46,909 INFO: INFO: 2018-06-09 18:35:46,898 -- Ending run of instack.
+2018-06-09 18:35:50,341 INFO: Instack completed successfully
+2018-06-09 18:35:50,427 INFO: Running os-refresh-config
+2018-06-09 18:36:18,808 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-09 18:36:18,872 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-09 18:36:19,774 INFO: [2018-06-09 18:36:19,629] (os-refresh-config) [ERROR] Could not lock /var/run/os-refresh-config.lock. [Errno 11] Resource temporarily unavailable
+2018-06-09 18:36:21,502 INFO: dib-run-parts 11-create-template-root completed
+2018-06-09 18:36:21,507 INFO: dib-run-parts Running /tmp/tmp7Irg8n/install.d/11-hiera-orc-install
+2018-06-09 18:36:21,867 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-09 18:36:22,332 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
+2018-06-09 18:36:24,243 INFO: + set -o pipefail
+2018-06-09 18:36:24,248 INFO: + mkdir -p /usr/libexec/os-refresh-config/configure.d/
+2018-06-09 18:36:25,180 INFO: ++ dirname /tmp/tmp7Irg8n/install.d/11-hiera-orc-install
+2018-06-09 18:36:25,902 INFO: + install -m 0755 -o root -g root /tmp/tmp7Irg8n/install.d/../10-hiera-disable /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-09 18:36:29,117 INFO: ++ dirname /tmp/tmp7Irg8n/install.d/11-hiera-orc-install
+2018-06-09 18:36:29,640 INFO: + install -m 0755 -o root -g root /tmp/tmp7Irg8n/install.d/../40-hiera-datafiles /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-09 18:36:31,537 INFO: dib-run-parts 11-hiera-orc-install completed
+2018-06-09 18:36:31,542 INFO: dib-run-parts Running /tmp/tmp7Irg8n/install.d/75-puppet-modules-package
+2018-06-09 18:36:33,359 INFO: + find /opt/stack/puppet-modules/ -mindepth 1
+2018-06-09 18:36:33,403 INFO: + read
+2018-06-09 18:36:34,396 INFO: + ln -f -s /usr/share/openstack-puppet/modules/aodh /usr/share/openstack-puppet/modules/apache /usr/share/openstack-puppet/modules/archive /usr/share/openstack-puppet/modules/auditd /usr/share/openstack-puppet/modules/barbican /usr/share/openstack-puppet/modules/cassandra /usr/share/openstack-puppet/modules/ceilometer /usr/share/openstack-puppet/modules/ceph /usr/share/openstack-puppet/modules/certmonger /usr/share/openstack-puppet/modules/cinder /usr/share/openstack-puppet/modules/collectd /usr/share/openstack-puppet/modules/concat /usr/share/openstack-puppet/modules/contrail /usr/share/openstack-puppet/modules/corosync /usr/share/openstack-puppet/modules/datacat /usr/share/openstack-puppet/modules/ec2api /usr/share/openstack-puppet/modules/elasticsearch /usr/share/openstack-puppet/modules/fdio /usr/share/openstack-puppet/modules/firewall /usr/share/openstack-puppet/modules/fluentd /usr/share/openstack-puppet/modules/git /usr/share/openstack-puppet/modules/glance /usr/share/openstack-puppet/modules/gnocchi /usr/share/openstack-puppet/modules/haproxy /usr/share/openstack-puppet/modules/heat /usr/share/openstack-puppet/modules/horizon /usr/share/openstack-puppet/modules/inifile /usr/share/openstack-puppet/modules/ipaclient /usr/share/openstack-puppet/modules/ironic /usr/share/openstack-puppet/modules/java /usr/share/openstack-puppet/modules/kafka /usr/share/openstack-puppet/modules/keepalived /usr/share/openstack-puppet/modules/keystone /usr/share/openstack-puppet/modules/kibana3 /usr/share/openstack-puppet/modules/kmod /usr/share/openstack-puppet/modules/manila /usr/share/openstack-puppet/modules/memcached /usr/share/openstack-puppet/modules/midonet /usr/share/openstack-puppet/modules/mistral /usr/share/openstack-puppet/modules/module-data /usr/share/openstack-puppet/modules/mysql /usr/share/openstack-puppet/modules/n1k_vsm /usr/share/openstack-puppet/modules/neutron /usr/share/openstack-puppet/modules/nova /usr/share/openstack-puppet/modules/nssdb /usr/share/openstack-puppet/modules/ntp /usr/share/openstack-puppet/modules/octavia /usr/share/openstack-puppet/modules/opendaylight /usr/share/openstack-puppet/modules/openstack_extras /usr/share/openstack-puppet/modules/openstacklib /usr/share/openstack-puppet/modules/oslo /usr/share/openstack-puppet/modules/ovn /usr/share/openstack-puppet/modules/pacemaker /usr/share/openstack-puppet/modules/panko /usr/share/openstack-puppet/modules/rabbitmq /usr/share/openstack-puppet/modules/redis /usr/share/openstack-puppet/modules/remote /usr/share/openstack-puppet/modules/rsync /usr/share/openstack-puppet/modules/sahara /usr/share/openstack-puppet/modules/sensu /usr/share/openstack-puppet/modules/snmp /usr/share/openstack-puppet/modules/ssh /usr/share/openstack-puppet/modules/staging /usr/share/openstack-puppet/modules/stdlib /usr/share/openstack-puppet/modules/swift /usr/share/openstack-puppet/modules/sysctl /usr/share/openstack-puppet/modules/systemd /usr/share/openstack-puppet/modules/tempest /usr/share/openstack-puppet/modules/timezone /usr/share/openstack-puppet/modules/tomcat /usr/share/openstack-puppet/modules/tripleo /usr/share/openstack-puppet/modules/trove /usr/share/openstack-puppet/modules/uchiwa /usr/share/openstack-puppet/modules/vcsrepo /usr/share/openstack-puppet/modules/veritas_hyperscale /usr/share/openstack-puppet/modules/vlan /usr/share/openstack-puppet/modules/vswitch /usr/share/openstack-puppet/modules/xinetd /usr/share/openstack-puppet/modules/zaqar /usr/share/openstack-puppet/modules/zookeeper /etc/puppet/modules/
+2018-06-09 18:36:35,979 INFO: dib-run-parts 75-puppet-modules-package completed
+2018-06-09 18:36:35,983 INFO: dib-run-parts Running /tmp/tmp7Irg8n/install.d/99-install-config-templates
+2018-06-09 18:36:38,484 INFO: ++ os-apply-config --print-templates
+2018-06-09 18:36:58,885 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-09 18:36:58,927 INFO: ++ dirname /tmp/tmp7Irg8n/install.d/99-install-config-templates
+2018-06-09 18:36:59,484 INFO: + TEMPLATE_SOURCE=/tmp/tmp7Irg8n/install.d/../os-apply-config
+2018-06-09 18:36:59,489 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-09 18:37:00,188 INFO: + '[' -d /tmp/tmp7Irg8n/install.d/../os-apply-config ']'
+2018-06-09 18:37:00,192 INFO: + rsync '--exclude=.*.swp' -Cr /tmp/tmp7Irg8n/install.d/../os-apply-config/ /usr/libexec/os-apply-config/templates/
+2018-06-09 18:37:02,578 INFO: dib-run-parts 99-install-config-templates completed
+2018-06-09 18:37:02,582 INFO: dib-run-parts Running /tmp/tmp7Irg8n/install.d/99-os-refresh-config-install-scripts
+2018-06-09 18:37:03,998 INFO: ++ os-refresh-config --print-base
+2018-06-09 18:37:13,501 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-09 18:37:13,539 INFO: ++ dirname /tmp/tmp7Irg8n/install.d/99-os-refresh-config-install-scripts
+2018-06-09 18:37:14,120 INFO: + SCRIPT_SOURCE=/tmp/tmp7Irg8n/install.d/../os-refresh-config
+2018-06-09 18:37:14,125 INFO: + rsync -r /tmp/tmp7Irg8n/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-09 18:37:16,325 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-09 18:37:16,352 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-09 18:37:16,356 INFO: dib-run-parts
+2018-06-09 18:37:16,923 INFO: dib-run-parts Target: install.d
+2018-06-09 18:37:16,926 INFO: dib-run-parts
+2018-06-09 18:37:16,929 INFO: dib-run-parts Script                                     Seconds
+2018-06-09 18:37:16,959 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-09 18:37:16,963 INFO: dib-run-parts
+2018-06-09 18:37:20,858 INFO: dib-run-parts 02-puppet-stack-config                      134.678
+2018-06-09 18:37:24,195 INFO: dib-run-parts 10-hiera-yaml-symlink                         4.470
+2018-06-09 18:37:26,111 INFO: dib-run-parts 10-puppet-stack-config-puppet-module          8.721
+2018-06-09 18:37:28,502 INFO: dib-run-parts 11-create-template-root                      61.951
+2018-06-09 18:37:30,968 INFO: dib-run-parts 11-hiera-orc-install                          8.631
+2018-06-09 18:37:33,005 INFO: dib-run-parts 75-puppet-modules-package                     3.421
+2018-06-09 18:37:34,934 INFO: dib-run-parts 99-install-config-templates                  25.530
+2018-06-09 18:37:37,003 INFO: dib-run-parts 99-os-refresh-config-install-scripts         13.074
+2018-06-09 18:37:38,141 INFO: dib-run-parts
+2018-06-09 18:37:38,146 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-09 18:37:38,277 INFO: INFO: 2018-06-09 18:37:38,161 -- ############### End stdout/stderr logging ###############
+2018-06-09 18:37:38,385 INFO: INFO: 2018-06-09 18:37:38,374 --   Running hook post-install
+2018-06-09 18:37:38,452 INFO: INFO: 2018-06-09 18:37:38,431 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmp7Irg8n/post-install.d
+2018-06-09 18:37:38,989 INFO: INFO: 2018-06-09 18:37:38,978 -- Ending run of instack.
+2018-06-09 18:37:40,680 INFO: Instack completed successfully
+2018-06-09 18:37:40,712 INFO: Running os-refresh-config
+2018-06-09 18:37:52,149 INFO: [2018-06-09 18:37:52,044] (os-refresh-config) [ERROR] Could not lock /var/run/os-refresh-config.lock. [Errno 11] Resource temporarily unavailable
+2018-06-09 18:37:53,299 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-09 18:37:53,829 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
+2018-06-09 18:38:05,200 INFO: [1;33mWarning: Scope(Class[Glance::Notify::Rabbitmq]): glance::notify::rabbitmq::rabbit_host, glance::notify::rabbitmq::rabbit_hosts, glance::notify::rabbitmq::rabbit_password, glance::notify::rabbitmq::rabbit_port, glance::notify::rabbitmq::rabbit_userid and glance::notify::rabbitmq::rabbit_virtual_host are deprecated. Please use glance::notify::rabbitmq::default_transport_url instead.[0m
+2018-06-09 18:38:09,276 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_database_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 18:38:09,283 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_slave_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 18:38:10,629 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/nova/manifests/init.pp", 557]:
+2018-06-09 18:38:10,634 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 18:38:20,588 INFO: [1;33mWarning: ModuleLoader: module 'cinder' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 18:38:20,593 INFO:    (file & line not available)[0m
+2018-06-09 18:38:32,308 INFO: [1;33mWarning: Unknown variable: 'until_complete_real'. at /etc/puppet/modules/nova/manifests/cron/archive_deleted_rows.pp:75:82[0m
+2018-06-09 18:38:34,516 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Array instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/nova/manifests/scheduler/filter.pp", 140]:["/etc/puppet/manifests/puppet-stack-config.pp", 404]
+2018-06-09 18:38:34,522 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 18:38:44,027 INFO: [1;33mWarning: Scope(Class[Neutron]): neutron::rabbit_host, neutron::rabbit_hosts, neutron::rabbit_password, neutron::rabbit_port, neutron::rabbit_user, neutron::rabbit_virtual_host and neutron::rpc_backend are deprecated. Please use neutron::default_transport_url instead.[0m
+2018-06-09 18:39:07,844 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Bool. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/swift/manifests/proxy.pp", 163]:["/etc/puppet/manifests/puppet-stack-config.pp", 444]
+2018-06-09 18:39:07,849 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 18:39:20,431 INFO: [1;33mWarning: Unknown variable: 'methods_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:100:56[0m
+2018-06-09 18:39:20,455 INFO: [1;33mWarning: Unknown variable: 'incoming_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:101:56[0m
+2018-06-09 18:39:20,473 INFO: [1;33mWarning: Unknown variable: 'incoming_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:102:56[0m
+2018-06-09 18:39:20,477 INFO: [1;33mWarning: Unknown variable: 'outgoing_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:103:56[0m
+2018-06-09 18:39:20,497 INFO: [1;33mWarning: Unknown variable: 'outgoing_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:104:56[0m
+2018-06-09 18:39:26,144 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the object storage server has changed from 6000 to 6200 and will be changed in a later release[0m
+2018-06-09 18:39:26,150 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the container storage server has changed from 6001 to 6201 and will be changed in a later release[0m
+2018-06-09 18:39:26,162 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the account storage server has changed from 6002 to 6202 and will be changed in a later release[0m
+2018-06-09 18:39:39,335 INFO: [1;33mWarning: Scope(Class[Heat]): heat::rabbit_host, heat::rabbit_hosts, heat::rabbit_password, heat::rabbit_port, heat::rabbit_userid, heat::rabbit_virtual_host and heat::rpc_backend are deprecated. Please use heat::default_transport_url instead.[0m
+2018-06-09 18:39:45,893 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Integer. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/heat/manifests/wsgi/apache_api_cfn.pp", 105]:["/etc/puppet/manifests/puppet-stack-config.pp", 506]
+2018-06-09 18:39:45,918 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 18:40:01,147 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_account'. at /etc/puppet/modules/ironic/manifests/glance.pp:106:30[0m
+2018-06-09 18:40:01,172 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_key'. at /etc/puppet/modules/ironic/manifests/glance.pp:107:35[0m
+2018-06-09 18:40:01,210 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_duration'. at /etc/puppet/modules/ironic/manifests/glance.pp:108:40[0m
+2018-06-09 18:40:03,772 INFO: [1;33mWarning: Unknown variable: '::ironic::api::neutron_url'. at /etc/puppet/modules/ironic/manifests/neutron.pp:58:29[0m
 </pre></body></html>
