@@ -1359,4 +1359,12 @@
 2018-06-09 16:11:46,216 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::db::end]: Triggered 'refresh' from 1 events[0m
 2018-06-09 16:11:46,256 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::dbsync::begin]: Triggered 'refresh' from 1 events[0m
 2018-06-09 16:14:04,037 INFO: [mNotice: /Stage[main]/Keystone::Db::Sync/Exec[keystone-manage db_sync]/returns: executed successfully[0m
+2018-06-09 16:15:13,376 INFO: [mNotice: /Stage[main]/Keystone::Db::Sync/Exec[keystone-manage db_sync]: Triggered 'refresh' from 3 events[0m
+2018-06-09 16:15:13,575 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::dbsync::end]: Triggered 'refresh' from 2 events[0m
+2018-06-09 16:16:48,381 INFO: [mNotice: /Stage[main]/Keystone/Exec[keystone-manage bootstrap]: Triggered 'refresh' from 1 events[0m
+2018-06-09 16:16:48,456 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::begin]: Triggered 'refresh' from 6 events[0m
+2018-06-09 16:16:48,511 INFO: [mNotice: /Stage[main]/Apache::Service/Service[httpd]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 16:16:48,516 INFO: [1;33mWarning: /Stage[main]/Apache::Service/Service[httpd]: Skipping because of failed dependencies[0m
+2018-06-09 16:16:48,553 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 16:16:48,557 INFO: [1;33mWarning: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Skipping because of failed dependencies[0m
 </pre></body></html>
