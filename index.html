@@ -618,4 +618,64 @@
 2018-06-09 12:10:36,973 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
 2018-06-09 12:10:37,092 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
 2018-06-09 12:14:57,417 INFO: [mNotice: /Stage[main]/Mysql::Server::Install/Package[mysql-server]/ensure: created[0m
+2018-06-09 12:15:29,103 INFO: [mNotice: /Stage[main]/Mysql::Server::Installdb/Mysql_datadir[/var/lib/mysql]/ensure: created[0m
+2018-06-09 12:17:53,442 INFO: [mNotice: /Stage[main]/Mysql::Server::Service/Service[mysqld]/ensure: ensure changed 'stopped' to 'running'[0m
+2018-06-09 12:17:54,564 INFO: [mNotice: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Triggered 'refresh' from 1 events[0m
+2018-06-09 12:18:06,734 INFO: [1;31mError: Failed to apply catalog: Execution of '/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT CONCAT(User, '@',Host) AS User FROM mysql.user' returned 1: ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)[0m
+2018-06-09 12:18:06,765 INFO: Changes:
+2018-06-09 12:18:06,769 INFO:             Total: 11
+2018-06-09 12:18:06,771 INFO: Events:
+2018-06-09 12:18:06,774 INFO:           Failure: 1
+2018-06-09 12:18:06,792 INFO:           Success: 11
+2018-06-09 12:18:06,795 INFO:             Total: 12
+2018-06-09 12:18:06,797 INFO: Resources:
+2018-06-09 12:18:06,815 INFO:            Failed: 1
+2018-06-09 12:18:06,818 INFO:         Restarted: 2
+2018-06-09 12:18:06,821 INFO:           Skipped: 4
+2018-06-09 12:18:06,824 INFO:             Total: 41
+2018-06-09 12:18:06,841 INFO:           Changed: 8
+2018-06-09 12:18:06,844 INFO:       Out of sync: 9
+2018-06-09 12:18:06,846 INFO: Time:
+2018-06-09 12:18:06,864 INFO:            Anchor: 0.00
+2018-06-09 12:18:06,867 INFO:             Total: 1524.21
+2018-06-09 12:18:06,869 INFO:          Last run: 1528546686
+2018-06-09 12:18:06,885 INFO:           Service: 239.95
+2018-06-09 12:18:06,889 INFO:           Package: 278.61
+2018-06-09 12:18:06,892 INFO:     Mysql datadir: 31.60
+2018-06-09 12:18:06,899 INFO:    Config retrieval: 426.05
+2018-06-09 12:18:06,901 INFO:    Rabbitmq plugin: 484.91
+2018-06-09 12:18:06,921 INFO:              Exec: 56.39
+2018-06-09 12:18:06,924 INFO:              File: 6.72
+2018-06-09 12:18:06,926 INFO: Version:
+2018-06-09 12:18:06,944 INFO:            Config: 1528545070
+2018-06-09 12:18:06,947 INFO:            Puppet: 4.8.2
+2018-06-09 12:18:09,788 INFO: + rc=1
+2018-06-09 12:18:09,808 INFO: + set -e
+2018-06-09 12:18:09,814 INFO: + echo 'puppet apply exited with exit code 1'
+2018-06-09 12:18:09,816 INFO: puppet apply exited with exit code 1
+2018-06-09 12:18:09,835 INFO: + '[' 1 '!=' 2 -a 1 '!=' 0 ']'
+2018-06-09 12:18:09,838 INFO: + exit 1
+2018-06-09 12:18:09,985 INFO: [2018-06-09 12:18:09,941] (os-refresh-config) [ERROR] during configure phase. [Command '['dib-run-parts', '/usr/libexec/os-refresh-config/configure.d']' returned non-zero exit status 1]
+2018-06-09 12:18:09,989 INFO: 
+2018-06-09 12:18:10,006 INFO: [2018-06-09 12:18:09,996] (os-refresh-config) [ERROR] Aborting...
+2018-06-09 12:18:10,220 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-09 12:18:10,271 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
 </pre></body></html>
