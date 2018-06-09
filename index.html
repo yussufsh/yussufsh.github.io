@@ -8644,4 +8644,27 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 18:40:01,172 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_key'. at /etc/puppet/modules/ironic/manifests/glance.pp:107:35[0m
 2018-06-09 18:40:01,210 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_duration'. at /etc/puppet/modules/ironic/manifests/glance.pp:108:40[0m
 2018-06-09 18:40:03,772 INFO: [1;33mWarning: Unknown variable: '::ironic::api::neutron_url'. at /etc/puppet/modules/ironic/manifests/neutron.pp:58:29[0m
+2018-06-09 18:41:00,689 INFO: [1;33mWarning: Scope(Class[Ironic::Inspector]): dnsmasq_ip_range is deprecated, replaced by dnsmasq_ip_subnets[0m
+2018-06-09 18:41:12,135 INFO: [1;33mWarning: ModuleLoader: module 'mistral' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 18:41:12,149 INFO:    (file & line not available)[0m
+2018-06-09 18:41:14,387 INFO: [1;33mWarning: Unknown variable: '::mistral::database_idle_timeout'. at /etc/puppet/modules/mistral/manifests/db.pp:57:40[0m
+2018-06-09 18:41:14,409 INFO: [1;33mWarning: Unknown variable: '::mistral::database_min_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:58:40[0m
+2018-06-09 18:41:14,429 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:59:40[0m
+2018-06-09 18:41:14,452 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_retries'. at /etc/puppet/modules/mistral/manifests/db.pp:60:40[0m
+2018-06-09 18:41:14,483 INFO: [1;33mWarning: Unknown variable: '::mistral::database_retry_interval'. at /etc/puppet/modules/mistral/manifests/db.pp:61:40[0m
+2018-06-09 18:41:14,503 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_overflow'. at /etc/puppet/modules/mistral/manifests/db.pp:62:40[0m
+2018-06-09 18:41:15,221 INFO: [1;33mWarning: Scope(Class[Mistral]): mistral::rabbit_host, mistral::rabbit_hosts, mistral::rabbit_password, mistral::rabbit_port, mistral::rabbit_userid, mistral::rabbit_virtual_host and mistral::rpc_backend are deprecated. Please use mistral::default_transport_url instead.[0m
+2018-06-09 18:41:25,461 INFO: [1;33mWarning: ModuleLoader: module 'zaqar' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 18:41:25,465 INFO:    (file & line not available)[0m
+2018-06-09 18:41:41,011 INFO: [1;33mWarning: ModuleLoader: module 'ssh' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 18:41:41,016 INFO:    (file & line not available)[0m
+2018-06-09 18:42:16,538 INFO: [1;33mWarning: ModuleLoader: module 'oslo' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 18:42:16,616 INFO:    (file & line not available)[0m
+2018-06-09 18:42:22,619 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[keystone_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 18:43:06,147 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_api_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 18:43:06,782 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_registry_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 18:43:13,622 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[neutron_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 18:43:17,610 INFO: [1;33mWarning: Scope(Neutron::Plugins::Ml2::Type_driver[local]): local type_driver is useful only for single-box, because it provides no connectivity between hosts[0m
+2018-06-09 18:43:29,742 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[heat_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 18:43:46,714 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[mistral_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
 </pre></body></html>
