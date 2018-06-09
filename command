@@ -1,1 +1,1 @@
-hostname
+ps -ef | grep 'openstack undercloud'
