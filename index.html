@@ -8730,4 +8730,71 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-09 20:51:08,117 INFO: [1;33mWarning: /Stage[main]/Apache::Service/Service[httpd]: Skipping because of failed dependencies[0m
 2018-06-09 20:51:08,148 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
 2018-06-09 20:51:08,166 INFO: [1;33mWarning: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Skipping because of failed dependencies[0m
+2018-06-09 20:55:32,710 INFO: [1;31mError: Failed to apply catalog: Command: 'openstack ["role", "list", "--quiet", "--format", "csv", []]' has been running for more than 40 seconds (tried 4, for a total of 170 seconds)[0m
+2018-06-09 20:55:33,142 INFO: Changes:
+2018-06-09 20:55:33,146 INFO:             Total: 12
+2018-06-09 20:55:33,148 INFO: Events:
+2018-06-09 20:55:33,201 INFO:           Failure: 1
+2018-06-09 20:55:33,205 INFO:           Success: 12
+2018-06-09 20:55:33,208 INFO:             Total: 13
+2018-06-09 20:55:33,211 INFO: Resources:
+2018-06-09 20:55:33,414 INFO:            Failed: 1
+2018-06-09 20:55:33,418 INFO:           Changed: 12
+2018-06-09 20:55:33,671 INFO:       Out of sync: 13
+2018-06-09 20:55:33,949 INFO:             Total: 2489
+2018-06-09 20:55:34,079 INFO:         Restarted: 37
+2018-06-09 20:55:34,140 INFO:           Skipped: 6
+2018-06-09 20:55:34,144 INFO: Time:
+2018-06-09 20:55:34,147 INFO:      Nova cell v2: 0.01
+2018-06-09 20:55:34,209 INFO:            Sysctl: 0.01
+2018-06-09 20:55:34,212 INFO:             Group: 0.02
+2018-06-09 20:55:34,215 INFO:    Neutron api config: 0.02
+2018-06-09 20:55:34,277 INFO:    Sysctl runtime: 0.03
+2018-06-09 20:55:34,280 INFO:         File line: 0.06
+2018-06-09 20:55:34,357 INFO:              Cron: 0.07
+2018-06-09 20:55:34,362 INFO:    Mysql database: 0.10
+2018-06-09 20:55:34,421 INFO:         Resources: 0.11
+2018-06-09 20:55:34,425 INFO:              User: 0.12
+2018-06-09 20:55:34,427 INFO:       Concat file: 0.13
+2018-06-09 20:55:34,483 INFO:    Glance swift config: 0.14
+2018-06-09 20:55:34,486 INFO:    Nova paste api ini: 0.22
+2018-06-09 20:55:34,488 INFO:      Swift config: 0.27
+2018-06-09 20:55:34,543 INFO:            Anchor: 0.42
+2018-06-09 20:55:34,546 INFO:     Mysql datadir: 0.55
+2018-06-09 20:55:34,549 INFO:    Concat fragment: 0.56
+2018-06-09 20:55:34,628 INFO:    Swift object expirer config: 0.57
+2018-06-09 20:55:34,633 INFO:        Mysql user: 0.63
+2018-06-09 20:55:34,635 INFO:    Neutron dhcp agent config: 0.68
+2018-06-09 20:55:34,678 INFO:    Neutron plugin ml2: 0.77
+2018-06-09 20:55:34,681 INFO:          Firewall: 0.86
+2018-06-09 20:55:34,684 INFO:    Neutron agent ovs: 0.92
+2018-06-09 20:55:34,691 INFO:              Exec: 1205.66
+2018-06-09 20:55:34,708 INFO:    Neutron config: 128.64
+2018-06-09 20:55:34,728 INFO:    Glance api config: 137.73
+2018-06-09 20:55:34,765 INFO:    Glance cache config: 14.20
+2018-06-09 20:55:34,786 INFO:          Last run: 1528577732
+2018-06-09 20:55:34,796 INFO:    Glance registry config: 16.93
+2018-06-09 20:55:34,842 INFO:    Config retrieval: 1608.57
+2018-06-09 20:55:34,865 INFO:       Heat config: 166.70
+2018-06-09 20:55:34,898 INFO:         Vs bridge: 2.20
+2018-06-09 20:55:34,924 INFO:     Ironic config: 200.91
+2018-06-09 20:55:34,961 INFO:            Augeas: 22.25
+2018-06-09 20:55:34,982 INFO:           Service: 233.78
+2018-06-09 20:55:35,002 INFO:    Mistral config: 3.22
+2018-06-09 20:55:35,035 INFO:    Ironic inspector config: 32.91
+2018-06-09 20:55:35,044 INFO:    Swift proxy config: 37.03
+2018-06-09 20:55:35,080 INFO:              File: 37.05
+2018-06-09 20:55:35,123 INFO:       Mysql grant: 37.33
+2018-06-09 20:55:35,161 INFO:    Ring object device: 37.52
+2018-06-09 20:55:35,164 INFO:      Zaqar config: 42.91
+2018-06-09 20:55:35,291 INFO:    Ring container device: 47.91
+2018-06-09 20:55:35,345 INFO:    Rabbitmq plugin: 513.95
+2018-06-09 20:55:35,349 INFO:    Ring account device: 52.82
+2018-06-09 20:55:35,352 INFO:             Total: 5375.11
+2018-06-09 20:55:35,409 INFO:       Nova config: 647.15
+2018-06-09 20:55:35,415 INFO:           Package: 68.56
+2018-06-09 20:55:35,418 INFO:    Keystone config: 71.90
+2018-06-09 20:55:35,471 INFO: Version:
+2018-06-09 20:55:35,475 INFO:            Config: 1528568572
+2018-06-09 20:55:35,478 INFO:            Puppet: 4.8.2
 </pre></body></html>
