@@ -617,4 +617,16 @@
 2018-06-09 13:16:13,871 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
 2018-06-09 13:16:14,115 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
 2018-06-09 13:16:14,120 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-09 13:21:48,278 INFO: [mNotice: /Stage[main]/Mysql::Server::Install/Package[mysql-server]/ensure: created[0m
+2018-06-09 13:22:04,439 INFO: [mNotice: /Stage[main]/Mysql::Server::Installdb/Mysql_datadir[/var/lib/mysql]/ensure: created[0m
+2018-06-09 13:24:34,852 INFO: [mNotice: /Stage[main]/Mysql::Server::Service/Service[mysqld]/ensure: ensure changed 'stopped' to 'running'[0m
+2018-06-09 13:24:35,982 INFO: [mNotice: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Triggered 'refresh' from 1 events[0m
+2018-06-09 13:24:44,351 INFO: [mNotice: /Stage[main]/Mysql::Server::Root_password/Mysql_user[root@localhost]/password_hash: defined 'password_hash' as '*496567C2E5F32E0D5808DDEEBCE8BBA444B00E2B'[0m
+2018-06-09 13:24:44,864 INFO: [mNotice: /Stage[main]/Mysql::Server::Root_password/File[/root/.my.cnf]/ensure: defined content as '{md5}6e01845d007fff2479f9eb74c14028ea'[0m
+2018-06-09 13:24:46,091 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_user[root@127.0.0.1]/ensure: removed[0m
+2018-06-09 13:24:47,197 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_user[root@::1]/ensure: removed[0m
+2018-06-09 13:24:47,808 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_user[@localhost]/ensure: removed[0m
+2018-06-09 13:24:48,252 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_user[root@under.persistent.co.in]/ensure: removed[0m
+2018-06-09 13:24:48,656 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_user[@under.persistent.co.in]/ensure: removed[0m
+2018-06-09 13:24:51,157 INFO: [mNotice: /Stage[main]/Mysql::Server::Account_security/Mysql_database[test]/ensure: removed[0m
 </pre></body></html>
