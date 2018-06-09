@@ -3252,3 +3252,732 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 
 #############################################################################
 
+2018-06-09 05:56:15,640 INFO: Logging to /home/stack/.instack/install-undercloud.log
+2018-06-09 05:56:18,279 INFO: Checking for a FQDN hostname...
+2018-06-09 05:56:22,048 INFO: Static hostname detected as under.persistent.co.in
+2018-06-09 05:56:24,064 INFO: Transient hostname detected as under.persistent.co.in
+2018-06-09 05:56:24,103 WARNING: Option "undercloud_public_vip" from group "DEFAULT" is deprecated. Use option "undercloud_public_host" from group "DEFAULT".
+2018-06-09 05:56:24,112 WARNING: Option "undercloud_admin_vip" from group "DEFAULT" is deprecated. Use option "undercloud_admin_host" from group "DEFAULT".
+2018-06-09 05:56:24,139 WARNING: Option "discovery_iprange" from group "DEFAULT" is deprecated. Use option "inspection_iprange" from group "DEFAULT".
+2018-06-09 05:56:27,278 INFO: Running yum clean all
+2018-06-09 05:56:37,289 INFO: Loaded plugins: fastestmirror
+2018-06-09 05:56:40,819 INFO: Cleaning repos: base custom epel extras updates
+2018-06-09 05:56:40,824 INFO: Cleaning up everything
+2018-06-09 05:56:40,827 INFO: Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+2018-06-09 05:56:41,943 INFO: Cleaning up list of fastest mirrors
+2018-06-09 05:56:42,471 INFO: yum-clean-all completed successfully
+2018-06-09 05:56:42,476 INFO: Running yum update
+2018-06-09 05:56:53,398 INFO: Loaded plugins: fastestmirror
+2018-06-09 05:57:01,051 INFO: Determining fastest mirrors
+2018-06-09 05:57:42,482 INFO:  * base: del-mirrors.extreme-ix.org
+2018-06-09 05:57:42,584 INFO:  * epel: del-mirrors.extreme-ix.org
+2018-06-09 05:57:42,639 INFO:  * extras: del-mirrors.extreme-ix.org
+2018-06-09 05:57:42,732 INFO:  * updates: del-mirrors.extreme-ix.org
+2018-06-09 06:01:23,672 INFO: No packages marked for update
+2018-06-09 06:01:25,618 INFO: yum-update completed successfully
+2018-06-09 06:01:33,850 INFO: Running instack
+2018-06-09 06:01:57,158 INFO: INFO: 2018-06-09 06:01:57,108 -- Starting run of instack
+2018-06-09 06:01:59,813 INFO: INFO: 2018-06-09 06:01:59,802 -- Using json file: /usr/share/instack-undercloud/json-files/centos-7-undercloud-packages.json
+2018-06-09 06:02:00,016 INFO: INFO: 2018-06-09 06:01:59,947 -- Running Installation
+2018-06-09 06:02:00,138 INFO: INFO: 2018-06-09 06:02:00,127 -- Initialized with elements path: /usr/share/tripleo-puppet-elements /usr/share/instack-undercloud /usr/share/tripleo-image-elements /usr/share/diskimage-builder/elements
+2018-06-09 06:02:01,183 INFO: WARNING: 2018-06-09 06:02:01,173 -- expand_dependencies() deprecated, use get_elements
+2018-06-09 06:02:03,553 INFO: INFO: 2018-06-09 06:02:03,543 -- List of all elements and dependencies: undercloud-install dib-python source-repositories install-types puppet-modules install-bin pip-manifest puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url pkg-map enable-packages-install puppet os-apply-config hiera package-installs
+2018-06-09 06:02:03,611 INFO: INFO: 2018-06-09 06:02:03,547 -- Excluding element pip-and-virtualenv
+2018-06-09 06:02:03,615 INFO: INFO: 2018-06-09 06:02:03,603 -- Excluding element pip-manifest
+2018-06-09 06:02:03,619 INFO: INFO: 2018-06-09 06:02:03,605 -- Excluding element package-installs
+2018-06-09 06:02:03,698 INFO: INFO: 2018-06-09 06:02:03,608 -- Excluding element pkg-map
+2018-06-09 06:02:03,761 INFO: INFO: 2018-06-09 06:02:03,722 -- Excluding element puppet
+2018-06-09 06:02:03,766 INFO: INFO: 2018-06-09 06:02:03,725 -- Excluding element cache-url
+2018-06-09 06:02:03,769 INFO: INFO: 2018-06-09 06:02:03,727 -- Excluding element dib-python
+2018-06-09 06:02:03,828 INFO: INFO: 2018-06-09 06:02:03,797 -- Excluding element install-bin
+2018-06-09 06:02:03,834 INFO: INFO: 2018-06-09 06:02:03,800 -- List of all elements and dependencies after excludes: undercloud-install source-repositories install-types puppet-modules puppet-stack-config os-refresh-config element-manifest manifests enable-packages-install os-apply-config hiera
+2018-06-09 06:02:31,289 INFO: INFO: 2018-06-09 06:02:31,267 --   Running hook extra-data
+2018-06-09 06:02:31,345 INFO: INFO: 2018-06-09 06:02:31,334 -- ############### Begin stdout/stderr logging ###############
+2018-06-09 06:02:37,216 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-09 06:02:38,669 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-09 06:02:38,676 INFO: ++ export 'IMAGE_ELEMENT=undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-09 06:02:38,723 INFO: ++ IMAGE_ELEMENT='undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-09 06:02:38,794 INFO: ++ export 'IMAGE_ELEMENT_YAML={cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-09 06:02:38,800 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-09 06:02:38,845 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-09 06:02:38,851 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-09 06:02:38,900 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-09 06:02:38,905 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-09 06:02:38,965 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-09 06:02:38,971 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-09 06:02:38,975 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-09 06:02:39,034 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-09 06:02:39,037 INFO: '
+2018-06-09 06:02:39,094 INFO: ++ IMAGE_ELEMENT_YAML='{cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-09 06:02:39,099 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-09 06:02:39,166 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-09 06:02:39,172 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-09 06:02:39,212 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-09 06:02:39,217 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-09 06:02:39,298 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-09 06:02:39,304 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-09 06:02:39,308 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-09 06:02:39,379 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-09 06:02:39,382 INFO: '
+2018-06-09 06:02:39,456 INFO: ++ export -f get_image_element_array
+2018-06-09 06:02:39,463 INFO: + set +o xtrace
+2018-06-09 06:02:39,514 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-09 06:02:40,138 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-09 06:02:40,142 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:02:40,145 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:02:40,186 INFO: + set +o xtrace
+2018-06-09 06:02:40,190 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-09 06:02:41,016 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-09 06:02:41,020 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-09 06:02:41,023 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-09 06:02:41,056 INFO: + set +o xtrace
+2018-06-09 06:02:41,061 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-09 06:02:41,820 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-09 06:02:41,824 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:02:41,827 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-09 06:02:41,854 INFO: ++ '[' package = source ']'
+2018-06-09 06:02:41,857 INFO: + set +o xtrace
+2018-06-09 06:02:41,899 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-09 06:02:42,684 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-09 06:02:42,688 INFO: ++ '[' -z '' ']'
+2018-06-09 06:02:42,691 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-09 06:02:42,725 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-09 06:02:42,728 INFO: + set +o xtrace
+2018-06-09 06:02:42,785 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/extra-data.d/../environment.d/14-manifests
+2018-06-09 06:02:43,795 INFO: + source /tmp/tmpImBKUf/extra-data.d/../environment.d/14-manifests
+2018-06-09 06:02:43,799 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-09 06:02:43,802 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-09 06:02:43,837 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-09 06:02:43,840 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-09 06:02:43,843 INFO: + set +o xtrace
+2018-06-09 06:02:43,898 INFO: dib-run-parts Running /tmp/tmpImBKUf/extra-data.d/10-install-git
+2018-06-09 06:02:45,863 INFO: + yum -y install git
+2018-06-09 06:03:05,206 INFO: Loaded plugins: fastestmirror
+2018-06-09 06:03:12,650 INFO: Loading mirror speeds from cached hostfile
+2018-06-09 06:03:12,940 INFO:  * base: del-mirrors.extreme-ix.org
+2018-06-09 06:03:12,980 INFO:  * epel: del-mirrors.extreme-ix.org
+2018-06-09 06:03:13,007 INFO:  * extras: del-mirrors.extreme-ix.org
+2018-06-09 06:03:13,028 INFO:  * updates: del-mirrors.extreme-ix.org
+2018-06-09 06:03:24,300 INFO: Package git-1.8.3.1-13.el7.x86_64 already installed and latest version
+2018-06-09 06:03:24,327 INFO: Nothing to do
+2018-06-09 06:03:25,303 INFO: dib-run-parts 10-install-git completed
+2018-06-09 06:03:25,312 INFO: dib-run-parts Running /tmp/tmpImBKUf/extra-data.d/20-manifest-dir
+2018-06-09 06:03:26,357 INFO: + set -eu
+2018-06-09 06:03:26,394 INFO: + set -o pipefail
+2018-06-09 06:03:26,399 INFO: + sudo mkdir -p /tmp/instack.XPHgFG/mnt//etc/dib-manifests
+2018-06-09 06:03:28,631 INFO: dib-run-parts 20-manifest-dir completed
+2018-06-09 06:03:28,636 INFO: dib-run-parts Running /tmp/tmpImBKUf/extra-data.d/75-inject-element-manifest
+2018-06-09 06:03:29,433 INFO: + set -eu
+2018-06-09 06:03:29,438 INFO: + set -o pipefail
+2018-06-09 06:03:29,441 INFO: + DIB_ELEMENT_MANIFEST_PATH=/etc/dib-manifests/dib-element-manifest
+2018-06-09 06:03:29,512 INFO: ++ dirname /etc/dib-manifests/dib-element-manifest
+2018-06-09 06:03:29,923 INFO: + sudo mkdir -p /tmp/instack.XPHgFG/mnt//etc/dib-manifests
+2018-06-09 06:03:33,136 INFO: + sudo /bin/bash -c 'echo undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs | tr '\'' '\'' '\''\n'\'' > /tmp/instack.XPHgFG/mnt//etc/dib-manifests/dib-element-manifest'
+2018-06-09 06:03:36,771 INFO: dib-run-parts 75-inject-element-manifest completed
+2018-06-09 06:03:36,776 INFO: dib-run-parts Running /tmp/tmpImBKUf/extra-data.d/98-source-repositories
+2018-06-09 06:03:40,083 INFO: Getting /root/.cache/image-create/source-repositories/repositories_flock: Sat Jun  9 06:03:39 UTC 2018 for /tmp/tmpImBKUf/source-repository-puppet-modules
+2018-06-09 06:03:41,370 INFO: (0001 / 0081)
+2018-06-09 06:03:42,598 INFO: puppetlabs-apache install type not set to source
+2018-06-09 06:03:42,636 INFO: (0002 / 0081)
+2018-06-09 06:03:43,691 INFO: puppet-aodh install type not set to source
+2018-06-09 06:03:43,727 INFO: (0003 / 0081)
+2018-06-09 06:03:45,220 INFO: puppet-auditd install type not set to source
+2018-06-09 06:03:45,299 INFO: (0004 / 0081)
+2018-06-09 06:03:46,956 INFO: puppet-barbican install type not set to source
+2018-06-09 06:03:46,991 INFO: (0005 / 0081)
+2018-06-09 06:03:48,106 INFO: puppet-cassandra install type not set to source
+2018-06-09 06:03:48,144 INFO: (0006 / 0081)
+2018-06-09 06:03:49,230 INFO: puppet-ceph install type not set to source
+2018-06-09 06:03:49,301 INFO: (0007 / 0081)
+2018-06-09 06:03:50,836 INFO: puppet-ceilometer install type not set to source
+2018-06-09 06:03:50,905 INFO: (0008 / 0081)
+2018-06-09 06:03:52,467 INFO: puppet-congress install type not set to source
+2018-06-09 06:03:52,504 INFO: (0009 / 0081)
+2018-06-09 06:03:53,525 INFO: puppet-gnocchi install type not set to source
+2018-06-09 06:03:53,562 INFO: (0010 / 0081)
+2018-06-09 06:03:54,634 INFO: puppet-certmonger install type not set to source
+2018-06-09 06:03:54,670 INFO: (0011 / 0081)
+2018-06-09 06:03:55,866 INFO: puppet-cinder install type not set to source
+2018-06-09 06:03:55,902 INFO: (0012 / 0081)
+2018-06-09 06:03:56,922 INFO: puppet-common install type not set to source
+2018-06-09 06:03:56,957 INFO: (0013 / 0081)
+2018-06-09 06:03:58,004 INFO: puppet-contrail install type not set to source
+2018-06-09 06:03:58,041 INFO: (0014 / 0081)
+2018-06-09 06:03:59,302 INFO: puppetlabs-concat install type not set to source
+2018-06-09 06:03:59,352 INFO: (0015 / 0081)
+2018-06-09 06:04:00,720 INFO: puppetlabs-firewall install type not set to source
+2018-06-09 06:04:00,759 INFO: (0016 / 0081)
+2018-06-09 06:04:01,815 INFO: puppet-glance install type not set to source
+2018-06-09 06:04:01,847 INFO: (0017 / 0081)
+2018-06-09 06:04:02,834 INFO: puppet-gluster install type not set to source
+2018-06-09 06:04:02,872 INFO: (0018 / 0081)
+2018-06-09 06:04:03,857 INFO: puppetlabs-haproxy install type not set to source
+2018-06-09 06:04:03,891 INFO: (0019 / 0081)
+2018-06-09 06:04:05,760 INFO: puppet-heat install type not set to source
+2018-06-09 06:04:05,825 INFO: (0020 / 0081)
+2018-06-09 06:04:07,661 INFO: puppet-healthcheck install type not set to source
+2018-06-09 06:04:07,700 INFO: (0021 / 0081)
+2018-06-09 06:04:08,733 INFO: puppet-horizon install type not set to source
+2018-06-09 06:04:08,779 INFO: (0022 / 0081)
+2018-06-09 06:04:10,210 INFO: puppetlabs-inifile install type not set to source
+2018-06-09 06:04:10,292 INFO: (0023 / 0081)
+2018-06-09 06:04:11,654 INFO: puppet-kafka install type not set to source
+2018-06-09 06:04:11,690 INFO: (0024 / 0081)
+2018-06-09 06:04:12,787 INFO: puppet-keystone install type not set to source
+2018-06-09 06:04:12,825 INFO: (0025 / 0081)
+2018-06-09 06:04:13,917 INFO: puppet-manila install type not set to source
+2018-06-09 06:04:13,954 INFO: (0026 / 0081)
+2018-06-09 06:04:15,124 INFO: puppet-memcached install type not set to source
+2018-06-09 06:04:15,164 INFO: (0027 / 0081)
+2018-06-09 06:04:16,318 INFO: puppet-mistral install type not set to source
+2018-06-09 06:04:16,355 INFO: (0028 / 0081)
+2018-06-09 06:04:17,424 INFO: puppetlabs-mongodb install type not set to source
+2018-06-09 06:04:17,459 INFO: (0029 / 0081)
+2018-06-09 06:04:18,855 INFO: puppetlabs-mysql install type not set to source
+2018-06-09 06:04:18,913 INFO: (0030 / 0081)
+2018-06-09 06:04:20,651 INFO: puppet-neutron install type not set to source
+2018-06-09 06:04:20,690 INFO: (0031 / 0081)
+2018-06-09 06:04:21,798 INFO: puppet-nova install type not set to source
+2018-06-09 06:04:21,832 INFO: (0032 / 0081)
+2018-06-09 06:04:22,989 INFO: puppet-octavia install type not set to source
+2018-06-09 06:04:23,030 INFO: (0033 / 0081)
+2018-06-09 06:04:24,685 INFO: puppet-oslo install type not set to source
+2018-06-09 06:04:24,784 INFO: (0034 / 0081)
+2018-06-09 06:04:26,432 INFO: puppet-nssdb install type not set to source
+2018-06-09 06:04:26,469 INFO: (0035 / 0081)
+2018-06-09 06:04:27,623 INFO: puppet-opendaylight install type not set to source
+2018-06-09 06:04:27,660 INFO: (0036 / 0081)
+2018-06-09 06:04:28,825 INFO: puppet-ovn install type not set to source
+2018-06-09 06:04:28,862 INFO: (0037 / 0081)
+2018-06-09 06:04:30,156 INFO: puppet-panko install type not set to source
+2018-06-09 06:04:30,195 INFO: (0038 / 0081)
+2018-06-09 06:04:31,353 INFO: puppet-puppet install type not set to source
+2018-06-09 06:04:31,388 INFO: (0039 / 0081)
+2018-06-09 06:04:32,652 INFO: puppetlabs-rabbitmq install type not set to source
+2018-06-09 06:04:32,703 INFO: (0040 / 0081)
+2018-06-09 06:04:34,071 INFO: puppet-redis install type not set to source
+2018-06-09 06:04:34,109 INFO: (0041 / 0081)
+2018-06-09 06:04:35,364 INFO: puppetlabs-rsync install type not set to source
+2018-06-09 06:04:35,401 INFO: (0042 / 0081)
+2018-06-09 06:04:36,571 INFO: puppet-sahara install type not set to source
+2018-06-09 06:04:36,608 INFO: (0043 / 0081)
+2018-06-09 06:04:37,819 INFO: sensu-puppet install type not set to source
+2018-06-09 06:04:37,869 INFO: (0044 / 0081)
+2018-06-09 06:04:39,614 INFO: puppet-tacker install type not set to source
+2018-06-09 06:04:39,675 INFO: (0045 / 0081)
+2018-06-09 06:04:41,603 INFO: puppet-trove install type not set to source
+2018-06-09 06:04:41,636 INFO: (0046 / 0081)
+2018-06-09 06:04:42,626 INFO: puppet-ssh install type not set to source
+2018-06-09 06:04:42,658 INFO: (0047 / 0081)
+2018-06-09 06:04:44,033 INFO: puppet-staging install type not set to source
+2018-06-09 06:04:44,100 INFO: (0048 / 0081)
+2018-06-09 06:04:45,422 INFO: puppetlabs-stdlib install type not set to source
+2018-06-09 06:04:45,456 INFO: (0049 / 0081)
+2018-06-09 06:04:46,574 INFO: puppet-swift install type not set to source
+2018-06-09 06:04:46,610 INFO: (0050 / 0081)
+2018-06-09 06:04:47,697 INFO: puppetlabs-sysctl install type not set to source
+2018-06-09 06:04:47,734 INFO: (0051 / 0081)
+2018-06-09 06:04:48,838 INFO: puppet-tempest install type not set to source
+2018-06-09 06:04:48,873 INFO: (0052 / 0081)
+2018-06-09 06:04:50,091 INFO: puppet-timezone install type not set to source
+2018-06-09 06:04:50,142 INFO: (0053 / 0081)
+2018-06-09 06:04:51,836 INFO: puppet-uchiwa install type not set to source
+2018-06-09 06:04:51,883 INFO: (0054 / 0081)
+2018-06-09 06:04:53,784 INFO: puppetlabs-vcsrepo install type not set to source
+2018-06-09 06:04:53,824 INFO: (0055 / 0081)
+2018-06-09 06:04:54,962 INFO: puppet-vlan install type not set to source
+2018-06-09 06:04:54,999 INFO: (0056 / 0081)
+2018-06-09 06:04:56,350 INFO: puppet-vswitch install type not set to source
+2018-06-09 06:04:56,389 INFO: (0057 / 0081)
+2018-06-09 06:04:57,617 INFO: puppetlabs-xinetd install type not set to source
+2018-06-09 06:04:57,659 INFO: (0058 / 0081)
+2018-06-09 06:04:59,382 INFO: puppet-zookeeper install type not set to source
+2018-06-09 06:04:59,425 INFO: (0059 / 0081)
+2018-06-09 06:05:00,794 INFO: puppet-openstacklib install type not set to source
+2018-06-09 06:05:00,839 INFO: (0060 / 0081)
+2018-06-09 06:05:02,145 INFO: puppet-module-keepalived install type not set to source
+2018-06-09 06:05:02,184 INFO: (0061 / 0081)
+2018-06-09 06:05:03,433 INFO: puppetlabs-ntp install type not set to source
+2018-06-09 06:05:03,467 INFO: (0062 / 0081)
+2018-06-09 06:05:04,536 INFO: puppet-snmp install type not set to source
+2018-06-09 06:05:04,574 INFO: (0063 / 0081)
+2018-06-09 06:05:05,888 INFO: puppet-tripleo install type not set to source
+2018-06-09 06:05:05,938 INFO: (0064 / 0081)
+2018-06-09 06:05:07,286 INFO: puppet-ironic install type not set to source
+2018-06-09 06:05:07,323 INFO: (0065 / 0081)
+2018-06-09 06:05:08,587 INFO: puppet-ipaclient install type not set to source
+2018-06-09 06:05:08,625 INFO: (0066 / 0081)
+2018-06-09 06:05:09,806 INFO: puppetlabs-corosync install type not set to source
+2018-06-09 06:05:09,841 INFO: (0067 / 0081)
+2018-06-09 06:05:11,331 INFO: puppet-pacemaker install type not set to source
+2018-06-09 06:05:11,379 INFO: (0068 / 0081)
+2018-06-09 06:05:12,931 INFO: puppet_aviator install type not set to source
+2018-06-09 06:05:12,997 INFO: (0069 / 0081)
+2018-06-09 06:05:15,445 INFO: puppet-openstack_extras install type not set to source
+2018-06-09 06:05:15,478 INFO: (0070 / 0081)
+2018-06-09 06:05:16,576 INFO: konstantin-fluentd install type not set to source
+2018-06-09 06:05:16,621 INFO: (0071 / 0081)
+2018-06-09 06:05:18,045 INFO: puppet-elasticsearch install type not set to source
+2018-06-09 06:05:18,078 INFO: (0072 / 0081)
+2018-06-09 06:05:19,200 INFO: puppet-kibana3 install type not set to source
+2018-06-09 06:05:19,233 INFO: (0073 / 0081)
+2018-06-09 06:05:20,721 INFO: puppetlabs-git install type not set to source
+2018-06-09 06:05:20,773 INFO: (0074 / 0081)
+2018-06-09 06:05:21,993 INFO: puppet-datacat install type not set to source
+2018-06-09 06:05:22,029 INFO: (0075 / 0081)
+2018-06-09 06:05:23,252 INFO: puppet-kmod install type not set to source
+2018-06-09 06:05:23,294 INFO: (0076 / 0081)
+2018-06-09 06:05:24,558 INFO: puppet-zaqar install type not set to source
+2018-06-09 06:05:24,592 INFO: (0077 / 0081)
+2018-06-09 06:05:26,529 INFO: puppet-ec2api install type not set to source
+2018-06-09 06:05:26,591 INFO: (0078 / 0081)
+2018-06-09 06:05:28,078 INFO: puppet-qdr install type not set to source
+2018-06-09 06:05:28,111 INFO: (0079 / 0081)
+2018-06-09 06:05:29,398 INFO: puppet-systemd install type not set to source
+2018-06-09 06:05:29,435 INFO: (0080 / 0081)
+2018-06-09 06:05:30,951 INFO: puppet-etcd install type not set to source
+2018-06-09 06:05:31,004 INFO: (0081 / 0081)
+2018-06-09 06:05:32,971 INFO: puppet-veritas_hyperscale install type not set to source
+2018-06-09 06:05:33,471 INFO: dib-run-parts 98-source-repositories completed
+2018-06-09 06:05:33,503 INFO: dib-run-parts Running /tmp/tmpImBKUf/extra-data.d/99-enable-install-types
+2018-06-09 06:05:34,503 INFO: + set -eu
+2018-06-09 06:05:34,508 INFO: + set -o pipefail
+2018-06-09 06:05:34,510 INFO: + declare -a SPECIFIED_ELEMS
+2018-06-09 06:05:34,536 INFO: + SPECIFIED_ELEMS[0]=
+2018-06-09 06:05:34,540 INFO: + PREFIX=DIB_INSTALLTYPE_
+2018-06-09 06:05:34,602 INFO: ++ env
+2018-06-09 06:05:34,645 INFO: ++ grep '^DIB_INSTALLTYPE_'
+2018-06-09 06:05:34,649 INFO: ++ cut -d= -f1
+2018-06-09 06:05:35,953 INFO: ++ echo ''
+2018-06-09 06:05:36,009 INFO: + INSTALL_TYPE_VARS=
+2018-06-09 06:05:36,031 INFO: ++ find /tmp/tmpImBKUf/install.d -maxdepth 1 -name '*-package-install' -type d
+2018-06-09 06:05:36,615 INFO: + default_install_type_dirs=/tmp/tmpImBKUf/install.d/puppet-modules-package-install
+2018-06-09 06:05:36,620 INFO: + for _install_dir in '$default_install_type_dirs'
+2018-06-09 06:05:36,623 INFO: + SUFFIX=-package-install
+2018-06-09 06:05:36,653 INFO: ++ basename /tmp/tmpImBKUf/install.d/puppet-modules-package-install
+2018-06-09 06:05:37,059 INFO: + _install_dir=puppet-modules-package-install
+2018-06-09 06:05:37,063 INFO: + INSTALLDIRPREFIX=puppet-modules
+2018-06-09 06:05:37,066 INFO: + found=0
+2018-06-09 06:05:37,095 INFO: + '[' 0 = 0 ']'
+2018-06-09 06:05:37,100 INFO: + pushd /tmp/tmpImBKUf/install.d
+2018-06-09 06:05:37,103 INFO: /tmp/tmpImBKUf/install.d /home/stack
+2018-06-09 06:05:37,131 INFO: + ln -sf puppet-modules-package-install/75-puppet-modules-package .
+2018-06-09 06:05:37,515 INFO: + popd
+2018-06-09 06:05:37,519 INFO: /home/stack
+2018-06-09 06:05:37,936 INFO: dib-run-parts 99-enable-install-types completed
+2018-06-09 06:05:37,965 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-09 06:05:37,970 INFO: dib-run-parts
+2018-06-09 06:05:38,363 INFO: dib-run-parts Target: extra-data.d
+2018-06-09 06:05:38,367 INFO: dib-run-parts
+2018-06-09 06:05:38,370 INFO: dib-run-parts Script                                     Seconds
+2018-06-09 06:05:38,383 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-09 06:05:38,408 INFO: dib-run-parts
+2018-06-09 06:05:41,692 INFO: dib-run-parts 10-install-git                               40.507
+2018-06-09 06:05:43,163 INFO: dib-run-parts 20-manifest-dir                               3.014
+2018-06-09 06:05:44,994 INFO: dib-run-parts 75-inject-element-manifest                    7.739
+2018-06-09 06:05:46,207 INFO: dib-run-parts 98-source-repositories                      116.099
+2018-06-09 06:05:48,502 INFO: dib-run-parts 99-enable-install-types                       3.993
+2018-06-09 06:05:48,864 INFO: dib-run-parts
+2018-06-09 06:05:48,869 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-09 06:05:48,925 INFO: INFO: 2018-06-09 06:05:48,884 -- ############### End stdout/stderr logging ###############
+2018-06-09 06:05:48,953 INFO: INFO: 2018-06-09 06:05:48,923 --   Running hook pre-install
+2018-06-09 06:05:48,979 INFO: INFO: 2018-06-09 06:05:48,967 --     Skipping hook pre-install, the hook directory doesn't exist at /tmp/tmpImBKUf/pre-install.d
+2018-06-09 06:05:48,983 INFO: INFO: 2018-06-09 06:05:48,971 --   Running hook install
+2018-06-09 06:05:49,010 INFO: INFO: 2018-06-09 06:05:49,001 -- ############### Begin stdout/stderr logging ###############
+2018-06-09 06:05:54,419 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/00-dib-v2-env
+2018-06-09 06:05:55,026 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/00-dib-v2-env
+2018-06-09 06:05:55,032 INFO: ++ export 'IMAGE_ELEMENT=undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-09 06:05:55,068 INFO: ++ IMAGE_ELEMENT='undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-09 06:05:55,074 INFO: ++ export 'IMAGE_ELEMENT_YAML={cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-09 06:05:55,086 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-09 06:05:55,090 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-09 06:05:55,117 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-09 06:05:55,122 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-09 06:05:55,136 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-09 06:05:55,141 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-09 06:05:55,166 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-09 06:05:55,171 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-09 06:05:55,211 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-09 06:05:55,215 INFO: '
+2018-06-09 06:05:55,252 INFO: ++ IMAGE_ELEMENT_YAML='{cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-09 06:05:55,257 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-09 06:05:55,284 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-09 06:05:55,289 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-09 06:05:55,293 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-09 06:05:55,322 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-09 06:05:55,327 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-09 06:05:55,362 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-09 06:05:55,427 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-09 06:05:55,430 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-09 06:05:55,472 INFO: '
+2018-06-09 06:05:55,475 INFO: ++ export -f get_image_element_array
+2018-06-09 06:05:55,514 INFO: + set +o xtrace
+2018-06-09 06:05:55,519 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/01-export-install-types.bash
+2018-06-09 06:05:55,991 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/01-export-install-types.bash
+2018-06-09 06:05:55,996 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:05:56,019 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:05:56,024 INFO: + set +o xtrace
+2018-06-09 06:05:56,027 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-09 06:05:56,666 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-09 06:05:56,671 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-09 06:05:56,674 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-09 06:05:56,690 INFO: + set +o xtrace
+2018-06-09 06:05:56,694 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-09 06:05:57,341 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-09 06:05:57,345 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-09 06:05:57,349 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-09 06:05:57,370 INFO: ++ '[' package = source ']'
+2018-06-09 06:05:57,373 INFO: + set +o xtrace
+2018-06-09 06:05:57,400 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-09 06:05:57,987 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-09 06:05:57,991 INFO: ++ '[' -z '' ']'
+2018-06-09 06:05:57,995 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-09 06:05:58,021 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-09 06:05:58,025 INFO: + set +o xtrace
+2018-06-09 06:05:58,045 INFO: dib-run-parts Sourcing environment file /tmp/tmpImBKUf/install.d/../environment.d/14-manifests
+2018-06-09 06:05:58,651 INFO: + source /tmp/tmpImBKUf/install.d/../environment.d/14-manifests
+2018-06-09 06:05:58,656 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-09 06:05:58,659 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-09 06:05:58,677 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-09 06:05:58,680 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-09 06:05:58,683 INFO: + set +o xtrace
+2018-06-09 06:05:58,710 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/02-puppet-stack-config
+2018-06-09 06:06:37,142 INFO: dib-run-parts 02-puppet-stack-config completed
+2018-06-09 06:06:37,147 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/10-hiera-yaml-symlink
+2018-06-09 06:06:38,667 INFO: + set -o pipefail
+2018-06-09 06:06:38,671 INFO: + ln -f -s /etc/puppet/hiera.yaml /etc/hiera.yaml
+2018-06-09 06:06:39,433 INFO: dib-run-parts 10-hiera-yaml-symlink completed
+2018-06-09 06:06:39,437 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/10-puppet-stack-config-puppet-module
+2018-06-09 06:06:40,232 INFO: + set -o pipefail
+2018-06-09 06:06:40,271 INFO: + mkdir -p /etc/puppet/manifests
+2018-06-09 06:06:40,743 INFO: ++ dirname /tmp/tmpImBKUf/install.d/10-puppet-stack-config-puppet-module
+2018-06-09 06:06:41,063 INFO: + cp /tmp/tmpImBKUf/install.d/../puppet-stack-config.pp /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-09 06:06:41,948 INFO: dib-run-parts 10-puppet-stack-config-puppet-module completed
+2018-06-09 06:06:41,952 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/11-create-template-root
+2018-06-09 06:06:43,002 INFO: ++ os-apply-config --print-templates
+2018-06-09 06:06:52,563 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-09 06:06:52,568 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-09 06:06:53,213 INFO: dib-run-parts 11-create-template-root completed
+2018-06-09 06:06:53,217 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/11-hiera-orc-install
+2018-06-09 06:06:54,677 INFO: + set -o pipefail
+2018-06-09 06:06:54,681 INFO: + mkdir -p /usr/libexec/os-refresh-config/configure.d/
+2018-06-09 06:06:55,806 INFO: ++ dirname /tmp/tmpImBKUf/install.d/11-hiera-orc-install
+2018-06-09 06:06:56,544 INFO: + install -m 0755 -o root -g root /tmp/tmpImBKUf/install.d/../10-hiera-disable /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-09 06:06:57,627 INFO: ++ dirname /tmp/tmpImBKUf/install.d/11-hiera-orc-install
+2018-06-09 06:06:58,022 INFO: + install -m 0755 -o root -g root /tmp/tmpImBKUf/install.d/../40-hiera-datafiles /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-09 06:06:59,440 INFO: dib-run-parts 11-hiera-orc-install completed
+2018-06-09 06:06:59,445 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/75-puppet-modules-package
+2018-06-09 06:07:00,459 INFO: + read
+2018-06-09 06:07:00,488 INFO: + find /opt/stack/puppet-modules/ -mindepth 1
+2018-06-09 06:07:01,188 INFO: + ln -f -s /usr/share/openstack-puppet/modules/aodh /usr/share/openstack-puppet/modules/apache /usr/share/openstack-puppet/modules/archive /usr/share/openstack-puppet/modules/auditd /usr/share/openstack-puppet/modules/barbican /usr/share/openstack-puppet/modules/cassandra /usr/share/openstack-puppet/modules/ceilometer /usr/share/openstack-puppet/modules/ceph /usr/share/openstack-puppet/modules/certmonger /usr/share/openstack-puppet/modules/cinder /usr/share/openstack-puppet/modules/collectd /usr/share/openstack-puppet/modules/concat /usr/share/openstack-puppet/modules/contrail /usr/share/openstack-puppet/modules/corosync /usr/share/openstack-puppet/modules/datacat /usr/share/openstack-puppet/modules/ec2api /usr/share/openstack-puppet/modules/elasticsearch /usr/share/openstack-puppet/modules/fdio /usr/share/openstack-puppet/modules/firewall /usr/share/openstack-puppet/modules/fluentd /usr/share/openstack-puppet/modules/git /usr/share/openstack-puppet/modules/glance /usr/share/openstack-puppet/modules/gnocchi /usr/share/openstack-puppet/modules/haproxy /usr/share/openstack-puppet/modules/heat /usr/share/openstack-puppet/modules/horizon /usr/share/openstack-puppet/modules/inifile /usr/share/openstack-puppet/modules/ipaclient /usr/share/openstack-puppet/modules/ironic /usr/share/openstack-puppet/modules/java /usr/share/openstack-puppet/modules/kafka /usr/share/openstack-puppet/modules/keepalived /usr/share/openstack-puppet/modules/keystone /usr/share/openstack-puppet/modules/kibana3 /usr/share/openstack-puppet/modules/kmod /usr/share/openstack-puppet/modules/manila /usr/share/openstack-puppet/modules/memcached /usr/share/openstack-puppet/modules/midonet /usr/share/openstack-puppet/modules/mistral /usr/share/openstack-puppet/modules/module-data /usr/share/openstack-puppet/modules/mysql /usr/share/openstack-puppet/modules/n1k_vsm /usr/share/openstack-puppet/modules/neutron /usr/share/openstack-puppet/modules/nova /usr/share/openstack-puppet/modules/nssdb /usr/share/openstack-puppet/modules/ntp /usr/share/openstack-puppet/modules/octavia /usr/share/openstack-puppet/modules/opendaylight /usr/share/openstack-puppet/modules/openstack_extras /usr/share/openstack-puppet/modules/openstacklib /usr/share/openstack-puppet/modules/oslo /usr/share/openstack-puppet/modules/ovn /usr/share/openstack-puppet/modules/pacemaker /usr/share/openstack-puppet/modules/panko /usr/share/openstack-puppet/modules/rabbitmq /usr/share/openstack-puppet/modules/redis /usr/share/openstack-puppet/modules/remote /usr/share/openstack-puppet/modules/rsync /usr/share/openstack-puppet/modules/sahara /usr/share/openstack-puppet/modules/sensu /usr/share/openstack-puppet/modules/snmp /usr/share/openstack-puppet/modules/ssh /usr/share/openstack-puppet/modules/staging /usr/share/openstack-puppet/modules/stdlib /usr/share/openstack-puppet/modules/swift /usr/share/openstack-puppet/modules/sysctl /usr/share/openstack-puppet/modules/systemd /usr/share/openstack-puppet/modules/tempest /usr/share/openstack-puppet/modules/timezone /usr/share/openstack-puppet/modules/tomcat /usr/share/openstack-puppet/modules/tripleo /usr/share/openstack-puppet/modules/trove /usr/share/openstack-puppet/modules/uchiwa /usr/share/openstack-puppet/modules/vcsrepo /usr/share/openstack-puppet/modules/veritas_hyperscale /usr/share/openstack-puppet/modules/vlan /usr/share/openstack-puppet/modules/vswitch /usr/share/openstack-puppet/modules/xinetd /usr/share/openstack-puppet/modules/zaqar /usr/share/openstack-puppet/modules/zookeeper /etc/puppet/modules/
+2018-06-09 06:07:01,981 INFO: dib-run-parts 75-puppet-modules-package completed
+2018-06-09 06:07:01,985 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/99-install-config-templates
+2018-06-09 06:07:02,889 INFO: ++ os-apply-config --print-templates
+2018-06-09 06:07:13,183 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-09 06:07:13,219 INFO: ++ dirname /tmp/tmpImBKUf/install.d/99-install-config-templates
+2018-06-09 06:07:13,560 INFO: + TEMPLATE_SOURCE=/tmp/tmpImBKUf/install.d/../os-apply-config
+2018-06-09 06:07:13,563 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-09 06:07:14,027 INFO: + '[' -d /tmp/tmpImBKUf/install.d/../os-apply-config ']'
+2018-06-09 06:07:14,032 INFO: + rsync '--exclude=.*.swp' -Cr /tmp/tmpImBKUf/install.d/../os-apply-config/ /usr/libexec/os-apply-config/templates/
+2018-06-09 06:07:15,968 INFO: dib-run-parts 99-install-config-templates completed
+2018-06-09 06:07:15,974 INFO: dib-run-parts Running /tmp/tmpImBKUf/install.d/99-os-refresh-config-install-scripts
+2018-06-09 06:07:17,127 INFO: ++ os-refresh-config --print-base
+2018-06-09 06:07:22,556 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-09 06:07:22,590 INFO: ++ dirname /tmp/tmpImBKUf/install.d/99-os-refresh-config-install-scripts
+2018-06-09 06:07:22,997 INFO: + SCRIPT_SOURCE=/tmp/tmpImBKUf/install.d/../os-refresh-config
+2018-06-09 06:07:23,002 INFO: + rsync -r /tmp/tmpImBKUf/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-09 06:07:25,140 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-09 06:07:25,161 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-09 06:07:25,165 INFO: dib-run-parts
+2018-06-09 06:07:25,571 INFO: dib-run-parts Target: install.d
+2018-06-09 06:07:25,575 INFO: dib-run-parts
+2018-06-09 06:07:25,579 INFO: dib-run-parts Script                                     Seconds
+2018-06-09 06:07:25,608 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-09 06:07:25,612 INFO: dib-run-parts
+2018-06-09 06:07:30,097 INFO: dib-run-parts 02-puppet-stack-config                       38.024
+2018-06-09 06:07:31,508 INFO: dib-run-parts 10-hiera-yaml-symlink                         1.499
+2018-06-09 06:07:32,950 INFO: dib-run-parts 10-puppet-stack-config-puppet-module          2.115
+2018-06-09 06:07:34,275 INFO: dib-run-parts 11-create-template-root                      10.842
+2018-06-09 06:07:35,566 INFO: dib-run-parts 11-hiera-orc-install                          5.861
+2018-06-09 06:07:37,188 INFO: dib-run-parts 75-puppet-modules-package                     2.104
+2018-06-09 06:07:38,603 INFO: dib-run-parts 99-install-config-templates                  13.474
+2018-06-09 06:07:40,795 INFO: dib-run-parts 99-os-refresh-config-install-scripts          8.677
+2018-06-09 06:07:41,518 INFO: dib-run-parts
+2018-06-09 06:07:41,523 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-09 06:07:41,568 INFO: INFO: 2018-06-09 06:07:41,531 -- ############### End stdout/stderr logging ###############
+2018-06-09 06:07:41,594 INFO: INFO: 2018-06-09 06:07:41,583 --   Running hook post-install
+2018-06-09 06:07:41,660 INFO: INFO: 2018-06-09 06:07:41,615 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmpImBKUf/post-install.d
+2018-06-09 06:07:41,869 INFO: INFO: 2018-06-09 06:07:41,856 -- Ending run of instack.
+2018-06-09 06:07:42,556 INFO: Instack completed successfully
+2018-06-09 06:07:42,560 INFO: Running os-refresh-config
+2018-06-09 06:07:49,173 INFO: [2018-06-09 06:07:49,132] (os-refresh-config) [INFO] Starting phase configure
+2018-06-09 06:07:52,613 INFO: dib-run-parts Sat Jun  9 06:07:52 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-09 06:07:53,434 INFO: + '[' -f /etc/puppet/hiera.yaml ']'
+2018-06-09 06:07:53,438 INFO: + grep yaml /etc/puppet/hiera.yaml
+2018-06-09 06:07:54,579 INFO: dib-run-parts Sat Jun  9 06:07:54 UTC 2018 10-hiera-disable completed
+2018-06-09 06:07:54,929 INFO: dib-run-parts Sat Jun  9 06:07:54 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/20-os-apply-config
+2018-06-09 06:08:06,397 INFO: [2018/06/09 06:08:06 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-09 06:08:06,776 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /etc/os-net-config/config.json
+2018-06-09 06:08:06,859 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /root/stackrc
+2018-06-09 06:08:06,896 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /root/tripleo-undercloud-passwords
+2018-06-09 06:08:06,933 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /etc/puppet/hiera.yaml
+2018-06-09 06:08:06,962 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /var/opt/undercloud-stack/masquerade
+2018-06-09 06:08:07,002 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /etc/puppet/hieradata/RedHat.yaml
+2018-06-09 06:08:07,025 INFO: [2018/06/09 06:08:06 AM] [INFO] writing /etc/puppet/hieradata/CentOS.yaml
+2018-06-09 06:08:07,029 INFO: [2018/06/09 06:08:07 AM] [INFO] writing /var/run/heat-config/heat-config
+2018-06-09 06:08:07,068 INFO: [2018/06/09 06:08:07 AM] [INFO] writing /etc/os-collect-config.conf
+2018-06-09 06:08:07,091 INFO: [2018/06/09 06:08:07 AM] [INFO] success
+2018-06-09 06:08:08,530 INFO: dib-run-parts Sat Jun  9 06:08:08 UTC 2018 20-os-apply-config completed
+2018-06-09 06:08:09,028 INFO: dib-run-parts Sat Jun  9 06:08:08 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/30-reload-keepalived
+2018-06-09 06:08:10,152 INFO: + systemctl is-enabled keepalived
+2018-06-09 06:08:11,512 INFO: disabled
+2018-06-09 06:08:12,781 INFO: dib-run-parts Sat Jun  9 06:08:12 UTC 2018 30-reload-keepalived completed
+2018-06-09 06:08:13,982 INFO: dib-run-parts Sat Jun  9 06:08:13 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-09 06:08:25,193 INFO: [2018/06/09 06:08:25 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-09 06:08:28,512 INFO: dib-run-parts Sat Jun  9 06:08:28 UTC 2018 40-hiera-datafiles completed
+2018-06-09 06:08:29,047 INFO: dib-run-parts Sat Jun  9 06:08:28 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/50-puppet-stack-config
+2018-06-09 06:08:30,676 INFO: + set -o pipefail
+2018-06-09 06:08:30,700 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-09 06:08:30,704 INFO: + set +e
+2018-06-09 06:08:30,708 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-09 06:12:56,118 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-09 06:12:59,568 INFO: [1;33mWarning: ModuleLoader: module 'openstacklib' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:12:59,573 INFO:    (file & line not available)[0m
+2018-06-09 06:13:10,100 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-09 06:13:20,635 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Ipv6 instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/rabbitmq/manifests/install/rabbitmqadmin.pp", 36]:["/etc/puppet/modules/rabbitmq/manifests/init.pp", 314]
+2018-06-09 06:13:20,667 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:13:27,116 INFO: [mNotice: Scope(Class[Tripleo::Firewall::Post]): At this stage, all network traffic is blocked.[0m
+2018-06-09 06:13:30,568 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Hash. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/tripleo/manifests/profile/base/database/mysql.pp", 97]:["/etc/puppet/manifests/puppet-stack-config.pp", 84]
+2018-06-09 06:13:30,573 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:13:32,509 INFO: [1;33mWarning: ModuleLoader: module 'mysql' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:13:32,516 INFO:    (file & line not available)[0m
+2018-06-09 06:13:42,523 INFO: [1;33mWarning: ModuleLoader: module 'keystone' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:13:42,547 INFO:    (file & line not available)[0m
+2018-06-09 06:13:58,877 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/db/mysql.pp", 63]:
+2018-06-09 06:13:58,883 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:14:00,121 INFO: [1;33mWarning: ModuleLoader: module 'glance' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:00,145 INFO:    (file & line not available)[0m
+2018-06-09 06:14:07,770 INFO: [1;33mWarning: ModuleLoader: module 'nova' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:07,774 INFO:    (file & line not available)[0m
+2018-06-09 06:14:13,636 INFO: [1;33mWarning: Unknown variable: '::nova::db::mysql_api::setup_cell0'. at /etc/puppet/modules/nova/manifests/db/mysql.pp:53:28[0m
+2018-06-09 06:14:15,308 INFO: [1;33mWarning: ModuleLoader: module 'neutron' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:15,313 INFO:    (file & line not available)[0m
+2018-06-09 06:14:39,096 INFO: [1;33mWarning: ModuleLoader: module 'heat' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:39,101 INFO:    (file & line not available)[0m
+2018-06-09 06:14:42,231 INFO: [1;33mWarning: ModuleLoader: module 'ironic' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:42,235 INFO:    (file & line not available)[0m
+2018-06-09 06:14:48,848 INFO: [1;33mWarning: ModuleLoader: module 'swift' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:14:48,852 INFO:    (file & line not available)[0m
+2018-06-09 06:15:01,415 INFO: [1;33mWarning: Scope(Class[Keystone]): keystone::rabbit_host, keystone::rabbit_hosts, keystone::rabbit_password, keystone::rabbit_port, keystone::rabbit_userid and keystone::rabbit_virtual_host are deprecated. Please use keystone::default_transport_url instead.[0m
+2018-06-09 06:15:01,541 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Pattern[]. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/init.pp", 806]:
+2018-06-09 06:15:01,546 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:16:06,285 INFO: [1;33mWarning: Scope(Class[Glance::Notify::Rabbitmq]): glance::notify::rabbitmq::rabbit_host, glance::notify::rabbitmq::rabbit_hosts, glance::notify::rabbitmq::rabbit_password, glance::notify::rabbitmq::rabbit_port, glance::notify::rabbitmq::rabbit_userid and glance::notify::rabbitmq::rabbit_virtual_host are deprecated. Please use glance::notify::rabbitmq::default_transport_url instead.[0m
+2018-06-09 06:16:10,921 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_database_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 06:16:10,927 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_slave_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-09 06:16:12,526 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/nova/manifests/init.pp", 557]:
+2018-06-09 06:16:12,531 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:16:22,411 INFO: [1;33mWarning: ModuleLoader: module 'cinder' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:16:22,415 INFO:    (file & line not available)[0m
+2018-06-09 06:16:34,116 INFO: [1;33mWarning: Unknown variable: 'until_complete_real'. at /etc/puppet/modules/nova/manifests/cron/archive_deleted_rows.pp:75:82[0m
+2018-06-09 06:16:36,076 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Array instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/nova/manifests/scheduler/filter.pp", 140]:["/etc/puppet/manifests/puppet-stack-config.pp", 404]
+2018-06-09 06:16:36,081 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:16:46,828 INFO: [1;33mWarning: Scope(Class[Neutron]): neutron::rabbit_host, neutron::rabbit_hosts, neutron::rabbit_password, neutron::rabbit_port, neutron::rabbit_user, neutron::rabbit_virtual_host and neutron::rpc_backend are deprecated. Please use neutron::default_transport_url instead.[0m
+2018-06-09 06:17:09,397 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Bool. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/swift/manifests/proxy.pp", 163]:["/etc/puppet/manifests/puppet-stack-config.pp", 444]
+2018-06-09 06:17:09,402 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:17:22,536 INFO: [1;33mWarning: Unknown variable: 'methods_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:100:56[0m
+2018-06-09 06:17:22,561 INFO: [1;33mWarning: Unknown variable: 'incoming_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:101:56[0m
+2018-06-09 06:17:22,584 INFO: [1;33mWarning: Unknown variable: 'incoming_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:102:56[0m
+2018-06-09 06:17:22,607 INFO: [1;33mWarning: Unknown variable: 'outgoing_remove_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:103:56[0m
+2018-06-09 06:17:22,612 INFO: [1;33mWarning: Unknown variable: 'outgoing_allow_headers_real'. at /etc/puppet/modules/swift/manifests/proxy/tempurl.pp:104:56[0m
+2018-06-09 06:17:27,648 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the object storage server has changed from 6000 to 6200 and will be changed in a later release[0m
+2018-06-09 06:17:27,669 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the container storage server has changed from 6001 to 6201 and will be changed in a later release[0m
+2018-06-09 06:17:27,674 INFO: [1;33mWarning: Scope(Class[Swift::Storage::All]): The default port for the account storage server has changed from 6002 to 6202 and will be changed in a later release[0m
+2018-06-09 06:17:38,101 INFO: [1;33mWarning: Scope(Class[Heat]): heat::rabbit_host, heat::rabbit_hosts, heat::rabbit_password, heat::rabbit_port, heat::rabbit_userid, heat::rabbit_virtual_host and heat::rpc_backend are deprecated. Please use heat::default_transport_url instead.[0m
+2018-06-09 06:17:45,278 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Integer. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/heat/manifests/wsgi/apache_api_cfn.pp", 105]:["/etc/puppet/manifests/puppet-stack-config.pp", 506]
+2018-06-09 06:17:45,284 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-09 06:18:00,215 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_account'. at /etc/puppet/modules/ironic/manifests/glance.pp:106:30[0m
+2018-06-09 06:18:00,241 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_key'. at /etc/puppet/modules/ironic/manifests/glance.pp:107:35[0m
+2018-06-09 06:18:00,274 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_duration'. at /etc/puppet/modules/ironic/manifests/glance.pp:108:40[0m
+2018-06-09 06:18:01,012 INFO: [1;33mWarning: Unknown variable: '::ironic::api::neutron_url'. at /etc/puppet/modules/ironic/manifests/neutron.pp:58:29[0m
+2018-06-09 06:18:18,098 INFO: [1;33mWarning: Scope(Class[Ironic::Inspector]): dnsmasq_ip_range is deprecated, replaced by dnsmasq_ip_subnets[0m
+2018-06-09 06:18:30,579 INFO: [1;33mWarning: ModuleLoader: module 'mistral' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:18:30,583 INFO:    (file & line not available)[0m
+2018-06-09 06:18:33,052 INFO: [1;33mWarning: Unknown variable: '::mistral::database_idle_timeout'. at /etc/puppet/modules/mistral/manifests/db.pp:57:40[0m
+2018-06-09 06:18:33,090 INFO: [1;33mWarning: Unknown variable: '::mistral::database_min_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:58:40[0m
+2018-06-09 06:18:33,127 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:59:40[0m
+2018-06-09 06:18:33,168 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_retries'. at /etc/puppet/modules/mistral/manifests/db.pp:60:40[0m
+2018-06-09 06:18:33,199 INFO: [1;33mWarning: Unknown variable: '::mistral::database_retry_interval'. at /etc/puppet/modules/mistral/manifests/db.pp:61:40[0m
+2018-06-09 06:18:33,222 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_overflow'. at /etc/puppet/modules/mistral/manifests/db.pp:62:40[0m
+2018-06-09 06:18:34,028 INFO: [1;33mWarning: Scope(Class[Mistral]): mistral::rabbit_host, mistral::rabbit_hosts, mistral::rabbit_password, mistral::rabbit_port, mistral::rabbit_userid, mistral::rabbit_virtual_host and mistral::rpc_backend are deprecated. Please use mistral::default_transport_url instead.[0m
+2018-06-09 06:18:43,643 INFO: [1;33mWarning: ModuleLoader: module 'zaqar' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:18:43,648 INFO:    (file & line not available)[0m
+2018-06-09 06:18:59,221 INFO: [1;33mWarning: ModuleLoader: module 'ssh' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:18:59,225 INFO:    (file & line not available)[0m
+2018-06-09 06:19:24,619 INFO: [1;33mWarning: ModuleLoader: module 'oslo' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-09 06:19:24,666 INFO:    (file & line not available)[0m
+2018-06-09 06:19:29,601 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[keystone_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:20:04,614 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_api_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:20:05,291 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[glance_registry_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:20:12,684 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[neutron_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:20:14,694 INFO: [1;33mWarning: Scope(Neutron::Plugins::Ml2::Type_driver[local]): local type_driver is useful only for single-box, because it provides no connectivity between hosts[0m
+2018-06-09 06:20:25,684 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[heat_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:20:39,278 INFO: [1;33mWarning: Scope(Oslo::Messaging::Rabbit[mistral_config]): The oslo_messaging rabbit_host, rabbit_hosts, rabbit_port, rabbit_userid, rabbit_password, rabbit_virtual_host parameters have been deprecated by the [DEFAULT]\transport_url. Please use oslo::messaging::default::transport_url instead.[0m
+2018-06-09 06:22:48,075 INFO: [mNotice: Compiled catalog for under.persistent.co.in in environment production in 601.15 seconds[0m
+2018-06-09 06:27:23,091 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[os-net-config]/returns: executed successfully[0m
+2018-06-09 06:27:23,917 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[trigger-keepalived-restart]: Triggered 'refresh' from 1 events[0m
+2018-06-09 06:35:48,479 INFO: [1;31mError: /Stage[main]/Rabbitmq/Rabbitmq_plugin[rabbitmq_management]: Could not evaluate: Command is still failing after 180 seconds expired![0m
+2018-06-09 06:35:50,116 INFO: [mNotice: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 06:35:50,515 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Skipping because of failed dependencies[0m
+2018-06-09 06:35:51,039 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 06:35:51,414 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Skipping because of failed dependencies[0m
+2018-06-09 06:35:51,832 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 06:35:51,837 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-09 06:35:52,196 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 06:35:52,202 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-09 06:52:26,716 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker/Augeas[docker-sysconfig-registry]/returns: executed successfully[0m
+2018-06-09 06:52:29,372 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker_registry/File_line[docker insecure registry]/ensure: created[0m
+2018-06-09 06:53:07,725 INFO: [mNotice: /Stage[main]/Tripleo::Profile::Base::Docker/Service[docker]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:16:08,582 INFO: [mNotice: /Stage[main]/Glance::Db::Sync/Exec[glance-manage db_sync]/returns: executed successfully[0m
+2018-06-09 07:16:08,652 INFO: [mNotice: /Stage[main]/Glance::Deps/Anchor[glance::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:17:04,621 INFO: [mNotice: /Stage[main]/Glance::Db::Metadefs/Exec[glance-manage db_load_metadefs]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:20:09,929 INFO: [mNotice: /Stage[main]/Nova::Db::Sync_api/Exec[nova-db-sync-api]/returns: executed successfully[0m
+2018-06-09 07:20:10,038 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::dbsync_api::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:20:10,149 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::cell_v2::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:20:10,254 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::db_online_data_migrations::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:23:30,996 INFO: [mNotice: /Stage[main]/Nova::Cell_v2::Map_cell0/Exec[nova-cell_v2-map_cell0]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:23:31,066 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::cell_v2::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:23:31,107 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::dbsync::begin]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:27:13,054 INFO: [mNotice: /Stage[main]/Nova::Db::Sync/Exec[nova-db-sync]/returns: executed successfully[0m
+2018-06-09 07:30:55,339 INFO: [mNotice: /Stage[main]/Nova::Db::Sync/Exec[nova-db-sync]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:30:55,380 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::dbsync::end]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:30:55,449 INFO: [mNotice: /Stage[main]/Nova::Deps/Anchor[nova::service::begin]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:39:51,905 INFO: [mNotice: /Stage[main]/Nova::Api/Nova::Generic_service[api]/Service[nova-api]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:43:33,438 INFO: [mNotice: /Stage[main]/Nova::Conductor/Nova::Generic_service[conductor]/Service[nova-conductor]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:48:20,476 INFO: [mNotice: /Stage[main]/Nova::Scheduler/Nova::Generic_service[scheduler]/Service[nova-scheduler]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:50:00,977 INFO: [mNotice: /Stage[main]/Neutron::Db::Sync/Exec[neutron-db-sync]/returns: executed successfully[0m
+2018-06-09 07:50:01,066 INFO: [mNotice: /Stage[main]/Neutron::Deps/Anchor[neutron::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:50:01,135 INFO: [mNotice: /Stage[main]/Neutron::Deps/Anchor[neutron::service::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:50:07,435 INFO: [mNotice: /Stage[main]/Neutron::Agents::Dhcp/Service[neutron-dhcp-service]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:50:19,339 INFO: [mNotice: /Stage[main]/Neutron::Agents::Ml2::Ovs/Service[neutron-ovs-agent-service]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:54:06,278 INFO: [mNotice: /Stage[main]/Neutron::Agents::Ml2::Ovs/Service[neutron-destroy-patch-ports-service]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:55:17,317 INFO: [mNotice: /Stage[main]/Heat::Db::Sync/Exec[heat-dbsync]/returns: executed successfully[0m
+2018-06-09 07:55:17,378 INFO: [mNotice: /Stage[main]/Heat::Deps/Anchor[heat::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:55:17,421 INFO: [mNotice: /Stage[main]/Heat::Deps/Anchor[heat::service::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:55:36,187 INFO: [mNotice: /Stage[main]/Heat::Api/Service[heat-api]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:55:39,341 INFO: [mNotice: /Stage[main]/Heat::Api_cfn/Service[heat-api-cfn]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:55:47,135 INFO: [mNotice: /Stage[main]/Heat::Engine/Service[heat-engine]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:57:25,610 INFO: [mNotice: /Stage[main]/Ironic::Db::Sync/Exec[ironic-dbsync]/returns: executed successfully[0m
+2018-06-09 07:57:25,676 INFO: [mNotice: /Stage[main]/Ironic::Deps/Anchor[ironic::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:57:25,739 INFO: [mNotice: /Stage[main]/Ironic::Deps/Anchor[ironic::db_online_data_migrations::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 07:58:51,923 INFO: [mNotice: /Stage[main]/Ironic::Db::Online_data_migrations/Exec[ironic-db-online-data-migrations]/returns: executed successfully[0m
+2018-06-09 07:59:56,399 INFO: [mNotice: /Stage[main]/Ironic::Db::Online_data_migrations/Exec[ironic-db-online-data-migrations]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:59:56,442 INFO: [mNotice: /Stage[main]/Ironic::Deps/Anchor[ironic::db_online_data_migrations::end]: Triggered 'refresh' from 2 events[0m
+2018-06-09 07:59:56,480 INFO: [mNotice: /Stage[main]/Ironic::Deps/Anchor[ironic::service::begin]: Triggered 'refresh' from 1 events[0m
+2018-06-09 08:00:01,665 INFO: [mNotice: /Stage[main]/Ironic::Api/Service[ironic-api]: Triggered 'refresh' from 1 events[0m
+2018-06-09 08:01:13,274 INFO: [mNotice: /Stage[main]/Ironic::Conductor/Service[ironic-conductor]: Triggered 'refresh' from 1 events[0m
+2018-06-09 08:01:13,642 INFO: [mNotice: /Stage[main]/Ironic::Deps/Anchor[ironic::service::end]: Triggered 'refresh' from 2 events[0m
+2018-06-09 08:06:10,234 INFO: [mNotice: /Stage[main]/Mistral::Db::Sync/Exec[mistral-db-sync]/returns: executed successfully[0m
+2018-06-09 08:07:35,400 INFO: [mNotice: /Stage[main]/Keystone::Db::Sync/Exec[keystone-manage db_sync]/returns: executed successfully[0m
+2018-06-09 08:07:35,448 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::dbsync::end]: Triggered 'refresh' from 1 events[0m
+2018-06-09 08:08:47,179 INFO: [mNotice: /Stage[main]/Keystone/Exec[keystone-manage bootstrap]: Triggered 'refresh' from 1 events[0m
+2018-06-09 08:08:47,226 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::begin]: Triggered 'refresh' from 2 events[0m
+2018-06-09 08:08:47,283 INFO: [mNotice: /Stage[main]/Apache::Service/Service[httpd]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 08:08:47,288 INFO: [1;33mWarning: /Stage[main]/Apache::Service/Service[httpd]: Skipping because of failed dependencies[0m
+2018-06-09 08:08:47,349 INFO: [mNotice: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-09 08:08:47,354 INFO: [1;33mWarning: /Stage[main]/Keystone::Deps/Anchor[keystone::service::end]: Skipping because of failed dependencies[0m
+2018-06-09 08:12:57,312 INFO: [1;31mError: Failed to apply catalog: Command: 'openstack ["role", "list", "--quiet", "--format", "csv", []]' has been running for more than 40 seconds (tried 4, for a total of 170 seconds)[0m
+2018-06-09 08:12:57,603 INFO: Changes:
+2018-06-09 08:12:57,608 INFO:             Total: 12
+2018-06-09 08:12:57,610 INFO: Events:
+2018-06-09 08:12:57,613 INFO:           Failure: 1
+2018-06-09 08:12:57,628 INFO:           Success: 12
+2018-06-09 08:12:57,631 INFO:             Total: 13
+2018-06-09 08:12:57,634 INFO: Resources:
+2018-06-09 08:12:57,678 INFO:            Failed: 1
+2018-06-09 08:12:57,681 INFO:           Changed: 12
+2018-06-09 08:12:57,684 INFO:       Out of sync: 13
+2018-06-09 08:12:57,729 INFO:             Total: 2489
+2018-06-09 08:12:57,732 INFO:         Restarted: 37
+2018-06-09 08:12:57,735 INFO:           Skipped: 6
+2018-06-09 08:12:57,779 INFO: Time:
+2018-06-09 08:12:57,783 INFO:      Nova cell v2: 0.01
+2018-06-09 08:12:57,786 INFO:            Sysctl: 0.01
+2018-06-09 08:12:57,835 INFO:    Sysctl runtime: 0.01
+2018-06-09 08:12:57,838 INFO:    Neutron api config: 0.02
+2018-06-09 08:12:57,884 INFO:         Resources: 0.02
+2018-06-09 08:12:57,888 INFO:             Group: 0.02
+2018-06-09 08:12:57,891 INFO:              Cron: 0.03
+2018-06-09 08:12:57,894 INFO:         File line: 0.05
+2018-06-09 08:12:57,940 INFO:    Glance swift config: 0.09
+2018-06-09 08:12:57,943 INFO:              User: 0.11
+2018-06-09 08:12:57,946 INFO:    Mysql database: 0.12
+2018-06-09 08:12:57,994 INFO:      Swift config: 0.15
+2018-06-09 08:12:57,998 INFO:    Nova paste api ini: 0.22
+2018-06-09 08:12:58,001 INFO:       Concat file: 0.22
+2018-06-09 08:12:58,057 INFO:    Swift object expirer config: 0.23
+2018-06-09 08:12:58,060 INFO:       Mysql grant: 0.32
+2018-06-09 08:12:58,063 INFO:     Mysql datadir: 0.34
+2018-06-09 08:12:58,106 INFO:        Mysql user: 0.49
+2018-06-09 08:12:58,110 INFO:    Concat fragment: 0.56
+2018-06-09 08:12:58,113 INFO:    Neutron plugin ml2: 0.57
+2018-06-09 08:12:58,116 INFO:    Neutron dhcp agent config: 0.62
+2018-06-09 08:12:58,209 INFO:          Firewall: 0.81
+2018-06-09 08:12:58,213 INFO:         Vs bridge: 1.55
+2018-06-09 08:12:58,215 INFO:    Mistral config: 1.86
+2018-06-09 08:12:58,290 INFO:    Glance api config: 101.70
+2018-06-09 08:12:58,294 INFO:              Exec: 1083.71
+2018-06-09 08:12:58,301 INFO:    Swift proxy config: 11.03
+2018-06-09 08:12:58,303 INFO:       Heat config: 114.72
+2018-06-09 08:12:58,397 INFO:            Anchor: 12.95
+2018-06-09 08:12:58,401 INFO:    Glance registry config: 14.09
+2018-06-09 08:12:58,404 INFO:          Last run: 1528531977
+2018-06-09 08:12:58,494 INFO:     Ironic config: 215.83
+2018-06-09 08:12:58,497 INFO:           Service: 225.46
+2018-06-09 08:12:58,500 INFO:    Ironic inspector config: 27.66
+2018-06-09 08:12:58,596 INFO:      Zaqar config: 36.68
+2018-06-09 08:12:58,599 INFO:    Neutron agent ovs: 4.66
+2018-06-09 08:12:58,674 INFO:             Total: 4182.29
+2018-06-09 08:12:58,678 INFO:            Augeas: 42.03
+2018-06-09 08:12:58,681 INFO:    Ring object device: 49.83
+2018-06-09 08:12:58,753 INFO:           Package: 49.90
+2018-06-09 08:12:58,757 INFO:    Rabbitmq plugin: 499.60
+2018-06-09 08:12:58,760 INFO:    Ring container device: 51.19
+2018-06-09 08:12:58,838 INFO:    Ring account device: 52.77
+2018-06-09 08:12:58,841 INFO:              File: 58.03
+2018-06-09 08:12:58,844 INFO:    Keystone config: 61.42
+2018-06-09 08:12:58,931 INFO:       Nova config: 646.86
+2018-06-09 08:12:58,934 INFO:    Glance cache config: 7.01
+2018-06-09 08:12:58,995 INFO:    Config retrieval: 714.82
+2018-06-09 08:12:58,999 INFO:    Neutron config: 91.92
+2018-06-09 08:12:59,002 INFO: Version:
+2018-06-09 08:12:59,086 INFO:            Config: 1528524770
+2018-06-09 08:12:59,090 INFO:            Puppet: 4.8.2
+2018-06-09 08:18:17,414 INFO: + rc=1
+2018-06-09 08:18:17,473 INFO: + set -e
+2018-06-09 08:18:17,530 INFO: + echo 'puppet apply exited with exit code 1'
+2018-06-09 08:18:17,560 INFO: puppet apply exited with exit code 1
+2018-06-09 08:18:17,590 INFO: + '[' 1 '!=' 2 -a 1 '!=' 0 ']'
+2018-06-09 08:18:17,595 INFO: + exit 1
+2018-06-09 08:18:18,196 INFO: [2018-06-09 08:18:18,021] (os-refresh-config) [ERROR] during configure phase. [Command '['dib-run-parts', '/usr/libexec/os-refresh-config/configure.d']' returned non-zero exit status 1]
+2018-06-09 08:18:18,201 INFO: 
+2018-06-09 08:18:18,362 INFO: [2018-06-09 08:18:18,336] (os-refresh-config) [ERROR] Aborting...
+2018-06-09 08:18:19,461 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-09 08:18:19,695 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
