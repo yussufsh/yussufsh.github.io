@@ -9099,4 +9099,219 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 06:00:22,584 INFO: (0074 / 0081)
 2018-06-10 06:00:30,919 INFO: puppet-datacat install type not set to source
 2018-06-10 06:00:31,119 INFO: (0075 / 0081)
+2018-06-10 06:00:38,987 INFO: puppet-kmod install type not set to source
+2018-06-10 06:00:39,134 INFO: (0076 / 0081)
+2018-06-10 06:00:43,807 INFO: puppet-zaqar install type not set to source
+2018-06-10 06:00:43,876 INFO: (0077 / 0081)
+2018-06-10 06:00:48,070 INFO: puppet-ec2api install type not set to source
+2018-06-10 06:00:48,133 INFO: (0078 / 0081)
+2018-06-10 06:00:52,120 INFO: puppet-qdr install type not set to source
+2018-06-10 06:00:52,203 INFO: (0079 / 0081)
+2018-06-10 06:00:56,667 INFO: puppet-systemd install type not set to source
+2018-06-10 06:00:56,740 INFO: (0080 / 0081)
+2018-06-10 06:01:00,453 INFO: puppet-etcd install type not set to source
+2018-06-10 06:01:00,512 INFO: (0081 / 0081)
+2018-06-10 06:01:05,717 INFO: puppet-veritas_hyperscale install type not set to source
+2018-06-10 06:01:11,024 INFO: dib-run-parts 98-source-repositories completed
+2018-06-10 06:01:11,030 INFO: dib-run-parts Running /tmp/tmpUa9YZn/extra-data.d/99-enable-install-types
+2018-06-10 06:01:16,952 INFO: + set -eu
+2018-06-10 06:01:16,957 INFO: + set -o pipefail
+2018-06-10 06:01:17,070 INFO: + declare -a SPECIFIED_ELEMS
+2018-06-10 06:01:17,073 INFO: + SPECIFIED_ELEMS[0]=
+2018-06-10 06:01:17,076 INFO: + PREFIX=DIB_INSTALLTYPE_
+2018-06-10 06:01:17,408 INFO: ++ env
+2018-06-10 06:01:17,457 INFO: ++ cut -d= -f1
+2018-06-10 06:01:17,460 INFO: ++ grep '^DIB_INSTALLTYPE_'
+2018-06-10 06:01:20,912 INFO: ++ echo ''
+2018-06-10 06:01:21,033 INFO: + INSTALL_TYPE_VARS=
+2018-06-10 06:01:21,126 INFO: ++ find /tmp/tmpUa9YZn/install.d -maxdepth 1 -name '*-package-install' -type d
+2018-06-10 06:01:24,550 INFO: + default_install_type_dirs=/tmp/tmpUa9YZn/install.d/puppet-modules-package-install
+2018-06-10 06:01:24,555 INFO: + for _install_dir in '$default_install_type_dirs'
+2018-06-10 06:01:24,633 INFO: + SUFFIX=-package-install
+2018-06-10 06:01:24,673 INFO: ++ basename /tmp/tmpUa9YZn/install.d/puppet-modules-package-install
+2018-06-10 06:01:28,139 INFO: + _install_dir=puppet-modules-package-install
+2018-06-10 06:01:28,652 INFO: + INSTALLDIRPREFIX=puppet-modules
+2018-06-10 06:01:28,656 INFO: + found=0
+2018-06-10 06:01:28,818 INFO: + '[' 0 = 0 ']'
+2018-06-10 06:01:28,821 INFO: + pushd /tmp/tmpUa9YZn/install.d
+2018-06-10 06:01:28,824 INFO: /tmp/tmpUa9YZn/install.d /home/stack/yussufsh.github.io
+2018-06-10 06:01:28,954 INFO: + ln -sf puppet-modules-package-install/75-puppet-modules-package .
+2018-06-10 06:01:29,607 INFO: + popd
+2018-06-10 06:01:29,611 INFO: /home/stack/yussufsh.github.io
+2018-06-10 06:01:30,588 INFO: dib-run-parts 99-enable-install-types completed
+2018-06-10 06:01:30,724 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-10 06:01:30,728 INFO: dib-run-parts
+2018-06-10 06:01:31,363 INFO: dib-run-parts Target: extra-data.d
+2018-06-10 06:01:31,367 INFO: dib-run-parts
+2018-06-10 06:01:31,475 INFO: dib-run-parts Script                                     Seconds
+2018-06-10 06:01:31,480 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-10 06:01:31,482 INFO: dib-run-parts
+2018-06-10 06:01:34,874 INFO: dib-run-parts 10-install-git                               24.293
+2018-06-10 06:01:36,338 INFO: dib-run-parts 20-manifest-dir                               3.127
+2018-06-10 06:01:37,137 INFO: dib-run-parts 75-inject-element-manifest                    9.259
+2018-06-10 06:01:38,092 INFO: dib-run-parts 98-source-repositories                      172.702
+2018-06-10 06:01:38,881 INFO: dib-run-parts 99-enable-install-types                      17.720
+2018-06-10 06:01:39,224 INFO: dib-run-parts
+2018-06-10 06:01:39,228 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-10 06:01:39,482 INFO: INFO: 2018-06-10 06:01:39,314 -- ############### End stdout/stderr logging ###############
+2018-06-10 06:01:39,596 INFO: INFO: 2018-06-10 06:01:39,534 --   Running hook pre-install
+2018-06-10 06:01:39,670 INFO: INFO: 2018-06-10 06:01:39,631 --     Skipping hook pre-install, the hook directory doesn't exist at /tmp/tmpUa9YZn/pre-install.d
+2018-06-10 06:01:39,712 INFO: INFO: 2018-06-10 06:01:39,656 --   Running hook install
+2018-06-10 06:01:39,716 INFO: INFO: 2018-06-10 06:01:39,704 -- ############### Begin stdout/stderr logging ###############
+2018-06-10 06:01:45,562 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/00-dib-v2-env
+2018-06-10 06:01:46,458 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/00-dib-v2-env
+2018-06-10 06:01:46,465 INFO: ++ export 'IMAGE_ELEMENT=undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 06:01:46,516 INFO: ++ IMAGE_ELEMENT='undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 06:01:46,521 INFO: ++ export 'IMAGE_ELEMENT_YAML={cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 06:01:46,524 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 06:01:46,642 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 06:01:46,645 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 06:01:46,727 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 06:01:46,732 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 06:01:46,787 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 06:01:46,790 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 06:01:46,863 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 06:01:46,866 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 06:01:46,868 INFO: '
+2018-06-10 06:01:46,908 INFO: ++ IMAGE_ELEMENT_YAML='{cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 06:01:46,912 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 06:01:46,965 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 06:01:46,968 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 06:01:46,971 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 06:01:47,036 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 06:01:47,039 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 06:01:47,093 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 06:01:47,097 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 06:01:47,099 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 06:01:47,154 INFO: '
+2018-06-10 06:01:47,157 INFO: ++ export -f get_image_element_array
+2018-06-10 06:01:47,159 INFO: + set +o xtrace
+2018-06-10 06:01:47,239 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/01-export-install-types.bash
+2018-06-10 06:01:47,243 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/01-export-install-types.bash
+2018-06-10 06:01:47,246 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 06:01:47,249 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 06:01:47,292 INFO: + set +o xtrace
+2018-06-10 06:01:47,295 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 06:01:47,671 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 06:01:47,675 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 06:01:47,677 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 06:01:47,679 INFO: + set +o xtrace
+2018-06-10 06:01:47,713 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 06:01:47,997 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 06:01:48,003 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 06:01:48,032 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-10 06:01:48,049 INFO: ++ '[' package = source ']'
+2018-06-10 06:01:48,052 INFO: + set +o xtrace
+2018-06-10 06:01:48,055 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 06:01:48,363 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 06:01:48,367 INFO: ++ '[' -z '' ']'
+2018-06-10 06:01:48,369 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 06:01:48,372 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 06:01:48,383 INFO: + set +o xtrace
+2018-06-10 06:01:48,386 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/install.d/../environment.d/14-manifests
+2018-06-10 06:01:48,653 INFO: + source /tmp/tmpUa9YZn/install.d/../environment.d/14-manifests
+2018-06-10 06:01:48,656 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 06:01:48,659 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 06:01:48,661 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 06:01:48,684 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 06:01:48,686 INFO: + set +o xtrace
+2018-06-10 06:01:48,692 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/02-puppet-stack-config
+2018-06-10 06:03:02,424 INFO: dib-run-parts 02-puppet-stack-config completed
+2018-06-10 06:03:02,428 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/10-hiera-yaml-symlink
+2018-06-10 06:03:03,052 INFO: + set -o pipefail
+2018-06-10 06:03:03,056 INFO: + ln -f -s /etc/puppet/hiera.yaml /etc/hiera.yaml
+2018-06-10 06:03:03,541 INFO: dib-run-parts 10-hiera-yaml-symlink completed
+2018-06-10 06:03:03,545 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 06:03:04,087 INFO: + set -o pipefail
+2018-06-10 06:03:04,091 INFO: + mkdir -p /etc/puppet/manifests
+2018-06-10 06:03:04,409 INFO: ++ dirname /tmp/tmpUa9YZn/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 06:03:04,612 INFO: + cp /tmp/tmpUa9YZn/install.d/../puppet-stack-config.pp /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 06:03:05,157 INFO: dib-run-parts 10-puppet-stack-config-puppet-module completed
+2018-06-10 06:03:05,162 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/11-create-template-root
+2018-06-10 06:03:05,908 INFO: ++ os-apply-config --print-templates
+2018-06-10 06:03:17,746 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-10 06:03:17,761 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-10 06:03:17,987 INFO: dib-run-parts 11-create-template-root completed
+2018-06-10 06:03:17,992 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/11-hiera-orc-install
+2018-06-10 06:03:18,238 INFO: + set -o pipefail
+2018-06-10 06:03:18,241 INFO: + mkdir -p /usr/libexec/os-refresh-config/configure.d/
+2018-06-10 06:03:18,384 INFO: ++ dirname /tmp/tmpUa9YZn/install.d/11-hiera-orc-install
+2018-06-10 06:03:18,458 INFO: + install -m 0755 -o root -g root /tmp/tmpUa9YZn/install.d/../10-hiera-disable /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-10 06:03:18,775 INFO: ++ dirname /tmp/tmpUa9YZn/install.d/11-hiera-orc-install
+2018-06-10 06:03:18,854 INFO: + install -m 0755 -o root -g root /tmp/tmpUa9YZn/install.d/../40-hiera-datafiles /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-10 06:03:19,220 INFO: dib-run-parts 11-hiera-orc-install completed
+2018-06-10 06:03:19,224 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/75-puppet-modules-package
+2018-06-10 06:03:19,494 INFO: + find /opt/stack/puppet-modules/ -mindepth 1
+2018-06-10 06:03:19,506 INFO: + read
+2018-06-10 06:03:19,730 INFO: + ln -f -s /usr/share/openstack-puppet/modules/aodh /usr/share/openstack-puppet/modules/apache /usr/share/openstack-puppet/modules/archive /usr/share/openstack-puppet/modules/auditd /usr/share/openstack-puppet/modules/barbican /usr/share/openstack-puppet/modules/cassandra /usr/share/openstack-puppet/modules/ceilometer /usr/share/openstack-puppet/modules/ceph /usr/share/openstack-puppet/modules/certmonger /usr/share/openstack-puppet/modules/cinder /usr/share/openstack-puppet/modules/collectd /usr/share/openstack-puppet/modules/concat /usr/share/openstack-puppet/modules/contrail /usr/share/openstack-puppet/modules/corosync /usr/share/openstack-puppet/modules/datacat /usr/share/openstack-puppet/modules/ec2api /usr/share/openstack-puppet/modules/elasticsearch /usr/share/openstack-puppet/modules/fdio /usr/share/openstack-puppet/modules/firewall /usr/share/openstack-puppet/modules/fluentd /usr/share/openstack-puppet/modules/git /usr/share/openstack-puppet/modules/glance /usr/share/openstack-puppet/modules/gnocchi /usr/share/openstack-puppet/modules/haproxy /usr/share/openstack-puppet/modules/heat /usr/share/openstack-puppet/modules/horizon /usr/share/openstack-puppet/modules/inifile /usr/share/openstack-puppet/modules/ipaclient /usr/share/openstack-puppet/modules/ironic /usr/share/openstack-puppet/modules/java /usr/share/openstack-puppet/modules/kafka /usr/share/openstack-puppet/modules/keepalived /usr/share/openstack-puppet/modules/keystone /usr/share/openstack-puppet/modules/kibana3 /usr/share/openstack-puppet/modules/kmod /usr/share/openstack-puppet/modules/manila /usr/share/openstack-puppet/modules/memcached /usr/share/openstack-puppet/modules/midonet /usr/share/openstack-puppet/modules/mistral /usr/share/openstack-puppet/modules/module-data /usr/share/openstack-puppet/modules/mysql /usr/share/openstack-puppet/modules/n1k_vsm /usr/share/openstack-puppet/modules/neutron /usr/share/openstack-puppet/modules/nova /usr/share/openstack-puppet/modules/nssdb /usr/share/openstack-puppet/modules/ntp /usr/share/openstack-puppet/modules/octavia /usr/share/openstack-puppet/modules/opendaylight /usr/share/openstack-puppet/modules/openstack_extras /usr/share/openstack-puppet/modules/openstacklib /usr/share/openstack-puppet/modules/oslo /usr/share/openstack-puppet/modules/ovn /usr/share/openstack-puppet/modules/pacemaker /usr/share/openstack-puppet/modules/panko /usr/share/openstack-puppet/modules/rabbitmq /usr/share/openstack-puppet/modules/redis /usr/share/openstack-puppet/modules/remote /usr/share/openstack-puppet/modules/rsync /usr/share/openstack-puppet/modules/sahara /usr/share/openstack-puppet/modules/sensu /usr/share/openstack-puppet/modules/snmp /usr/share/openstack-puppet/modules/ssh /usr/share/openstack-puppet/modules/staging /usr/share/openstack-puppet/modules/stdlib /usr/share/openstack-puppet/modules/swift /usr/share/openstack-puppet/modules/sysctl /usr/share/openstack-puppet/modules/systemd /usr/share/openstack-puppet/modules/tempest /usr/share/openstack-puppet/modules/timezone /usr/share/openstack-puppet/modules/tomcat /usr/share/openstack-puppet/modules/tripleo /usr/share/openstack-puppet/modules/trove /usr/share/openstack-puppet/modules/uchiwa /usr/share/openstack-puppet/modules/vcsrepo /usr/share/openstack-puppet/modules/veritas_hyperscale /usr/share/openstack-puppet/modules/vlan /usr/share/openstack-puppet/modules/vswitch /usr/share/openstack-puppet/modules/xinetd /usr/share/openstack-puppet/modules/zaqar /usr/share/openstack-puppet/modules/zookeeper /etc/puppet/modules/
+2018-06-10 06:03:20,046 INFO: dib-run-parts 75-puppet-modules-package completed
+2018-06-10 06:03:20,050 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/99-install-config-templates
+2018-06-10 06:03:20,308 INFO: ++ os-apply-config --print-templates
+2018-06-10 06:03:27,590 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-10 06:03:27,636 INFO: ++ dirname /tmp/tmpUa9YZn/install.d/99-install-config-templates
+2018-06-10 06:03:27,909 INFO: + TEMPLATE_SOURCE=/tmp/tmpUa9YZn/install.d/../os-apply-config
+2018-06-10 06:03:27,913 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-10 06:03:28,390 INFO: + '[' -d /tmp/tmpUa9YZn/install.d/../os-apply-config ']'
+2018-06-10 06:03:28,395 INFO: + rsync '--exclude=.*.swp' -Cr /tmp/tmpUa9YZn/install.d/../os-apply-config/ /usr/libexec/os-apply-config/templates/
+2018-06-10 06:03:29,997 INFO: dib-run-parts 99-install-config-templates completed
+2018-06-10 06:03:30,001 INFO: dib-run-parts Running /tmp/tmpUa9YZn/install.d/99-os-refresh-config-install-scripts
+2018-06-10 06:03:30,273 INFO: ++ os-refresh-config --print-base
+2018-06-10 06:03:32,678 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-10 06:03:32,700 INFO: ++ dirname /tmp/tmpUa9YZn/install.d/99-os-refresh-config-install-scripts
+2018-06-10 06:03:32,809 INFO: + SCRIPT_SOURCE=/tmp/tmpUa9YZn/install.d/../os-refresh-config
+2018-06-10 06:03:32,812 INFO: + rsync -r /tmp/tmpUa9YZn/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-10 06:03:33,353 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-10 06:03:33,375 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-10 06:03:33,378 INFO: dib-run-parts
+2018-06-10 06:03:33,494 INFO: dib-run-parts Target: install.d
+2018-06-10 06:03:33,497 INFO: dib-run-parts
+2018-06-10 06:03:33,500 INFO: dib-run-parts Script                                     Seconds
+2018-06-10 06:03:33,503 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-10 06:03:33,516 INFO: dib-run-parts
+2018-06-10 06:03:34,455 INFO: dib-run-parts 02-puppet-stack-config                       73.506
+2018-06-10 06:03:34,896 INFO: dib-run-parts 10-hiera-yaml-symlink                         0.834
+2018-06-10 06:03:35,289 INFO: dib-run-parts 10-puppet-stack-config-puppet-module          1.384
+2018-06-10 06:03:35,649 INFO: dib-run-parts 11-create-template-root                      12.598
+2018-06-10 06:03:36,218 INFO: dib-run-parts 11-hiera-orc-install                          1.117
+2018-06-10 06:03:36,560 INFO: dib-run-parts 75-puppet-modules-package                     0.712
+2018-06-10 06:03:36,890 INFO: dib-run-parts 99-install-config-templates                   9.820
+2018-06-10 06:03:37,369 INFO: dib-run-parts 99-os-refresh-config-install-scripts          3.229
+2018-06-10 06:03:37,507 INFO: dib-run-parts
+2018-06-10 06:03:37,510 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-10 06:03:37,541 INFO: INFO: 2018-06-10 06:03:37,517 -- ############### End stdout/stderr logging ###############
+2018-06-10 06:03:37,560 INFO: INFO: 2018-06-10 06:03:37,539 --   Running hook post-install
+2018-06-10 06:03:37,564 INFO: INFO: 2018-06-10 06:03:37,555 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmpUa9YZn/post-install.d
+2018-06-10 06:03:37,692 INFO: INFO: 2018-06-10 06:03:37,684 -- Ending run of instack.
+2018-06-10 06:03:38,074 INFO: Instack completed successfully
+2018-06-10 06:03:38,078 INFO: Running os-refresh-config
+2018-06-10 06:03:41,164 INFO: [2018-06-10 06:03:41,143] (os-refresh-config) [INFO] Starting phase configure
+2018-06-10 06:03:42,242 INFO: dib-run-parts Sun Jun 10 06:03:42 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-10 06:03:42,507 INFO: + '[' -f /etc/puppet/hiera.yaml ']'
+2018-06-10 06:03:42,520 INFO: + grep yaml /etc/puppet/hiera.yaml
+2018-06-10 06:03:43,405 INFO: dib-run-parts Sun Jun 10 06:03:43 UTC 2018 10-hiera-disable completed
+2018-06-10 06:03:43,558 INFO: dib-run-parts Sun Jun 10 06:03:43 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/20-os-apply-config
+2018-06-10 06:03:51,558 INFO: [2018/06/10 06:03:51 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-10 06:03:51,766 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /etc/os-net-config/config.json
+2018-06-10 06:03:51,799 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /root/stackrc
+2018-06-10 06:03:51,850 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /root/tripleo-undercloud-passwords
+2018-06-10 06:03:51,940 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /etc/puppet/hiera.yaml
+2018-06-10 06:03:51,974 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /var/opt/undercloud-stack/masquerade
+2018-06-10 06:03:52,008 INFO: [2018/06/10 06:03:51 AM] [INFO] writing /etc/puppet/hieradata/RedHat.yaml
+2018-06-10 06:03:52,042 INFO: [2018/06/10 06:03:52 AM] [INFO] writing /etc/puppet/hieradata/CentOS.yaml
+2018-06-10 06:03:52,048 INFO: [2018/06/10 06:03:52 AM] [INFO] writing /var/run/heat-config/heat-config
+2018-06-10 06:03:52,098 INFO: [2018/06/10 06:03:52 AM] [INFO] writing /etc/os-collect-config.conf
+2018-06-10 06:03:52,143 INFO: [2018/06/10 06:03:52 AM] [INFO] success
+2018-06-10 06:03:52,656 INFO: dib-run-parts Sun Jun 10 06:03:52 UTC 2018 20-os-apply-config completed
+2018-06-10 06:03:52,777 INFO: dib-run-parts Sun Jun 10 06:03:52 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/30-reload-keepalived
+2018-06-10 06:03:53,047 INFO: + systemctl is-enabled keepalived
+2018-06-10 06:03:53,619 INFO: disabled
+2018-06-10 06:03:53,897 INFO: dib-run-parts Sun Jun 10 06:03:53 UTC 2018 30-reload-keepalived completed
+2018-06-10 06:03:54,027 INFO: dib-run-parts Sun Jun 10 06:03:53 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-10 06:04:03,895 INFO: [2018/06/10 06:04:03 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-10 06:04:05,027 INFO: dib-run-parts Sun Jun 10 06:04:04 UTC 2018 40-hiera-datafiles completed
+2018-06-10 06:04:05,153 INFO: dib-run-parts Sun Jun 10 06:04:05 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/50-puppet-stack-config
+2018-06-10 06:04:05,458 INFO: + set -o pipefail
+2018-06-10 06:04:05,478 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 06:04:05,481 INFO: + set +e
+2018-06-10 06:04:05,495 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 </pre></body></html>
