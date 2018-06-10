@@ -11192,4 +11192,25 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 20:45:06,179 INFO: [mNotice: Compiled catalog for under.persistent.co.in in environment production in 6560.84 seconds[0m
 2018-06-10 21:34:40,960 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[os-net-config]/returns: executed successfully[0m
 2018-06-10 21:34:46,902 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[trigger-keepalived-restart]: Triggered 'refresh' from 1 events[0m
+2018-06-10 21:45:19,259 INFO: [1;31mError: /Stage[main]/Rabbitmq/Rabbitmq_plugin[rabbitmq_management]: Could not evaluate: Command is still failing after 180 seconds expired![0m
+2018-06-10 21:45:23,022 INFO: [mNotice: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 21:45:23,830 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Skipping because of failed dependencies[0m
+2018-06-10 21:45:27,066 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 21:45:27,918 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Skipping because of failed dependencies[0m
+2018-06-10 21:45:28,812 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 21:45:29,561 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-10 21:45:30,365 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 21:45:38,996 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-10 21:55:55,231 INFO: [1;31mError: Systemd start for mariadb failed!
+2018-06-10 21:56:07,244 INFO: journalctl log for mariadb:
+2018-06-10 21:56:10,322 INFO: -- No entries --
+2018-06-10 21:56:10,774 INFO: [0m
+2018-06-10 21:56:11,145 INFO: [1;31mError: /Stage[main]/Mysql::Server::Service/Service[mysqld]/ensure: change from stopped to running failed: Systemd start for mariadb failed!
+2018-06-10 21:56:11,972 INFO: journalctl log for mariadb:
+2018-06-10 21:56:12,937 INFO: -- No entries --
+2018-06-10 21:56:13,685 INFO: [0m
+2018-06-10 21:56:14,359 INFO: [mNotice: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Dependency Service[mysqld] has failures: true[0m
+2018-06-10 21:56:15,014 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Skipping because of failed dependencies[0m
+2018-06-10 21:56:15,406 INFO: [mNotice: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Dependency Service[mysqld] has failures: true[0m
+2018-06-10 21:56:16,217 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Skipping because of failed dependencies[0m
 </pre></body></html>
