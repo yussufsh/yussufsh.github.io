@@ -9399,4 +9399,13 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 06:19:29,514 INFO: [mNotice: Compiled catalog for under.persistent.co.in in environment production in 686.41 seconds[0m
 2018-06-10 06:26:23,182 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[os-net-config]/returns: executed successfully[0m
 2018-06-10 06:26:24,778 INFO: [mNotice: /Stage[setup]/Tripleo::Network::Os_net_config/Exec[trigger-keepalived-restart]: Triggered 'refresh' from 1 events[0m
+2018-06-10 06:34:52,851 INFO: [1;31mError: /Stage[main]/Rabbitmq/Rabbitmq_plugin[rabbitmq_management]: Could not evaluate: Command is still failing after 180 seconds expired![0m
+2018-06-10 06:34:55,987 INFO: [mNotice: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 06:34:55,993 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Service/Service[rabbitmq-server]: Skipping because of failed dependencies[0m
+2018-06-10 06:34:55,996 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 06:34:56,440 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Package[python]: Skipping because of failed dependencies[0m
+2018-06-10 06:34:56,443 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 06:34:56,864 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/Archive[rabbitmqadmin]: Skipping because of failed dependencies[0m
+2018-06-10 06:34:56,868 INFO: [mNotice: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Dependency Rabbitmq_plugin[rabbitmq_management] has failures: true[0m
+2018-06-10 06:34:57,274 INFO: [1;33mWarning: /Stage[main]/Rabbitmq::Install::Rabbitmqadmin/File[/usr/local/bin/rabbitmqadmin]: Skipping because of failed dependencies[0m
 </pre></body></html>
