@@ -11138,4 +11138,11 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 19:23:15,330 INFO: [1;33mWarning: Scope(Class[Keystone]): keystone::rabbit_host, keystone::rabbit_hosts, keystone::rabbit_password, keystone::rabbit_port, keystone::rabbit_userid and keystone::rabbit_virtual_host are deprecated. Please use keystone::default_transport_url instead.[0m
 2018-06-10 19:23:16,221 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Pattern[]. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/init.pp", 806]:
 2018-06-10 19:23:16,363 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-10 19:33:18,580 INFO: [1;33mWarning: Scope(Class[Glance::Notify::Rabbitmq]): glance::notify::rabbitmq::rabbit_host, glance::notify::rabbitmq::rabbit_hosts, glance::notify::rabbitmq::rabbit_password, glance::notify::rabbitmq::rabbit_port, glance::notify::rabbitmq::rabbit_userid and glance::notify::rabbitmq::rabbit_virtual_host are deprecated. Please use glance::notify::rabbitmq::default_transport_url instead.[0m
+2018-06-10 19:33:50,904 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_database_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-10 19:33:51,061 INFO: [1;33mWarning: Scope(Class[Nova::Db]): placement_slave_connection has no effect as of pike, and may be removed in a future release[0m
+2018-06-10 19:34:01,673 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Array. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/nova/manifests/init.pp", 557]:
+2018-06-10 19:34:01,810 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-10 19:35:35,691 INFO: [1;33mWarning: ModuleLoader: module 'cinder' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 19:35:36,052 INFO:    (file & line not available)[0m
 </pre></body></html>
