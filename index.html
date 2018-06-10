@@ -8847,4 +8847,256 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 05:52:54,224 INFO:  * epel: del-mirrors.extreme-ix.org
 2018-06-10 05:52:54,259 INFO:  * extras: mirror.nbrc.ac.in
 2018-06-10 05:52:54,281 INFO:  * updates: mirror.nbrc.ac.in
+2018-06-10 05:56:56,178 INFO: No packages marked for update
+2018-06-10 05:56:57,070 INFO: yum-update completed successfully
+2018-06-10 05:57:02,048 INFO: Running instack
+2018-06-10 05:57:15,215 INFO: INFO: 2018-06-10 05:57:15,176 -- Starting run of instack
+2018-06-10 05:57:16,629 INFO: INFO: 2018-06-10 05:57:16,616 -- Using json file: /usr/share/instack-undercloud/json-files/centos-7-undercloud-packages.json
+2018-06-10 05:57:16,707 INFO: INFO: 2018-06-10 05:57:16,676 -- Running Installation
+2018-06-10 05:57:16,729 INFO: INFO: 2018-06-10 05:57:16,720 -- Initialized with elements path: /usr/share/tripleo-puppet-elements /usr/share/instack-undercloud /usr/share/tripleo-image-elements /usr/share/diskimage-builder/elements
+2018-06-10 05:57:17,170 INFO: WARNING: 2018-06-10 05:57:17,162 -- expand_dependencies() deprecated, use get_elements
+2018-06-10 05:57:17,850 INFO: INFO: 2018-06-10 05:57:17,830 -- List of all elements and dependencies: undercloud-install dib-python source-repositories install-types puppet-modules install-bin pip-manifest puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url pkg-map enable-packages-install puppet os-apply-config hiera package-installs
+2018-06-10 05:57:17,854 INFO: INFO: 2018-06-10 05:57:17,839 -- Excluding element pip-and-virtualenv
+2018-06-10 05:57:17,856 INFO: INFO: 2018-06-10 05:57:17,842 -- Excluding element pip-manifest
+2018-06-10 05:57:17,866 INFO: INFO: 2018-06-10 05:57:17,844 -- Excluding element package-installs
+2018-06-10 05:57:17,890 INFO: INFO: 2018-06-10 05:57:17,876 -- Excluding element pkg-map
+2018-06-10 05:57:17,894 INFO: INFO: 2018-06-10 05:57:17,879 -- Excluding element puppet
+2018-06-10 05:57:17,897 INFO: INFO: 2018-06-10 05:57:17,881 -- Excluding element cache-url
+2018-06-10 05:57:17,900 INFO: INFO: 2018-06-10 05:57:17,883 -- Excluding element dib-python
+2018-06-10 05:57:17,926 INFO: INFO: 2018-06-10 05:57:17,906 -- Excluding element install-bin
+2018-06-10 05:57:17,930 INFO: INFO: 2018-06-10 05:57:17,909 -- List of all elements and dependencies after excludes: undercloud-install source-repositories install-types puppet-modules puppet-stack-config os-refresh-config element-manifest manifests enable-packages-install os-apply-config hiera
+2018-06-10 05:57:28,220 INFO: INFO: 2018-06-10 05:57:28,200 --   Running hook extra-data
+2018-06-10 05:57:28,240 INFO: INFO: 2018-06-10 05:57:28,233 -- ############### Begin stdout/stderr logging ###############
+2018-06-10 05:57:32,415 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-10 05:57:33,171 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-10 05:57:33,194 INFO: ++ export 'IMAGE_ELEMENT=undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 05:57:33,200 INFO: ++ IMAGE_ELEMENT='undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 05:57:33,233 INFO: ++ export 'IMAGE_ELEMENT_YAML={cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 05:57:33,237 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 05:57:33,240 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 05:57:33,262 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 05:57:33,266 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 05:57:33,270 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 05:57:33,317 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 05:57:33,321 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 05:57:33,349 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 05:57:33,353 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 05:57:33,356 INFO: '
+2018-06-10 05:57:33,401 INFO: ++ IMAGE_ELEMENT_YAML='{cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 05:57:33,405 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 05:57:33,408 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 05:57:33,446 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 05:57:33,450 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 05:57:33,535 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 05:57:33,540 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 05:57:33,544 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 05:57:33,585 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 05:57:33,588 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 05:57:33,646 INFO: '
+2018-06-10 05:57:33,650 INFO: ++ export -f get_image_element_array
+2018-06-10 05:57:33,653 INFO: + set +o xtrace
+2018-06-10 05:57:33,730 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-10 05:57:34,466 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-10 05:57:34,470 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 05:57:34,473 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 05:57:34,488 INFO: + set +o xtrace
+2018-06-10 05:57:34,493 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 05:57:35,102 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 05:57:35,106 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 05:57:35,109 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 05:57:35,119 INFO: + set +o xtrace
+2018-06-10 05:57:35,123 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 05:57:35,767 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 05:57:35,771 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 05:57:35,774 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-10 05:57:35,785 INFO: ++ '[' package = source ']'
+2018-06-10 05:57:35,788 INFO: + set +o xtrace
+2018-06-10 05:57:35,819 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 05:57:36,676 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 05:57:36,680 INFO: ++ '[' -z '' ']'
+2018-06-10 05:57:36,682 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 05:57:36,730 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 05:57:36,734 INFO: + set +o xtrace
+2018-06-10 05:57:36,737 INFO: dib-run-parts Sourcing environment file /tmp/tmpUa9YZn/extra-data.d/../environment.d/14-manifests
+2018-06-10 05:57:38,418 INFO: + source /tmp/tmpUa9YZn/extra-data.d/../environment.d/14-manifests
+2018-06-10 05:57:38,422 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 05:57:38,425 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 05:57:38,439 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 05:57:38,442 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 05:57:38,444 INFO: + set +o xtrace
+2018-06-10 05:57:38,447 INFO: dib-run-parts Running /tmp/tmpUa9YZn/extra-data.d/10-install-git
+2018-06-10 05:57:39,371 INFO: + yum -y install git
+2018-06-10 05:57:49,209 INFO: Loaded plugins: fastestmirror
+2018-06-10 05:57:52,430 INFO: Loading mirror speeds from cached hostfile
+2018-06-10 05:57:52,692 INFO:  * base: mirror.nbrc.ac.in
+2018-06-10 05:57:52,732 INFO:  * epel: del-mirrors.extreme-ix.org
+2018-06-10 05:57:52,772 INFO:  * extras: mirror.nbrc.ac.in
+2018-06-10 05:57:52,775 INFO:  * updates: mirror.nbrc.ac.in
+2018-06-10 05:58:02,191 INFO: Package git-1.8.3.1-13.el7.x86_64 already installed and latest version
+2018-06-10 05:58:02,195 INFO: Nothing to do
+2018-06-10 05:58:03,186 INFO: dib-run-parts 10-install-git completed
+2018-06-10 05:58:03,191 INFO: dib-run-parts Running /tmp/tmpUa9YZn/extra-data.d/20-manifest-dir
+2018-06-10 05:58:04,040 INFO: + set -eu
+2018-06-10 05:58:04,062 INFO: + set -o pipefail
+2018-06-10 05:58:04,067 INFO: + sudo mkdir -p /tmp/instack.zb5bx0/mnt//etc/dib-manifests
+2018-06-10 05:58:06,714 INFO: dib-run-parts 20-manifest-dir completed
+2018-06-10 05:58:06,718 INFO: dib-run-parts Running /tmp/tmpUa9YZn/extra-data.d/75-inject-element-manifest
+2018-06-10 05:58:07,785 INFO: + set -eu
+2018-06-10 05:58:07,789 INFO: + set -o pipefail
+2018-06-10 05:58:07,792 INFO: + DIB_ELEMENT_MANIFEST_PATH=/etc/dib-manifests/dib-element-manifest
+2018-06-10 05:58:07,870 INFO: ++ dirname /etc/dib-manifests/dib-element-manifest
+2018-06-10 05:58:08,210 INFO: + sudo mkdir -p /tmp/instack.zb5bx0/mnt//etc/dib-manifests
+2018-06-10 05:58:12,494 INFO: + sudo /bin/bash -c 'echo undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs | tr '\'' '\'' '\''\n'\'' > /tmp/instack.zb5bx0/mnt//etc/dib-manifests/dib-element-manifest'
+2018-06-10 05:58:16,770 INFO: dib-run-parts 75-inject-element-manifest completed
+2018-06-10 05:58:16,775 INFO: dib-run-parts Running /tmp/tmpUa9YZn/extra-data.d/98-source-repositories
+2018-06-10 05:58:21,515 INFO: Getting /root/.cache/image-create/source-repositories/repositories_flock: Sun Jun 10 05:58:21 UTC 2018 for /tmp/tmpUa9YZn/source-repository-puppet-modules
+2018-06-10 05:58:22,883 INFO: (0001 / 0081)
+2018-06-10 05:58:24,510 INFO: puppetlabs-apache install type not set to source
+2018-06-10 05:58:24,539 INFO: (0002 / 0081)
+2018-06-10 05:58:25,689 INFO: puppet-aodh install type not set to source
+2018-06-10 05:58:25,717 INFO: (0003 / 0081)
+2018-06-10 05:58:26,823 INFO: puppet-auditd install type not set to source
+2018-06-10 05:58:26,854 INFO: (0004 / 0081)
+2018-06-10 05:58:27,934 INFO: puppet-barbican install type not set to source
+2018-06-10 05:58:27,983 INFO: (0005 / 0081)
+2018-06-10 05:58:29,087 INFO: puppet-cassandra install type not set to source
+2018-06-10 05:58:29,132 INFO: (0006 / 0081)
+2018-06-10 05:58:30,367 INFO: puppet-ceph install type not set to source
+2018-06-10 05:58:30,396 INFO: (0007 / 0081)
+2018-06-10 05:58:31,344 INFO: puppet-ceilometer install type not set to source
+2018-06-10 05:58:31,372 INFO: (0008 / 0081)
+2018-06-10 05:58:32,295 INFO: puppet-congress install type not set to source
+2018-06-10 05:58:32,329 INFO: (0009 / 0081)
+2018-06-10 05:58:33,255 INFO: puppet-gnocchi install type not set to source
+2018-06-10 05:58:33,289 INFO: (0010 / 0081)
+2018-06-10 05:58:34,501 INFO: puppet-certmonger install type not set to source
+2018-06-10 05:58:34,533 INFO: (0011 / 0081)
+2018-06-10 05:58:35,827 INFO: puppet-cinder install type not set to source
+2018-06-10 05:58:35,858 INFO: (0012 / 0081)
+2018-06-10 05:58:36,917 INFO: puppet-common install type not set to source
+2018-06-10 05:58:36,944 INFO: (0013 / 0081)
+2018-06-10 05:58:38,261 INFO: puppet-contrail install type not set to source
+2018-06-10 05:58:38,313 INFO: (0014 / 0081)
+2018-06-10 05:58:40,403 INFO: puppetlabs-concat install type not set to source
+2018-06-10 05:58:40,449 INFO: (0015 / 0081)
+2018-06-10 05:58:41,816 INFO: puppetlabs-firewall install type not set to source
+2018-06-10 05:58:41,861 INFO: (0016 / 0081)
+2018-06-10 05:58:43,436 INFO: puppet-glance install type not set to source
+2018-06-10 05:58:43,470 INFO: (0017 / 0081)
+2018-06-10 05:58:46,043 INFO: puppet-gluster install type not set to source
+2018-06-10 05:58:46,133 INFO: (0018 / 0081)
+2018-06-10 05:58:47,632 INFO: puppetlabs-haproxy install type not set to source
+2018-06-10 05:58:47,673 INFO: (0019 / 0081)
+2018-06-10 05:58:49,106 INFO: puppet-heat install type not set to source
+2018-06-10 05:58:49,222 INFO: (0020 / 0081)
+2018-06-10 05:58:51,206 INFO: puppet-healthcheck install type not set to source
+2018-06-10 05:58:51,235 INFO: (0021 / 0081)
+2018-06-10 05:58:52,672 INFO: puppet-horizon install type not set to source
+2018-06-10 05:58:52,713 INFO: (0022 / 0081)
+2018-06-10 05:58:53,921 INFO: puppetlabs-inifile install type not set to source
+2018-06-10 05:58:53,953 INFO: (0023 / 0081)
+2018-06-10 05:58:55,186 INFO: puppet-kafka install type not set to source
+2018-06-10 05:58:55,213 INFO: (0024 / 0081)
+2018-06-10 05:58:56,400 INFO: puppet-keystone install type not set to source
+2018-06-10 05:58:56,433 INFO: (0025 / 0081)
+2018-06-10 05:58:57,560 INFO: puppet-manila install type not set to source
+2018-06-10 05:58:57,589 INFO: (0026 / 0081)
+2018-06-10 05:58:58,754 INFO: puppet-memcached install type not set to source
+2018-06-10 05:58:58,783 INFO: (0027 / 0081)
+2018-06-10 05:59:00,036 INFO: puppet-mistral install type not set to source
+2018-06-10 05:59:00,082 INFO: (0028 / 0081)
+2018-06-10 05:59:01,210 INFO: puppetlabs-mongodb install type not set to source
+2018-06-10 05:59:01,238 INFO: (0029 / 0081)
+2018-06-10 05:59:02,339 INFO: puppetlabs-mysql install type not set to source
+2018-06-10 05:59:02,368 INFO: (0030 / 0081)
+2018-06-10 05:59:03,630 INFO: puppet-neutron install type not set to source
+2018-06-10 05:59:03,659 INFO: (0031 / 0081)
+2018-06-10 05:59:04,892 INFO: puppet-nova install type not set to source
+2018-06-10 05:59:04,928 INFO: (0032 / 0081)
+2018-06-10 05:59:06,167 INFO: puppet-octavia install type not set to source
+2018-06-10 05:59:06,194 INFO: (0033 / 0081)
+2018-06-10 05:59:07,463 INFO: puppet-oslo install type not set to source
+2018-06-10 05:59:07,492 INFO: (0034 / 0081)
+2018-06-10 05:59:08,667 INFO: puppet-nssdb install type not set to source
+2018-06-10 05:59:08,696 INFO: (0035 / 0081)
+2018-06-10 05:59:09,951 INFO: puppet-opendaylight install type not set to source
+2018-06-10 05:59:09,979 INFO: (0036 / 0081)
+2018-06-10 05:59:11,253 INFO: puppet-ovn install type not set to source
+2018-06-10 05:59:11,350 INFO: (0037 / 0081)
+2018-06-10 05:59:13,378 INFO: puppet-panko install type not set to source
+2018-06-10 05:59:13,424 INFO: (0038 / 0081)
+2018-06-10 05:59:14,955 INFO: puppet-puppet install type not set to source
+2018-06-10 05:59:14,985 INFO: (0039 / 0081)
+2018-06-10 05:59:16,067 INFO: puppetlabs-rabbitmq install type not set to source
+2018-06-10 05:59:16,096 INFO: (0040 / 0081)
+2018-06-10 05:59:17,164 INFO: puppet-redis install type not set to source
+2018-06-10 05:59:17,192 INFO: (0041 / 0081)
+2018-06-10 05:59:18,319 INFO: puppetlabs-rsync install type not set to source
+2018-06-10 05:59:18,350 INFO: (0042 / 0081)
+2018-06-10 05:59:21,370 INFO: puppet-sahara install type not set to source
+2018-06-10 05:59:21,417 INFO: (0043 / 0081)
+2018-06-10 05:59:22,715 INFO: sensu-puppet install type not set to source
+2018-06-10 05:59:22,755 INFO: (0044 / 0081)
+2018-06-10 05:59:24,489 INFO: puppet-tacker install type not set to source
+2018-06-10 05:59:24,517 INFO: (0045 / 0081)
+2018-06-10 05:59:25,942 INFO: puppet-trove install type not set to source
+2018-06-10 05:59:25,970 INFO: (0046 / 0081)
+2018-06-10 05:59:27,112 INFO: puppet-ssh install type not set to source
+2018-06-10 05:59:27,141 INFO: (0047 / 0081)
+2018-06-10 05:59:28,725 INFO: puppet-staging install type not set to source
+2018-06-10 05:59:28,755 INFO: (0048 / 0081)
+2018-06-10 05:59:30,596 INFO: puppetlabs-stdlib install type not set to source
+2018-06-10 05:59:30,631 INFO: (0049 / 0081)
+2018-06-10 05:59:32,226 INFO: puppet-swift install type not set to source
+2018-06-10 05:59:32,258 INFO: (0050 / 0081)
+2018-06-10 05:59:33,682 INFO: puppetlabs-sysctl install type not set to source
+2018-06-10 05:59:33,717 INFO: (0051 / 0081)
+2018-06-10 05:59:35,364 INFO: puppet-tempest install type not set to source
+2018-06-10 05:59:35,398 INFO: (0052 / 0081)
+2018-06-10 05:59:36,904 INFO: puppet-timezone install type not set to source
+2018-06-10 05:59:36,938 INFO: (0053 / 0081)
+2018-06-10 05:59:38,659 INFO: puppet-uchiwa install type not set to source
+2018-06-10 05:59:38,693 INFO: (0054 / 0081)
+2018-06-10 05:59:39,964 INFO: puppetlabs-vcsrepo install type not set to source
+2018-06-10 05:59:39,993 INFO: (0055 / 0081)
+2018-06-10 05:59:41,022 INFO: puppet-vlan install type not set to source
+2018-06-10 05:59:41,059 INFO: (0056 / 0081)
+2018-06-10 05:59:42,097 INFO: puppet-vswitch install type not set to source
+2018-06-10 05:59:42,126 INFO: (0057 / 0081)
+2018-06-10 05:59:43,163 INFO: puppetlabs-xinetd install type not set to source
+2018-06-10 05:59:43,191 INFO: (0058 / 0081)
+2018-06-10 05:59:44,235 INFO: puppet-zookeeper install type not set to source
+2018-06-10 05:59:44,293 INFO: (0059 / 0081)
+2018-06-10 05:59:45,733 INFO: puppet-openstacklib install type not set to source
+2018-06-10 05:59:45,762 INFO: (0060 / 0081)
+2018-06-10 05:59:47,166 INFO: puppet-module-keepalived install type not set to source
+2018-06-10 05:59:47,194 INFO: (0061 / 0081)
+2018-06-10 05:59:48,230 INFO: puppetlabs-ntp install type not set to source
+2018-06-10 05:59:48,257 INFO: (0062 / 0081)
+2018-06-10 05:59:49,304 INFO: puppet-snmp install type not set to source
+2018-06-10 05:59:49,339 INFO: (0063 / 0081)
+2018-06-10 05:59:50,721 INFO: puppet-tripleo install type not set to source
+2018-06-10 05:59:50,767 INFO: (0064 / 0081)
+2018-06-10 05:59:51,822 INFO: puppet-ironic install type not set to source
+2018-06-10 05:59:51,857 INFO: (0065 / 0081)
+2018-06-10 05:59:52,925 INFO: puppet-ipaclient install type not set to source
+2018-06-10 05:59:52,992 INFO: (0066 / 0081)
+2018-06-10 05:59:55,827 INFO: puppetlabs-corosync install type not set to source
+2018-06-10 05:59:55,867 INFO: (0067 / 0081)
+2018-06-10 05:59:57,763 INFO: puppet-pacemaker install type not set to source
+2018-06-10 05:59:57,792 INFO: (0068 / 0081)
+2018-06-10 05:59:59,573 INFO: puppet_aviator install type not set to source
+2018-06-10 05:59:59,615 INFO: (0069 / 0081)
+2018-06-10 06:00:01,533 INFO: puppet-openstack_extras install type not set to source
+2018-06-10 06:00:01,582 INFO: (0070 / 0081)
+2018-06-10 06:00:05,988 INFO: konstantin-fluentd install type not set to source
+2018-06-10 06:00:06,101 INFO: (0071 / 0081)
+2018-06-10 06:00:11,203 INFO: puppet-elasticsearch install type not set to source
+2018-06-10 06:00:11,287 INFO: (0072 / 0081)
+2018-06-10 06:00:16,094 INFO: puppet-kibana3 install type not set to source
+2018-06-10 06:00:16,176 INFO: (0073 / 0081)
+2018-06-10 06:00:22,455 INFO: puppetlabs-git install type not set to source
+2018-06-10 06:00:22,584 INFO: (0074 / 0081)
+2018-06-10 06:00:30,919 INFO: puppet-datacat install type not set to source
+2018-06-10 06:00:31,119 INFO: (0075 / 0081)
 </pre></body></html>
