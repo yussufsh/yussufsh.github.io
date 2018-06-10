@@ -9834,4 +9834,64 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 08:04:30,565 INFO: dib-run-parts 75-puppet-modules-package completed
 2018-06-10 08:04:30,571 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/99-install-config-templates
 2018-06-10 08:04:32,417 INFO: ++ os-apply-config --print-templates
+2018-06-10 08:05:38,878 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-10 08:05:39,038 INFO: ++ dirname /tmp/tmp_PKzCd/install.d/99-install-config-templates
+2018-06-10 08:05:40,215 INFO: + TEMPLATE_SOURCE=/tmp/tmp_PKzCd/install.d/../os-apply-config
+2018-06-10 08:05:40,220 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-10 08:05:41,700 INFO: + '[' -d /tmp/tmp_PKzCd/install.d/../os-apply-config ']'
+2018-06-10 08:05:41,706 INFO: + rsync '--exclude=.*.swp' -Cr /tmp/tmp_PKzCd/install.d/../os-apply-config/ /usr/libexec/os-apply-config/templates/
+2018-06-10 08:05:47,659 INFO: dib-run-parts 99-install-config-templates completed
+2018-06-10 08:05:47,665 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/99-os-refresh-config-install-scripts
+2018-06-10 08:05:51,042 INFO: ++ os-refresh-config --print-base
+2018-06-10 08:06:16,902 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-10 08:06:17,057 INFO: ++ dirname /tmp/tmp_PKzCd/install.d/99-os-refresh-config-install-scripts
+2018-06-10 08:06:18,091 INFO: + SCRIPT_SOURCE=/tmp/tmp_PKzCd/install.d/../os-refresh-config
+2018-06-10 08:06:18,100 INFO: + rsync -r /tmp/tmp_PKzCd/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-10 08:06:23,069 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-10 08:06:23,171 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-10 08:06:23,176 INFO: dib-run-parts
+2018-06-10 08:06:24,386 INFO: dib-run-parts Target: install.d
+2018-06-10 08:06:24,391 INFO: dib-run-parts
+2018-06-10 08:06:24,394 INFO: dib-run-parts Script                                     Seconds
+2018-06-10 08:06:24,499 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-10 08:06:24,502 INFO: dib-run-parts
+2018-06-10 08:06:31,856 INFO: dib-run-parts 02-puppet-stack-config                      252.787
+2018-06-10 08:06:34,994 INFO: dib-run-parts 10-hiera-yaml-symlink                         3.226
+2018-06-10 08:06:39,047 INFO: dib-run-parts 10-puppet-stack-config-puppet-module          5.189
+2018-06-10 08:06:42,454 INFO: dib-run-parts 11-create-template-root                      51.059
+2018-06-10 08:06:46,687 INFO: dib-run-parts 11-hiera-orc-install                          9.664
+2018-06-10 08:06:50,023 INFO: dib-run-parts 75-puppet-modules-package                     6.117
+2018-06-10 08:06:53,135 INFO: dib-run-parts 99-install-config-templates                  76.004
+2018-06-10 08:06:56,722 INFO: dib-run-parts 99-os-refresh-config-install-scripts         33.941
+2018-06-10 08:06:58,191 INFO: dib-run-parts
+2018-06-10 08:06:58,197 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-10 08:06:59,038 INFO: INFO: 2018-06-10 08:06:58,429 -- ############### End stdout/stderr logging ###############
+2018-06-10 08:06:59,286 INFO: INFO: 2018-06-10 08:06:59,197 --   Running hook post-install
+2018-06-10 08:06:59,459 INFO: INFO: 2018-06-10 08:06:59,454 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmp_PKzCd/post-install.d
+2018-06-10 08:07:00,212 INFO: INFO: 2018-06-10 08:07:00,147 -- Ending run of instack.
+2018-06-10 08:07:01,996 INFO: Instack completed successfully
+2018-06-10 08:07:02,054 INFO: Running os-refresh-config
+2018-06-10 08:07:20,495 INFO: [2018-06-10 08:07:20,431] (os-refresh-config) [ERROR] Could not lock /var/run/os-refresh-config.lock. [Errno 11] Resource temporarily unavailable
+2018-06-10 08:07:21,512 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-10 08:07:21,720 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
+2018-06-10 08:08:32,050 INFO: [mNotice: /Stage[main]/Glance::Db::Sync/Exec[glance-manage db_sync]/returns: executed successfully[0m
+2018-06-10 08:08:32,731 INFO: [mNotice: /Stage[main]/Glance::Deps/Anchor[glance::dbsync::end]: Triggered 'refresh' from 1 events[0m
 </pre></body></html>
