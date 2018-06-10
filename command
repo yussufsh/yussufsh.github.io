@@ -1,1 +1,1 @@
-oepnstack undercloud install
+openstack undercloud install
