@@ -9314,4 +9314,30 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 06:04:05,478 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 2018-06-10 06:04:05,481 INFO: + set +e
 2018-06-10 06:04:05,495 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 06:08:13,010 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-10 06:08:16,936 INFO: [1;33mWarning: ModuleLoader: module 'openstacklib' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:08:16,941 INFO:    (file & line not available)[0m
+2018-06-10 06:08:29,683 INFO: [mNotice: hiera(): Cannot load backend module_data: cannot load such file -- hiera/backend/module_data_backend[0m
+2018-06-10 06:08:43,014 INFO: [1;33mWarning: This method is deprecated, please use match expressions with Stdlib::Compat::Ipv6 instead. They are described at https://docs.puppet.com/puppet/latest/reference/lang_data_type.html#match-expressions. at ["/etc/puppet/modules/rabbitmq/manifests/install/rabbitmqadmin.pp", 36]:["/etc/puppet/modules/rabbitmq/manifests/init.pp", 314]
+2018-06-10 06:08:43,020 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-10 06:08:49,240 INFO: [mNotice: Scope(Class[Tripleo::Firewall::Post]): At this stage, all network traffic is blocked.[0m
+2018-06-10 06:08:52,034 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::Hash. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/tripleo/manifests/profile/base/database/mysql.pp", 97]:["/etc/puppet/manifests/puppet-stack-config.pp", 84]
+2018-06-10 06:08:52,039 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-10 06:08:55,188 INFO: [1;33mWarning: ModuleLoader: module 'mysql' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:08:55,192 INFO:    (file & line not available)[0m
+2018-06-10 06:09:04,757 INFO: [1;33mWarning: ModuleLoader: module 'keystone' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:09:04,761 INFO:    (file & line not available)[0m
+2018-06-10 06:09:20,157 INFO: [1;33mWarning: This method is deprecated, please use the stdlib validate_legacy function, with Stdlib::Compat::String. There is further documentation for validate_legacy function in the README. at ["/etc/puppet/modules/keystone/manifests/db/mysql.pp", 63]:
+2018-06-10 06:09:20,162 INFO:    (at /etc/puppet/modules/stdlib/lib/puppet/functions/deprecation.rb:25:in `deprecation')[0m
+2018-06-10 06:09:20,962 INFO: [1;33mWarning: ModuleLoader: module 'glance' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:09:20,965 INFO:    (file & line not available)[0m
+2018-06-10 06:09:28,121 INFO: [1;33mWarning: ModuleLoader: module 'nova' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:09:28,126 INFO:    (file & line not available)[0m
+2018-06-10 06:09:32,505 INFO: [1;33mWarning: Unknown variable: '::nova::db::mysql_api::setup_cell0'. at /etc/puppet/modules/nova/manifests/db/mysql.pp:53:28[0m
+2018-06-10 06:09:34,579 INFO: [1;33mWarning: ModuleLoader: module 'neutron' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:09:34,617 INFO:    (file & line not available)[0m
+2018-06-10 06:09:56,635 INFO: [1;33mWarning: ModuleLoader: module 'heat' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:09:56,642 INFO:    (file & line not available)[0m
+2018-06-10 06:10:00,693 INFO: [1;33mWarning: ModuleLoader: module 'ironic' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 06:10:00,697 INFO:    (file & line not available)[0m
 </pre></body></html>
