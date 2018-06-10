@@ -10325,4 +10325,38 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 10:10:30,788 INFO: dib-run-parts 99-install-config-templates completed
 2018-06-10 10:10:30,871 INFO: dib-run-parts Running /tmp/tmpuMK7AV/install.d/99-os-refresh-config-install-scripts
 2018-06-10 10:10:42,563 INFO: ++ os-refresh-config --print-base
+2018-06-10 10:11:44,583 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-10 10:11:44,921 INFO: ++ dirname /tmp/tmpuMK7AV/install.d/99-os-refresh-config-install-scripts
+2018-06-10 10:11:49,321 INFO: + SCRIPT_SOURCE=/tmp/tmpuMK7AV/install.d/../os-refresh-config
+2018-06-10 10:11:49,567 INFO: + rsync -r /tmp/tmpuMK7AV/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-10 10:12:01,897 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-10 10:12:02,195 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-10 10:12:02,273 INFO: dib-run-parts
+2018-06-10 10:12:05,865 INFO: dib-run-parts Target: install.d
+2018-06-10 10:12:05,890 INFO: dib-run-parts
+2018-06-10 10:12:05,940 INFO: dib-run-parts Script                                     Seconds
+2018-06-10 10:12:06,005 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-10 10:12:06,185 INFO: dib-run-parts
+2018-06-10 10:12:24,669 INFO: dib-run-parts 02-puppet-stack-config                      406.430
+2018-06-10 10:12:32,557 INFO: dib-run-parts 10-hiera-yaml-symlink                        15.759
+2018-06-10 10:12:40,443 INFO: dib-run-parts 10-puppet-stack-config-puppet-module         22.572
+2018-06-10 10:12:49,797 INFO: dib-run-parts 11-create-template-root                     102.240
+2018-06-10 10:12:56,081 INFO: dib-run-parts 11-hiera-orc-install                         30.609
+2018-06-10 10:13:01,948 INFO: dib-run-parts 75-puppet-modules-package                    17.885
+2018-06-10 10:13:06,717 INFO: dib-run-parts 99-install-config-templates                  57.258
+2018-06-10 10:13:12,568 INFO: dib-run-parts 99-os-refresh-config-install-scripts         86.002
+2018-06-10 10:13:15,157 INFO: dib-run-parts
+2018-06-10 10:13:15,248 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-10 10:13:15,840 INFO: INFO: 2018-06-10 10:13:15,324 -- ############### End stdout/stderr logging ###############
+2018-06-10 10:13:16,105 INFO: INFO: 2018-06-10 10:13:16,006 --   Running hook post-install
+2018-06-10 10:13:16,248 INFO: INFO: 2018-06-10 10:13:16,205 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmpuMK7AV/post-install.d
+2018-06-10 10:13:17,199 INFO: INFO: 2018-06-10 10:13:17,189 -- Ending run of instack.
+2018-06-10 10:13:21,381 INFO: Instack completed successfully
+2018-06-10 10:13:21,453 INFO: Running os-refresh-config
+2018-06-10 10:14:08,112 INFO: [2018-06-10 10:14:07,723] (os-refresh-config) [INFO] Starting phase configure
+2018-06-10 10:14:33,312 INFO: dib-run-parts Sun Jun 10 10:14:32 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-10 10:14:40,012 INFO: + '[' -f /etc/puppet/hiera.yaml ']'
+2018-06-10 10:14:40,109 INFO: + grep yaml /etc/puppet/hiera.yaml
+2018-06-10 10:14:54,909 INFO: dib-run-parts Sun Jun 10 10:14:53 UTC 2018 10-hiera-disable completed
+2018-06-10 10:14:58,766 INFO: dib-run-parts Sun Jun 10 10:14:57 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/20-os-apply-config
 </pre></body></html>
