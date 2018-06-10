@@ -9934,4 +9934,75 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 09:44:06,918 INFO: INFO: 2018-06-10 09:44:06,493 -- Excluding element dib-python
 2018-06-10 09:44:07,047 INFO: INFO: 2018-06-10 09:44:06,630 -- Excluding element install-bin
 2018-06-10 09:44:07,132 INFO: INFO: 2018-06-10 09:44:06,738 -- List of all elements and dependencies after excludes: undercloud-install source-repositories install-types puppet-modules puppet-stack-config os-refresh-config element-manifest manifests enable-packages-install os-apply-config hiera
+2018-06-10 09:45:49,197 INFO: INFO: 2018-06-10 09:45:48,898 --   Running hook extra-data
+2018-06-10 09:45:49,723 INFO: INFO: 2018-06-10 09:45:49,699 -- ############### Begin stdout/stderr logging ###############
+2018-06-10 09:46:22,508 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-10 09:46:28,524 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/00-dib-v2-env
+2018-06-10 09:46:28,697 INFO: ++ export 'IMAGE_ELEMENT=undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 09:46:28,842 INFO: ++ IMAGE_ELEMENT='undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs'
+2018-06-10 09:46:28,906 INFO: ++ export 'IMAGE_ELEMENT_YAML={cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 09:46:28,977 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 09:46:29,043 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 09:46:29,188 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 09:46:29,247 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 09:46:29,341 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 09:46:29,397 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 09:46:29,459 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 09:46:29,530 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 09:46:29,593 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 09:46:29,757 INFO: '
+2018-06-10 09:46:29,798 INFO: ++ IMAGE_ELEMENT_YAML='{cache-url: /usr/share/diskimage-builder/elements/cache-url, dib-python: /usr/share/diskimage-builder/elements/dib-python,
+2018-06-10 09:46:29,844 INFO:   element-manifest: /usr/share/diskimage-builder/elements/element-manifest, enable-packages-install: /usr/share/tripleo-image-elements/enable-packages-install,
+2018-06-10 09:46:29,946 INFO:   hiera: /usr/share/tripleo-puppet-elements/hiera, install-bin: /usr/share/diskimage-builder/elements/install-bin,
+2018-06-10 09:46:30,050 INFO:   install-types: /usr/share/diskimage-builder/elements/install-types, manifests: /usr/share/diskimage-builder/elements/manifests,
+2018-06-10 09:46:30,209 INFO:   os-apply-config: /usr/share/tripleo-image-elements/os-apply-config, os-refresh-config: /usr/share/tripleo-image-elements/os-refresh-config,
+2018-06-10 09:46:30,332 INFO:   package-installs: /usr/share/diskimage-builder/elements/package-installs, pip-and-virtualenv: /usr/share/diskimage-builder/elements/pip-and-virtualenv,
+2018-06-10 09:46:30,490 INFO:   pip-manifest: /usr/share/tripleo-image-elements/pip-manifest, pkg-map: /usr/share/diskimage-builder/elements/pkg-map,
+2018-06-10 09:46:30,586 INFO:   puppet: /usr/share/tripleo-puppet-elements/puppet, puppet-modules: /usr/share/tripleo-puppet-elements/puppet-modules,
+2018-06-10 09:46:30,762 INFO:   puppet-stack-config: /usr/share/instack-undercloud/puppet-stack-config, source-repositories: /usr/share/diskimage-builder/elements/source-repositories,
+2018-06-10 09:46:30,870 INFO:   undercloud-install: /usr/share/instack-undercloud/undercloud-install}
+2018-06-10 09:46:30,998 INFO: '
+2018-06-10 09:46:31,060 INFO: ++ export -f get_image_element_array
+2018-06-10 09:46:31,141 INFO: + set +o xtrace
+2018-06-10 09:46:31,241 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-10 09:46:35,400 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/01-export-install-types.bash
+2018-06-10 09:46:35,503 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 09:46:35,600 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 09:46:35,714 INFO: + set +o xtrace
+2018-06-10 09:46:35,775 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 09:46:41,710 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 09:46:41,891 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 09:46:41,947 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 09:46:42,046 INFO: + set +o xtrace
+2018-06-10 09:46:42,191 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 09:46:48,467 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 09:46:48,609 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 09:46:48,808 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-10 09:46:49,056 INFO: ++ '[' package = source ']'
+2018-06-10 09:46:49,172 INFO: + set +o xtrace
+2018-06-10 09:46:49,312 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 09:46:54,273 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 09:46:54,419 INFO: ++ '[' -z '' ']'
+2018-06-10 09:46:54,525 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 09:46:54,722 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 09:46:54,850 INFO: + set +o xtrace
+2018-06-10 09:46:54,922 INFO: dib-run-parts Sourcing environment file /tmp/tmpuMK7AV/extra-data.d/../environment.d/14-manifests
+2018-06-10 09:46:59,858 INFO: + source /tmp/tmpuMK7AV/extra-data.d/../environment.d/14-manifests
+2018-06-10 09:46:59,889 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 09:46:59,962 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 09:47:00,134 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 09:47:00,236 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 09:47:00,427 INFO: + set +o xtrace
+2018-06-10 09:47:00,527 INFO: dib-run-parts Running /tmp/tmpuMK7AV/extra-data.d/10-install-git
+2018-06-10 09:47:06,838 INFO: + yum -y install git
+2018-06-10 09:48:26,151 INFO: Loaded plugins: fastestmirror
+2018-06-10 09:48:45,953 INFO: Loading mirror speeds from cached hostfile
+2018-06-10 09:48:48,397 INFO:  * base: mirror.nbrc.ac.in
+2018-06-10 09:48:48,836 INFO:  * epel: kartolo.sby.datautama.net.id
+2018-06-10 09:48:49,175 INFO:  * extras: mirror.nbrc.ac.in
+2018-06-10 09:48:49,457 INFO:  * updates: mirror.nbrc.ac.in
+2018-06-10 09:50:43,704 INFO: Package git-1.8.3.1-13.el7.x86_64 already installed and latest version
+2018-06-10 09:50:44,052 INFO: Nothing to do
+2018-06-10 09:51:00,394 INFO: dib-run-parts 10-install-git completed
+2018-06-10 09:51:00,826 INFO: dib-run-parts Running /tmp/tmpuMK7AV/extra-data.d/20-manifest-dir
 </pre></body></html>
