@@ -10443,4 +10443,13 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 11:47:39,364 INFO: [1;33mWarning: Unknown variable: '::ironic::conductor::swift_temp_url_duration'. at /etc/puppet/modules/ironic/manifests/glance.pp:108:40[0m
 2018-06-10 11:47:49,131 INFO: [1;33mWarning: Unknown variable: '::ironic::api::neutron_url'. at /etc/puppet/modules/ironic/manifests/neutron.pp:58:29[0m
 2018-06-10 11:50:44,724 INFO: [1;33mWarning: Scope(Class[Ironic::Inspector]): dnsmasq_ip_range is deprecated, replaced by dnsmasq_ip_subnets[0m
+2018-06-10 11:53:57,801 INFO: [1;33mWarning: ModuleLoader: module 'mistral' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+2018-06-10 11:53:58,127 INFO:    (file & line not available)[0m
+2018-06-10 11:54:25,409 INFO: [1;33mWarning: Unknown variable: '::mistral::database_idle_timeout'. at /etc/puppet/modules/mistral/manifests/db.pp:57:40[0m
+2018-06-10 11:54:25,670 INFO: [1;33mWarning: Unknown variable: '::mistral::database_min_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:58:40[0m
+2018-06-10 11:54:25,867 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_pool_size'. at /etc/puppet/modules/mistral/manifests/db.pp:59:40[0m
+2018-06-10 11:54:26,160 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_retries'. at /etc/puppet/modules/mistral/manifests/db.pp:60:40[0m
+2018-06-10 11:54:26,615 INFO: [1;33mWarning: Unknown variable: '::mistral::database_retry_interval'. at /etc/puppet/modules/mistral/manifests/db.pp:61:40[0m
+2018-06-10 11:54:26,696 INFO: [1;33mWarning: Unknown variable: '::mistral::database_max_overflow'. at /etc/puppet/modules/mistral/manifests/db.pp:62:40[0m
+2018-06-10 11:54:32,292 INFO: [1;33mWarning: Scope(Class[Mistral]): mistral::rabbit_host, mistral::rabbit_hosts, mistral::rabbit_password, mistral::rabbit_port, mistral::rabbit_userid, mistral::rabbit_virtual_host and mistral::rpc_backend are deprecated. Please use mistral::default_transport_url instead.[0m
 </pre></body></html>
