@@ -10005,4 +10005,93 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 09:50:44,052 INFO: Nothing to do
 2018-06-10 09:51:00,394 INFO: dib-run-parts 10-install-git completed
 2018-06-10 09:51:00,826 INFO: dib-run-parts Running /tmp/tmpuMK7AV/extra-data.d/20-manifest-dir
+2018-06-10 09:51:20,587 INFO: + set -eu
+2018-06-10 09:51:20,666 INFO: + set -o pipefail
+2018-06-10 09:51:20,760 INFO: + sudo mkdir -p /tmp/instack.pUgXMo/mnt//etc/dib-manifests
+2018-06-10 09:51:51,804 INFO: dib-run-parts 20-manifest-dir completed
+2018-06-10 09:51:51,931 INFO: dib-run-parts Running /tmp/tmpuMK7AV/extra-data.d/75-inject-element-manifest
+2018-06-10 09:52:03,688 INFO: + set -eu
+2018-06-10 09:52:03,861 INFO: + set -o pipefail
+2018-06-10 09:52:03,950 INFO: + DIB_ELEMENT_MANIFEST_PATH=/etc/dib-manifests/dib-element-manifest
+2018-06-10 09:52:04,243 INFO: ++ dirname /etc/dib-manifests/dib-element-manifest
+2018-06-10 09:52:07,961 INFO: + sudo mkdir -p /tmp/instack.pUgXMo/mnt//etc/dib-manifests
+2018-06-10 09:52:29,416 INFO: + sudo /bin/bash -c 'echo undercloud-install dib-python source-repositories install-types install-bin pip-manifest pkg-map puppet-stack-config os-refresh-config element-manifest manifests pip-and-virtualenv cache-url puppet enable-packages-install puppet-modules os-apply-config hiera package-installs | tr '\'' '\'' '\''\n'\'' > /tmp/instack.pUgXMo/mnt//etc/dib-manifests/dib-element-manifest'
+2018-06-10 09:53:03,676 INFO: dib-run-parts 75-inject-element-manifest completed
+2018-06-10 09:53:03,835 INFO: dib-run-parts Running /tmp/tmpuMK7AV/extra-data.d/98-source-repositories
+2018-06-10 09:53:54,968 INFO: Getting /root/.cache/image-create/source-repositories/repositories_flock: Sun Jun 10 09:53:53 UTC 2018 for /tmp/tmpuMK7AV/source-repository-puppet-modules
+2018-06-10 09:54:03,871 INFO: (0001 / 0081)
+2018-06-10 09:54:06,046 INFO: puppetlabs-apache install type not set to source
+2018-06-10 09:54:06,234 INFO: (0002 / 0081)
+2018-06-10 09:54:08,159 INFO: puppet-aodh install type not set to source
+2018-06-10 09:54:08,279 INFO: (0003 / 0081)
+2018-06-10 09:54:10,129 INFO: puppet-auditd install type not set to source
+2018-06-10 09:54:10,260 INFO: (0004 / 0081)
+2018-06-10 09:54:11,441 INFO: puppet-barbican install type not set to source
+2018-06-10 09:54:11,573 INFO: (0005 / 0081)
+2018-06-10 09:54:13,314 INFO: puppet-cassandra install type not set to source
+2018-06-10 09:54:13,586 INFO: (0006 / 0081)
+2018-06-10 09:54:15,790 INFO: puppet-ceph install type not set to source
+2018-06-10 09:54:16,100 INFO: (0007 / 0081)
+2018-06-10 09:54:17,960 INFO: puppet-ceilometer install type not set to source
+2018-06-10 09:54:18,067 INFO: (0008 / 0081)
+2018-06-10 09:54:19,827 INFO: puppet-congress install type not set to source
+2018-06-10 09:54:19,978 INFO: (0009 / 0081)
+2018-06-10 09:54:21,310 INFO: puppet-gnocchi install type not set to source
+2018-06-10 09:54:21,406 INFO: (0010 / 0081)
+2018-06-10 09:54:22,584 INFO: puppet-certmonger install type not set to source
+2018-06-10 09:54:22,632 INFO: (0011 / 0081)
+2018-06-10 09:54:24,128 INFO: puppet-cinder install type not set to source
+2018-06-10 09:54:24,216 INFO: (0012 / 0081)
+2018-06-10 09:54:25,617 INFO: puppet-common install type not set to source
+2018-06-10 09:54:25,732 INFO: (0013 / 0081)
+2018-06-10 09:54:27,560 INFO: puppet-contrail install type not set to source
+2018-06-10 09:54:27,677 INFO: (0014 / 0081)
+2018-06-10 09:54:29,141 INFO: puppetlabs-concat install type not set to source
+2018-06-10 09:54:29,327 INFO: (0015 / 0081)
+2018-06-10 09:54:31,601 INFO: puppetlabs-firewall install type not set to source
+2018-06-10 09:54:31,815 INFO: (0016 / 0081)
+2018-06-10 09:54:34,064 INFO: puppet-glance install type not set to source
+2018-06-10 09:54:34,161 INFO: (0017 / 0081)
+2018-06-10 09:54:35,987 INFO: puppet-gluster install type not set to source
+2018-06-10 09:54:36,070 INFO: (0018 / 0081)
+2018-06-10 09:54:37,788 INFO: puppetlabs-haproxy install type not set to source
+2018-06-10 09:54:37,947 INFO: (0019 / 0081)
+2018-06-10 09:54:39,489 INFO: puppet-heat install type not set to source
+2018-06-10 09:54:39,702 INFO: (0020 / 0081)
+2018-06-10 09:54:41,911 INFO: puppet-healthcheck install type not set to source
+2018-06-10 09:54:42,074 INFO: (0021 / 0081)
+2018-06-10 09:54:44,068 INFO: puppet-horizon install type not set to source
+2018-06-10 09:54:44,211 INFO: (0022 / 0081)
+2018-06-10 09:54:45,926 INFO: puppetlabs-inifile install type not set to source
+2018-06-10 09:54:46,031 INFO: (0023 / 0081)
+2018-06-10 09:54:47,855 INFO: puppet-kafka install type not set to source
+2018-06-10 09:54:47,991 INFO: (0024 / 0081)
+2018-06-10 09:54:49,638 INFO: puppet-keystone install type not set to source
+2018-06-10 09:54:49,757 INFO: (0025 / 0081)
+2018-06-10 09:54:51,842 INFO: puppet-manila install type not set to source
+2018-06-10 09:54:51,947 INFO: (0026 / 0081)
+2018-06-10 09:54:53,719 INFO: puppet-memcached install type not set to source
+2018-06-10 09:54:53,817 INFO: (0027 / 0081)
+2018-06-10 09:54:55,657 INFO: puppet-mistral install type not set to source
+2018-06-10 09:54:55,752 INFO: (0028 / 0081)
+2018-06-10 09:54:57,353 INFO: puppetlabs-mongodb install type not set to source
+2018-06-10 09:54:57,408 INFO: (0029 / 0081)
+2018-06-10 09:54:59,361 INFO: puppetlabs-mysql install type not set to source
+2018-06-10 09:54:59,545 INFO: (0030 / 0081)
+2018-06-10 09:55:00,842 INFO: puppet-neutron install type not set to source
+2018-06-10 09:55:00,989 INFO: (0031 / 0081)
+2018-06-10 09:55:02,749 INFO: puppet-nova install type not set to source
+2018-06-10 09:55:02,902 INFO: (0032 / 0081)
+2018-06-10 09:55:05,773 INFO: puppet-octavia install type not set to source
+2018-06-10 09:55:05,944 INFO: (0033 / 0081)
+2018-06-10 09:55:09,322 INFO: puppet-oslo install type not set to source
+2018-06-10 09:55:09,527 INFO: (0034 / 0081)
+2018-06-10 09:55:13,376 INFO: puppet-nssdb install type not set to source
+2018-06-10 09:55:13,624 INFO: (0035 / 0081)
+2018-06-10 09:55:17,032 INFO: puppet-opendaylight install type not set to source
+2018-06-10 09:55:17,294 INFO: (0036 / 0081)
+2018-06-10 09:55:20,535 INFO: puppet-ovn install type not set to source
+2018-06-10 09:55:20,707 INFO: (0037 / 0081)
+2018-06-10 09:55:24,456 INFO: puppet-panko install type not set to source
+2018-06-10 09:55:24,600 INFO: (0038 / 0081)
 </pre></body></html>
