@@ -1,1 +1,1 @@
-sudo rm -rf /root/.my.cnf
+none
