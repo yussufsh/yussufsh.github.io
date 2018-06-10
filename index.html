@@ -9803,4 +9803,35 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 07:58:55,827 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
 2018-06-10 07:58:55,923 INFO: + set +o xtrace
 2018-06-10 07:58:55,927 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/02-puppet-stack-config
+2018-06-10 08:03:10,899 INFO: dib-run-parts 02-puppet-stack-config completed
+2018-06-10 08:03:11,598 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/10-hiera-yaml-symlink
+2018-06-10 08:03:12,972 INFO: + set -o pipefail
+2018-06-10 08:03:12,978 INFO: + ln -f -s /etc/puppet/hiera.yaml /etc/hiera.yaml
+2018-06-10 08:03:14,936 INFO: dib-run-parts 10-hiera-yaml-symlink completed
+2018-06-10 08:03:15,049 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 08:03:17,154 INFO: + set -o pipefail
+2018-06-10 08:03:17,159 INFO: + mkdir -p /etc/puppet/manifests
+2018-06-10 08:03:18,106 INFO: ++ dirname /tmp/tmp_PKzCd/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 08:03:18,903 INFO: + cp /tmp/tmp_PKzCd/install.d/../puppet-stack-config.pp /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 08:03:21,251 INFO: dib-run-parts 10-puppet-stack-config-puppet-module completed
+2018-06-10 08:03:21,256 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/11-create-template-root
+2018-06-10 08:03:23,134 INFO: ++ os-apply-config --print-templates
+2018-06-10 08:04:11,410 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-10 08:04:11,511 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-10 08:04:13,018 INFO: dib-run-parts 11-create-template-root completed
+2018-06-10 08:04:13,023 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/11-hiera-orc-install
+2018-06-10 08:04:14,998 INFO: + set -o pipefail
+2018-06-10 08:04:15,003 INFO: + mkdir -p /usr/libexec/os-refresh-config/configure.d/
+2018-06-10 08:04:16,302 INFO: ++ dirname /tmp/tmp_PKzCd/install.d/11-hiera-orc-install
+2018-06-10 08:04:16,883 INFO: + install -m 0755 -o root -g root /tmp/tmp_PKzCd/install.d/../10-hiera-disable /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-10 08:04:19,461 INFO: ++ dirname /tmp/tmp_PKzCd/install.d/11-hiera-orc-install
+2018-06-10 08:04:20,419 INFO: + install -m 0755 -o root -g root /tmp/tmp_PKzCd/install.d/../40-hiera-datafiles /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-10 08:04:23,440 INFO: dib-run-parts 11-hiera-orc-install completed
+2018-06-10 08:04:23,446 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/75-puppet-modules-package
+2018-06-10 08:04:26,487 INFO: + find /opt/stack/puppet-modules/ -mindepth 1
+2018-06-10 08:04:26,648 INFO: + read
+2018-06-10 08:04:28,253 INFO: + ln -f -s /usr/share/openstack-puppet/modules/aodh /usr/share/openstack-puppet/modules/apache /usr/share/openstack-puppet/modules/archive /usr/share/openstack-puppet/modules/auditd /usr/share/openstack-puppet/modules/barbican /usr/share/openstack-puppet/modules/cassandra /usr/share/openstack-puppet/modules/ceilometer /usr/share/openstack-puppet/modules/ceph /usr/share/openstack-puppet/modules/certmonger /usr/share/openstack-puppet/modules/cinder /usr/share/openstack-puppet/modules/collectd /usr/share/openstack-puppet/modules/concat /usr/share/openstack-puppet/modules/contrail /usr/share/openstack-puppet/modules/corosync /usr/share/openstack-puppet/modules/datacat /usr/share/openstack-puppet/modules/ec2api /usr/share/openstack-puppet/modules/elasticsearch /usr/share/openstack-puppet/modules/fdio /usr/share/openstack-puppet/modules/firewall /usr/share/openstack-puppet/modules/fluentd /usr/share/openstack-puppet/modules/git /usr/share/openstack-puppet/modules/glance /usr/share/openstack-puppet/modules/gnocchi /usr/share/openstack-puppet/modules/haproxy /usr/share/openstack-puppet/modules/heat /usr/share/openstack-puppet/modules/horizon /usr/share/openstack-puppet/modules/inifile /usr/share/openstack-puppet/modules/ipaclient /usr/share/openstack-puppet/modules/ironic /usr/share/openstack-puppet/modules/java /usr/share/openstack-puppet/modules/kafka /usr/share/openstack-puppet/modules/keepalived /usr/share/openstack-puppet/modules/keystone /usr/share/openstack-puppet/modules/kibana3 /usr/share/openstack-puppet/modules/kmod /usr/share/openstack-puppet/modules/manila /usr/share/openstack-puppet/modules/memcached /usr/share/openstack-puppet/modules/midonet /usr/share/openstack-puppet/modules/mistral /usr/share/openstack-puppet/modules/module-data /usr/share/openstack-puppet/modules/mysql /usr/share/openstack-puppet/modules/n1k_vsm /usr/share/openstack-puppet/modules/neutron /usr/share/openstack-puppet/modules/nova /usr/share/openstack-puppet/modules/nssdb /usr/share/openstack-puppet/modules/ntp /usr/share/openstack-puppet/modules/octavia /usr/share/openstack-puppet/modules/opendaylight /usr/share/openstack-puppet/modules/openstack_extras /usr/share/openstack-puppet/modules/openstacklib /usr/share/openstack-puppet/modules/oslo /usr/share/openstack-puppet/modules/ovn /usr/share/openstack-puppet/modules/pacemaker /usr/share/openstack-puppet/modules/panko /usr/share/openstack-puppet/modules/rabbitmq /usr/share/openstack-puppet/modules/redis /usr/share/openstack-puppet/modules/remote /usr/share/openstack-puppet/modules/rsync /usr/share/openstack-puppet/modules/sahara /usr/share/openstack-puppet/modules/sensu /usr/share/openstack-puppet/modules/snmp /usr/share/openstack-puppet/modules/ssh /usr/share/openstack-puppet/modules/staging /usr/share/openstack-puppet/modules/stdlib /usr/share/openstack-puppet/modules/swift /usr/share/openstack-puppet/modules/sysctl /usr/share/openstack-puppet/modules/systemd /usr/share/openstack-puppet/modules/tempest /usr/share/openstack-puppet/modules/timezone /usr/share/openstack-puppet/modules/tomcat /usr/share/openstack-puppet/modules/tripleo /usr/share/openstack-puppet/modules/trove /usr/share/openstack-puppet/modules/uchiwa /usr/share/openstack-puppet/modules/vcsrepo /usr/share/openstack-puppet/modules/veritas_hyperscale /usr/share/openstack-puppet/modules/vlan /usr/share/openstack-puppet/modules/vswitch /usr/share/openstack-puppet/modules/xinetd /usr/share/openstack-puppet/modules/zaqar /usr/share/openstack-puppet/modules/zookeeper /etc/puppet/modules/
+2018-06-10 08:04:30,565 INFO: dib-run-parts 75-puppet-modules-package completed
+2018-06-10 08:04:30,571 INFO: dib-run-parts Running /tmp/tmp_PKzCd/install.d/99-install-config-templates
+2018-06-10 08:04:32,417 INFO: ++ os-apply-config --print-templates
 </pre></body></html>
