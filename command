@@ -1,1 +1,1 @@
-ps -ef | grap openstack
+ps -ef | grep openstack
