@@ -11009,4 +11009,17 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 18:02:00,736 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
 2018-06-10 18:02:01,103 INFO: + set +o xtrace
 2018-06-10 18:02:01,302 INFO: dib-run-parts Running /tmp/tmp4B2kdO/install.d/02-puppet-stack-config
+2018-06-10 18:14:00,803 INFO: dib-run-parts 02-puppet-stack-config completed
+2018-06-10 18:14:01,361 INFO: dib-run-parts Running /tmp/tmp4B2kdO/install.d/10-hiera-yaml-symlink
+2018-06-10 18:14:02,608 INFO: + set -o pipefail
+2018-06-10 18:14:02,664 INFO: + ln -f -s /etc/puppet/hiera.yaml /etc/hiera.yaml
+2018-06-10 18:14:04,383 INFO: dib-run-parts 10-hiera-yaml-symlink completed
+2018-06-10 18:14:04,524 INFO: dib-run-parts Running /tmp/tmp4B2kdO/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 18:14:07,318 INFO: + set -o pipefail
+2018-06-10 18:14:07,409 INFO: + mkdir -p /etc/puppet/manifests
+2018-06-10 18:14:08,662 INFO: ++ dirname /tmp/tmp4B2kdO/install.d/10-puppet-stack-config-puppet-module
+2018-06-10 18:14:09,929 INFO: + cp /tmp/tmp4B2kdO/install.d/../puppet-stack-config.pp /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 18:14:13,034 INFO: dib-run-parts 10-puppet-stack-config-puppet-module completed
+2018-06-10 18:14:13,262 INFO: dib-run-parts Running /tmp/tmp4B2kdO/install.d/11-create-template-root
+2018-06-10 18:14:16,384 INFO: ++ os-apply-config --print-templates
 </pre></body></html>
