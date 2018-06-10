@@ -11241,4 +11241,33 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 22:05:36,307 INFO: Version:
 2018-06-10 22:05:36,411 INFO:            Config: 1528656999
 2018-06-10 22:05:36,528 INFO:            Puppet: 4.8.2
+2018-06-10 22:08:15,615 INFO: + rc=1
+2018-06-10 22:08:15,918 INFO: + set -e
+2018-06-10 22:08:15,961 INFO: + echo 'puppet apply exited with exit code 1'
+2018-06-10 22:08:16,406 INFO: puppet apply exited with exit code 1
+2018-06-10 22:08:16,484 INFO: + '[' 1 '!=' 2 -a 1 '!=' 0 ']'
+2018-06-10 22:08:16,566 INFO: + exit 1
+2018-06-10 22:08:23,033 INFO: [2018-06-10 22:08:20,996] (os-refresh-config) [ERROR] during configure phase. [Command '['dib-run-parts', '/usr/libexec/os-refresh-config/configure.d']' returned non-zero exit status 1]
+2018-06-10 22:08:23,331 INFO: 
+2018-06-10 22:08:25,663 INFO: [2018-06-10 22:08:24,890] (os-refresh-config) [ERROR] Aborting...
+2018-06-10 22:08:33,623 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-10 22:08:35,530 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
 </pre></body></html>
