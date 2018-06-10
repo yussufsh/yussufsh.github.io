@@ -10980,4 +10980,33 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 18:01:00,450 INFO: ++ export -f get_image_element_array
 2018-06-10 18:01:00,662 INFO: + set +o xtrace
 2018-06-10 18:01:00,910 INFO: dib-run-parts Sourcing environment file /tmp/tmp4B2kdO/install.d/../environment.d/01-export-install-types.bash
+2018-06-10 18:01:10,311 INFO: + source /tmp/tmp4B2kdO/install.d/../environment.d/01-export-install-types.bash
+2018-06-10 18:01:10,586 INFO: ++ export DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 18:01:10,789 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 18:01:11,012 INFO: + set +o xtrace
+2018-06-10 18:01:11,284 INFO: dib-run-parts Sourcing environment file /tmp/tmp4B2kdO/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 18:01:24,617 INFO: + source /tmp/tmp4B2kdO/install.d/../environment.d/01-puppet-module-pins.sh
+2018-06-10 18:01:24,796 INFO: ++ export DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 18:01:24,802 INFO: ++ DIB_REPOREF_puppetlabs_ntp=4.2.x
+2018-06-10 18:01:24,863 INFO: + set +o xtrace
+2018-06-10 18:01:25,116 INFO: dib-run-parts Sourcing environment file /tmp/tmp4B2kdO/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 18:01:34,571 INFO: + source /tmp/tmp4B2kdO/install.d/../environment.d/02-puppet-modules-install-types.sh
+2018-06-10 18:01:34,742 INFO: ++ DIB_DEFAULT_INSTALLTYPE=package
+2018-06-10 18:01:34,886 INFO: ++ DIB_INSTALLTYPE_puppet_modules=package
+2018-06-10 18:01:35,027 INFO: ++ '[' package = source ']'
+2018-06-10 18:01:35,203 INFO: + set +o xtrace
+2018-06-10 18:01:35,525 INFO: dib-run-parts Sourcing environment file /tmp/tmp4B2kdO/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 18:01:48,541 INFO: + source /tmp/tmp4B2kdO/install.d/../environment.d/10-os-apply-config-venv-dir.bash
+2018-06-10 18:01:48,803 INFO: ++ '[' -z '' ']'
+2018-06-10 18:01:49,125 INFO: ++ export OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 18:01:49,405 INFO: ++ OS_APPLY_CONFIG_VENV_DIR=/opt/stack/venvs/os-apply-config
+2018-06-10 18:01:49,615 INFO: + set +o xtrace
+2018-06-10 18:01:49,725 INFO: dib-run-parts Sourcing environment file /tmp/tmp4B2kdO/install.d/../environment.d/14-manifests
+2018-06-10 18:02:00,393 INFO: + source /tmp/tmp4B2kdO/install.d/../environment.d/14-manifests
+2018-06-10 18:02:00,516 INFO: ++ export DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 18:02:00,731 INFO: ++ DIB_MANIFEST_IMAGE_DIR=/etc/dib-manifests
+2018-06-10 18:02:00,734 INFO: ++ export DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 18:02:00,736 INFO: ++ DIB_MANIFEST_SAVE_DIR=instack.d/
+2018-06-10 18:02:01,103 INFO: + set +o xtrace
+2018-06-10 18:02:01,302 INFO: dib-run-parts Running /tmp/tmp4B2kdO/install.d/02-puppet-stack-config
 </pre></body></html>
