@@ -11213,4 +11213,32 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 21:56:15,014 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Skipping because of failed dependencies[0m
 2018-06-10 21:56:15,406 INFO: [mNotice: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Dependency Service[mysqld] has failures: true[0m
 2018-06-10 21:56:16,217 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Skipping because of failed dependencies[0m
+2018-06-10 22:05:29,997 INFO: [1;31mError: Failed to apply catalog: Execution of '/bin/mysql -NBe SELECT CONCAT(User, '@',Host) AS User FROM mysql.user' returned 1: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)[0m
+2018-06-10 22:05:31,082 INFO: Changes:
+2018-06-10 22:05:31,155 INFO:             Total: 1
+2018-06-10 22:05:31,387 INFO: Events:
+2018-06-10 22:05:31,555 INFO:           Success: 1
+2018-06-10 22:05:31,676 INFO:           Failure: 2
+2018-06-10 22:05:32,447 INFO:             Total: 3
+2018-06-10 22:05:32,798 INFO: Resources:
+2018-06-10 22:05:33,253 INFO:           Changed: 1
+2018-06-10 22:05:33,533 INFO:         Restarted: 1
+2018-06-10 22:05:33,713 INFO:            Failed: 2
+2018-06-10 22:05:33,932 INFO:       Out of sync: 3
+2018-06-10 22:05:34,115 INFO:             Total: 41
+2018-06-10 22:05:34,273 INFO:           Skipped: 6
+2018-06-10 22:05:34,504 INFO: Time:
+2018-06-10 22:05:34,655 INFO:            Anchor: 0.43
+2018-06-10 22:05:34,888 INFO:     Mysql datadir: 1.55
+2018-06-10 22:05:34,977 INFO:          Last run: 1528668329
+2018-06-10 22:05:35,126 INFO:           Package: 2.46
+2018-06-10 22:05:35,325 INFO:              File: 26.12
+2018-06-10 22:05:35,643 INFO:              Exec: 320.11
+2018-06-10 22:05:35,735 INFO:           Service: 467.85
+2018-06-10 22:05:35,841 INFO:    Rabbitmq plugin: 626.52
+2018-06-10 22:05:35,872 INFO:    Config retrieval: 7971.63
+2018-06-10 22:05:36,126 INFO:             Total: 9416.67
+2018-06-10 22:05:36,307 INFO: Version:
+2018-06-10 22:05:36,411 INFO:            Config: 1528656999
+2018-06-10 22:05:36,528 INFO:            Puppet: 4.8.2
 </pre></body></html>
