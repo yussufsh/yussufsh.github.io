@@ -11096,4 +11096,15 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 18:20:14,840 INFO: [2018/06/10 06:20:14 PM] [INFO] success
 2018-06-10 18:20:22,516 INFO: dib-run-parts Sun Jun 10 18:20:21 UTC 2018 20-os-apply-config completed
 2018-06-10 18:20:24,971 INFO: dib-run-parts Sun Jun 10 18:20:24 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/30-reload-keepalived
+2018-06-10 18:20:31,473 INFO: + systemctl is-enabled keepalived
+2018-06-10 18:20:37,720 INFO: disabled
+2018-06-10 18:20:43,305 INFO: dib-run-parts Sun Jun 10 18:20:42 UTC 2018 30-reload-keepalived completed
+2018-06-10 18:20:45,451 INFO: dib-run-parts Sun Jun 10 18:20:44 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-10 18:22:30,929 INFO: [2018/06/10 06:22:30 PM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-10 18:22:50,961 INFO: dib-run-parts Sun Jun 10 18:22:50 UTC 2018 40-hiera-datafiles completed
+2018-06-10 18:22:53,614 INFO: dib-run-parts Sun Jun 10 18:22:53 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/50-puppet-stack-config
+2018-06-10 18:23:00,092 INFO: + set -o pipefail
+2018-06-10 18:23:00,244 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 18:23:00,388 INFO: + set +e
+2018-06-10 18:23:00,670 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 </pre></body></html>
