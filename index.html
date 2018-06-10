@@ -10542,4 +10542,53 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 13:29:40,542 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Service/Exec[wait_for_mysql_socket_to_open]: Skipping because of failed dependencies[0m
 2018-06-10 13:29:40,911 INFO: [mNotice: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Dependency Exec[os-net-config] has failures: true[0m
 2018-06-10 13:29:41,016 INFO: [1;33mWarning: /Stage[main]/Mysql::Server::Root_password/Exec[remove install pass]: Skipping because of failed dependencies[0m
+2018-06-10 13:32:40,226 INFO: [1;31mError: Failed to apply catalog: Execution of '/bin/mysql --defaults-extra-file=/root/.my.cnf -NBe SELECT CONCAT(User, '@',Host) AS User FROM mysql.user' returned 1: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)[0m
+2018-06-10 13:32:41,150 INFO: Changes:
+2018-06-10 13:32:41,387 INFO: Events:
+2018-06-10 13:32:42,119 INFO:           Failure: 1
+2018-06-10 13:32:42,310 INFO:             Total: 1
+2018-06-10 13:32:42,534 INFO: Resources:
+2018-06-10 13:32:42,692 INFO:            Failed: 1
+2018-06-10 13:32:42,827 INFO:       Out of sync: 1
+2018-06-10 13:32:43,085 INFO:           Skipped: 37
+2018-06-10 13:32:43,342 INFO:             Total: 41
+2018-06-10 13:32:43,559 INFO: Time:
+2018-06-10 13:32:43,719 INFO:           Package: 0.27
+2018-06-10 13:32:43,907 INFO:          Last run: 1528637560
+2018-06-10 13:32:44,048 INFO:           Service: 30.34
+2018-06-10 13:32:44,176 INFO:              Exec: 302.49
+2018-06-10 13:32:44,386 INFO:    Config retrieval: 7444.04
+2018-06-10 13:32:44,484 INFO:             Total: 7777.14
+2018-06-10 13:32:44,547 INFO: Version:
+2018-06-10 13:32:44,692 INFO:            Config: 1528628215
+2018-06-10 13:32:44,882 INFO:            Puppet: 4.8.2
+2018-06-10 13:33:40,507 INFO: + rc=1
+2018-06-10 13:33:40,621 INFO: + set -e
+2018-06-10 13:33:40,694 INFO: + echo 'puppet apply exited with exit code 1'
+2018-06-10 13:33:40,754 INFO: puppet apply exited with exit code 1
+2018-06-10 13:33:40,807 INFO: + '[' 1 '!=' 2 -a 1 '!=' 0 ']'
+2018-06-10 13:33:40,903 INFO: + exit 1
+2018-06-10 13:33:42,049 INFO: [2018-06-10 13:33:41,345] (os-refresh-config) [ERROR] during configure phase. [Command '['dib-run-parts', '/usr/libexec/os-refresh-config/configure.d']' returned non-zero exit status 1]
+2018-06-10 13:33:42,156 INFO: 
+2018-06-10 13:33:42,691 INFO: [2018-06-10 13:33:42,357] (os-refresh-config) [ERROR] Aborting...
+2018-06-10 13:33:45,497 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1869, in install
+    _run_orc(instack_env)
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1383, in _run_orc
+    _run_live_command(args, instack_env, 'os-refresh-config')
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 620, in _run_live_command
+    raise RuntimeError('%s failed. See log for details.' % name)
+RuntimeError: os-refresh-config failed. See log for details.
+2018-06-10 13:33:46,032 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: os-refresh-config failed. See log for details.
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
 </pre></body></html>
