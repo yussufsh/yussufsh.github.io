@@ -10591,4 +10591,32 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 
 #############################################################################
 
+2018-06-10 16:22:59,081 INFO: Logging to /home/stack/.instack/install-undercloud.log
+2018-06-10 16:24:09,686 INFO: Checking for a FQDN hostname...
+2018-06-10 16:25:18,473 ERROR: hostnamectl failed: Could not get property: Connection timed out
+
+2018-06-10 16:25:19,130 DEBUG: An exception occurred
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 1848, in install
+    _validate_configuration()
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 780, in _validate_configuration
+    _check_hostname()
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 637, in _check_hostname
+    detected_static_hostname = _run_command(args, name='hostnamectl').rstrip()
+  File "/usr/lib/python2.7/site-packages/instack_undercloud/undercloud.py", line 586, in _run_command
+    env=env).decode('utf-8')
+  File "/usr/lib64/python2.7/subprocess.py", line 575, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['sudo', 'hostnamectl', '--static']' returned non-zero exit status 1
+2018-06-10 16:25:20,457 ERROR: 
+#############################################################################
+Undercloud install failed.
+
+Reason: Command '['sudo', 'hostnamectl', '--static']' returned non-zero exit status 1
+
+See the previous output for details about what went wrong.  The full install
+log can be found at /home/stack/.instack/install-undercloud.log.
+
+#############################################################################
+
 </pre></body></html>
