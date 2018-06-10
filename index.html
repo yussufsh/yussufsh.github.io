@@ -10378,4 +10378,9 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-10 10:18:42,929 INFO: dib-run-parts Sun Jun 10 10:18:41 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
 2018-06-10 10:20:43,508 INFO: [2018/06/10 10:20:43 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
 2018-06-10 10:21:12,057 INFO: dib-run-parts Sun Jun 10 10:21:11 UTC 2018 40-hiera-datafiles completed
+2018-06-10 10:21:12,838 INFO: dib-run-parts Sun Jun 10 10:21:12 UTC 2018 Running /usr/libexec/os-refresh-config/configure.d/50-puppet-stack-config
+2018-06-10 10:21:14,341 INFO: + set -o pipefail
+2018-06-10 10:21:14,425 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-10 10:21:14,532 INFO: + set +e
+2018-06-10 10:21:14,663 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 </pre></body></html>
