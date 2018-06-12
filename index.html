@@ -2857,4 +2857,71 @@ log can be found at /home/stack/.instack/install-undercloud.log.
 2018-06-12 01:11:47,988 INFO: dib-run-parts 75-puppet-modules-package completed
 2018-06-12 01:11:48,048 INFO: dib-run-parts Running /tmp/tmpC_obCS/install.d/99-install-config-templates
 2018-06-12 01:11:51,482 INFO: ++ os-apply-config --print-templates
+2018-06-12 01:12:37,788 INFO: + TEMPLATE_ROOT=/usr/libexec/os-apply-config/templates
+2018-06-12 01:12:37,846 INFO: ++ dirname /tmp/tmpC_obCS/install.d/99-install-config-templates
+2018-06-12 01:12:38,631 INFO: + TEMPLATE_SOURCE=/tmp/tmpC_obCS/install.d/../os-apply-config
+2018-06-12 01:12:38,637 INFO: + mkdir -p /usr/libexec/os-apply-config/templates
+2018-06-12 01:12:39,474 INFO: + '[' -d /tmp/tmpC_obCS/install.d/../os-apply-config ']'
+2018-06-12 01:12:39,513 INFO: + rsync '--exclude=.*.swp' -Cr /tmp/tmpC_obCS/install.d/../os-apply-config/ /usr/libexec/os-apply-config/templates/
+2018-06-12 01:12:42,749 INFO: dib-run-parts 99-install-config-templates completed
+2018-06-12 01:12:42,804 INFO: dib-run-parts Running /tmp/tmpC_obCS/install.d/99-os-refresh-config-install-scripts
+2018-06-12 01:12:48,127 INFO: ++ os-refresh-config --print-base
+2018-06-12 01:13:11,450 INFO: + SCRIPT_BASE=/usr/libexec/os-refresh-config
+2018-06-12 01:13:11,716 INFO: ++ dirname /tmp/tmpC_obCS/install.d/99-os-refresh-config-install-scripts
+2018-06-12 01:13:14,720 INFO: + SCRIPT_SOURCE=/tmp/tmpC_obCS/install.d/../os-refresh-config
+2018-06-12 01:13:14,953 INFO: + rsync -r /tmp/tmpC_obCS/install.d/../os-refresh-config/ /usr/libexec/os-refresh-config/
+2018-06-12 01:13:19,049 INFO: dib-run-parts 99-os-refresh-config-install-scripts completed
+2018-06-12 01:13:19,078 INFO: dib-run-parts ----------------------- PROFILING -----------------------
+2018-06-12 01:13:19,081 INFO: dib-run-parts
+2018-06-12 01:13:20,000 INFO: dib-run-parts Target: install.d
+2018-06-12 01:13:20,013 INFO: dib-run-parts
+2018-06-12 01:13:20,051 INFO: dib-run-parts Script                                     Seconds
+2018-06-12 01:13:20,072 INFO: dib-run-parts ---------------------------------------  ----------
+2018-06-12 01:13:20,076 INFO: dib-run-parts
+2018-06-12 01:13:27,099 INFO: dib-run-parts 02-puppet-stack-config                      167.274
+2018-06-12 01:13:32,414 INFO: dib-run-parts 10-hiera-yaml-symlink                         3.601
+2018-06-12 01:13:35,453 INFO: dib-run-parts 10-puppet-stack-config-puppet-module          4.868
+2018-06-12 01:13:38,385 INFO: dib-run-parts 11-create-template-root                      50.240
+2018-06-12 01:13:41,173 INFO: dib-run-parts 11-hiera-orc-install                         17.353
+2018-06-12 01:13:45,718 INFO: dib-run-parts 75-puppet-modules-package                    11.309
+2018-06-12 01:13:49,976 INFO: dib-run-parts 99-install-config-templates                  53.267
+2018-06-12 01:13:52,374 INFO: dib-run-parts 99-os-refresh-config-install-scripts         34.229
+2018-06-12 01:13:54,089 INFO: dib-run-parts
+2018-06-12 01:13:54,154 INFO: dib-run-parts --------------------- END PROFILING ---------------------
+2018-06-12 01:13:54,232 INFO: INFO: 2018-06-12 01:13:54,123 -- ############### End stdout/stderr logging ###############
+2018-06-12 01:13:54,346 INFO: INFO: 2018-06-12 01:13:54,289 --   Running hook post-install
+2018-06-12 01:13:54,485 INFO: INFO: 2018-06-12 01:13:54,437 --     Skipping hook post-install, the hook directory doesn't exist at /tmp/tmpC_obCS/post-install.d
+2018-06-12 01:13:54,887 INFO: INFO: 2018-06-12 01:13:54,849 -- Ending run of instack.
+2018-06-12 01:13:56,963 INFO: Instack completed successfully
+2018-06-12 01:13:56,991 INFO: Running os-refresh-config
+2018-06-12 01:14:18,542 INFO: [2018-06-12 01:14:18,352] (os-refresh-config) [INFO] Starting phase configure
+2018-06-12 01:14:30,496 INFO: dib-run-parts Tue Jun 12 01:14:30 EDT 2018 Running /usr/libexec/os-refresh-config/configure.d/10-hiera-disable
+2018-06-12 01:14:33,065 INFO: + '[' -f /etc/puppet/hiera.yaml ']'
+2018-06-12 01:14:33,109 INFO: + grep yaml /etc/puppet/hiera.yaml
+2018-06-12 01:14:37,660 INFO: dib-run-parts Tue Jun 12 01:14:37 EDT 2018 10-hiera-disable completed
+2018-06-12 01:14:39,131 INFO: dib-run-parts Tue Jun 12 01:14:38 EDT 2018 Running /usr/libexec/os-refresh-config/configure.d/20-os-apply-config
+2018-06-12 01:15:18,383 INFO: [2018/06/12 01:15:18 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-12 01:15:18,780 INFO: [2018/06/12 01:15:18 AM] [INFO] writing /etc/os-net-config/config.json
+2018-06-12 01:15:18,849 INFO: [2018/06/12 01:15:18 AM] [INFO] writing /root/stackrc
+2018-06-12 01:15:18,979 INFO: [2018/06/12 01:15:18 AM] [INFO] writing /root/tripleo-undercloud-passwords
+2018-06-12 01:15:19,021 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /etc/puppet/hiera.yaml
+2018-06-12 01:15:19,052 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /var/opt/undercloud-stack/masquerade
+2018-06-12 01:15:19,125 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /etc/puppet/hieradata/RedHat.yaml
+2018-06-12 01:15:19,173 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /etc/puppet/hieradata/CentOS.yaml
+2018-06-12 01:15:19,240 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /var/run/heat-config/heat-config
+2018-06-12 01:15:19,281 INFO: [2018/06/12 01:15:19 AM] [INFO] writing /etc/os-collect-config.conf
+2018-06-12 01:15:19,403 INFO: [2018/06/12 01:15:19 AM] [INFO] success
+2018-06-12 01:15:21,092 INFO: dib-run-parts Tue Jun 12 01:15:21 EDT 2018 20-os-apply-config completed
+2018-06-12 01:15:21,787 INFO: dib-run-parts Tue Jun 12 01:15:21 EDT 2018 Running /usr/libexec/os-refresh-config/configure.d/30-reload-keepalived
+2018-06-12 01:15:23,465 INFO: + systemctl is-enabled keepalived
+2018-06-12 01:15:27,776 INFO: disabled
+2018-06-12 01:15:30,445 INFO: dib-run-parts Tue Jun 12 01:15:29 EDT 2018 30-reload-keepalived completed
+2018-06-12 01:15:31,898 INFO: dib-run-parts Tue Jun 12 01:15:31 EDT 2018 Running /usr/libexec/os-refresh-config/configure.d/40-hiera-datafiles
+2018-06-12 01:16:03,050 INFO: [2018/06/12 01:16:02 AM] [WARNING] DEPRECATED: falling back to /var/run/os-collect-config/os_config_files.json
+2018-06-12 01:16:12,988 INFO: dib-run-parts Tue Jun 12 01:16:12 EDT 2018 40-hiera-datafiles completed
+2018-06-12 01:16:15,470 INFO: dib-run-parts Tue Jun 12 01:16:14 EDT 2018 Running /usr/libexec/os-refresh-config/configure.d/50-puppet-stack-config
+2018-06-12 01:16:18,035 INFO: + set -o pipefail
+2018-06-12 01:16:18,104 INFO: + puppet_apply puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
+2018-06-12 01:16:18,175 INFO: + set +e
+2018-06-12 01:16:18,179 INFO: + puppet apply --summarize --detailed-exitcodes /etc/puppet/manifests/puppet-stack-config.pp
 </pre></body></html>
